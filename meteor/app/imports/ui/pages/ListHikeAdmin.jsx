@@ -3,11 +3,11 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Table, Header, Loader } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { Stuffs } from '../../api/stuff/Stuff';
-import StuffItem from '../components/StuffItem';
+import { Hikes } from '../../api/hike/Hike';
+import HikeItemAdmin from '../components/HikeItemAdmin';
 
-/** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
-class ListStuff extends React.Component {
+/** Renders a table containing all of the Hike documents. Use <HikeItem> to render each row. */
+class ListHikeAdmin extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,18 +18,18 @@ class ListStuff extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center">List Stuff</Header>
+        <Header as="h2" textAlign="center">List Hike (Admin)</Header>
         <Table celled>
           <Table.Header>
             <Table.Row>
               <Table.HeaderCell>Name</Table.HeaderCell>
               <Table.HeaderCell>Quantity</Table.HeaderCell>
               <Table.HeaderCell>Condition</Table.HeaderCell>
-              <Table.HeaderCell>Edit</Table.HeaderCell>
+              <Table.HeaderCell>Owner</Table.HeaderCell>
             </Table.Row>
           </Table.Header>
           <Table.Body>
-            {this.props.stuffs.map((stuff) => <StuffItem key={stuff._id} stuff={stuff} />)}
+            {this.props.hikes.map((hike) => <HikeItemAdmin key={hike._id} hike={hike} />)}
           </Table.Body>
         </Table>
       </Container>
@@ -37,22 +37,22 @@ class ListStuff extends React.Component {
   }
 }
 
-// Require an array of Stuff documents in the props.
-ListStuff.propTypes = {
-  stuffs: PropTypes.array.isRequired,
+// Require an array of Hike documents in the props.
+ListHikeAdmin.propTypes = {
+  hikes: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
 // withTracker connects Meteor data to React components. https://guide.meteor.com/react.html#using-withTracker
 export default withTracker(() => {
-  // Get access to Stuff documents.
-  const subscription = Meteor.subscribe(Stuffs.userPublicationName);
+  // Get access to Hike documents.
+  const subscription = Meteor.subscribe(Hikes.adminPublicationName);
   // Determine if the subscription is ready
   const ready = subscription.ready();
-  // Get the Stuff documents
-  const stuffs = Stuffs.collection.find({}).fetch();
+  // Get the Hike documents
+  const hikes = Hikes.collection.find({}).fetch();
   return {
-    stuffs,
+    hikes,
     ready,
   };
-})(ListStuff);
+})(ListHikeAdmin);
