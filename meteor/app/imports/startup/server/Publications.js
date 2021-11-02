@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Stuffs } from '../../api/stuff/Stuff';
+import { UserInfo } from '../../api/userinfo/UserInfo';
 
 // User-level publication.
 // If logged in, then publish documents owned by this user. Otherwise publish nothing.
@@ -26,6 +27,13 @@ Meteor.publish(Stuffs.adminPublicationName, function () {
 Meteor.publish(null, function () {
   if (this.userId) {
     return Meteor.roleAssignment.find({ 'user._id': this.userId });
+  }
+  return this.ready();
+});
+
+Meteor.publish('UserInfo', function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return UserInfo.find();
   }
   return this.ready();
 });
