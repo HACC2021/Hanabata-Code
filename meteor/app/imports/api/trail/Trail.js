@@ -28,7 +28,10 @@ class TrailsCollection {
           defaultValue: '$',
         },
         description: String,
-        owner: String,
+        owner: {
+          type: String,
+          optional: true,
+        }
       },
       { tracker: Tracker }
     );

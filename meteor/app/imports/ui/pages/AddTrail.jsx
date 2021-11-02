@@ -5,29 +5,42 @@ import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { Stuffs } from '../../api/stuff/Stuff';
+import { Trails } from '../../api/trail/Trail';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   name: String,
-  quantity: Number,
-  condition: {
+  image: String,
+  location: String,
+  length: String,
+  difficulty: {
     type: String,
-    allowedValues: ['excellent', 'good', 'fair', 'poor'],
-    defaultValue: 'good',
+    allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme'],
+    defaultValue: 'Normal',
   },
+  busyTime: String,
+  price: {
+    type: String,
+    allowedValues: ['$', '$$', '$$$'],
+    defaultValue: '$',
+  },
+  description: String,
+  owner: {
+    type: String,
+    optional: true,
+  }
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /** Renders the Page for adding a document. */
-class AddStuff extends React.Component {
+class AddTrail extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, quantity, condition } = data;
+    const { name, image, location, length, difficulty, busyTime, price, description } = data;
     const owner = Meteor.user().username;
-    Stuffs.collection.insert({ name, quantity, condition, owner },
+    Trails.collection.insert({ name, image, location, length, difficulty, busyTime, price, description, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -44,12 +57,17 @@ class AddStuff extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Add Stuff</Header>
+          <Header as="h2" textAlign="center">Add Trail</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='name'/>
-              <NumField name='quantity' decimal={false}/>
-              <SelectField name='condition'/>
+              <TextField name='image'/>
+              <TextField name='location'/>
+              <TextField name='length'/>
+              <SelectField name='difficulty'/>
+              <TextField name='busyTime'/>
+              <SelectField name='price'/>
+              <TextField name='description'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>
@@ -60,4 +78,4 @@ class AddStuff extends React.Component {
   }
 }
 
-export default AddStuff;
+export default AddTrail;
