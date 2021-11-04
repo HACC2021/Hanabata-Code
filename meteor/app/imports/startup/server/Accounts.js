@@ -1,25 +1,32 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
-import { UserInfo } from '../../api/userinfo/UserInfo';
 
 /* eslint-disable no-console */
 
 function createUser(email, password, role) {
   console.log(`  Creating user ${email}.`);
-  UserInfo.insert({ user: email });
   const userID = Accounts.createUser({
     username: email,
     email: email,
     password: password,
   });
-  if (role === 'admin') {
+
+  if (role === 'superAdmin') {
+    Meteor.users.update(userID, {
+      $set: {
+        isAdmin: true,
+        isSuperAdmin: true,
+      }
+    });
     Roles.createRole(role, { unlessExists: true });
-    Roles.addUsersToRoles(userID, 'admin');
+    Roles.createRole("admin", {unlessExists: true});
+    Roles.addUsersToRoles(userID, role);
+    Roles.addUsersToRoles(userID, "admin");
   }
 }
 
-// When running app for first time, pass a settings file to set up a default user account.
+/** When running app for first time, pass a settings file to set up a default user account. */
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.defaultAccounts) {
     console.log('Creating the default user(s)');

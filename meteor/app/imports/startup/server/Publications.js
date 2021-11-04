@@ -44,3 +44,10 @@ Meteor.publish(null, function () {
   }
   return this.ready();
 });
+
+Meteor.publish('AllUsers', function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Meteor.users.find();
+  }
+  return this.ready();
+});
