@@ -31,7 +31,7 @@ class Signup extends React.Component {
         this.setState({ error: '', redirectToReferer: true });
       }
     });
-    UserInfo.insert({ user });
+    //UserInfo.insert({ user });
   }
 
   /* Display the signup form. Redirect to add page after successful registration and login. */
