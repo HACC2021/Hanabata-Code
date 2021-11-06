@@ -6,7 +6,7 @@
 
   "defaultData": [
     { "name": "Diamond Head (Le'ahi) Summit Trail",
-      "image": "/images/diamond_head.png",
+      "defaultImage": "/images/diamond_head.png",
       "location": "Diamond Head State Monument",
       "length": "1.8 mi",
       "difficulty": "Easy",
@@ -16,7 +16,7 @@
       "owner": "admin@foo.com"
     },
     { "name": "Koko Crater Tramway to Kokohead Lookout",
-      "image": "/images/kokohead.png",
+      "defaultImage": "/images/kokohead.png",
       "location": "Koko Crater Tramway to Kokohead Lookout",
       "length": "1.6 mi",
       "difficulty": "Hard",
@@ -26,7 +26,7 @@
       "owner": "admin@foo.com"
     },
     { "name": "Makapu'u Point Lighthouse Trail",
-      "image": "/images/makapuu.png",
+      "defaultImage": "/images/makapuu.png",
       "location": "Makapu'u Point Lighthouse Trail",
       "length": "2.5 mi",
       "difficulty": "Easy",
@@ -36,7 +36,7 @@
       "owner": "admin@foo.com"
     },
     { "name": "Kuliouou Ridge Trail",
-      "image": "/images/kuliouou.jpeg",
+      "defaultImage": "/images/kuliouou.jpeg",
       "location": "Kuliouou Ridge Trail",
       "length": "4.7 mi",
       "difficulty": "Normal",

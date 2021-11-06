@@ -2,13 +2,29 @@ import React from 'react';
 import { Card, Image, Table } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
+import fetchImg from '../../api/fetchImg';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 export class AllTrailCourse extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      image: '/images/meteor-logo.png',
+    };
+  }
+
+  componentDidMount() {
+    if (this.props.trail.image) {
+      fetchImg(this.props.trail._id + this.props.trail.image).then((res) => this.setState({ image: res }));
+    } else if (this.props.trail.defaultImage) {
+      this.setState({ image: this.props.trail.defaultImage });
+    }
+  }
+
   render() {
     return (
       <Card>
-        <Image src={this.props.trail.image} wrapped ui={false} />
+        <Image src={this.state.image}/>
         <Card.Content>
           <Card.Header as='h2'>{this.props.trail.name}</Card.Header>
           <Card.Description><strong>{this.props.trail.location}</strong></Card.Description>
