@@ -27,7 +27,9 @@ function App() {
         <Drawer.Screen name="Home" >
           {props => <Home trails={ trails } />}
         </Drawer.Screen>
-        <Drawer.Screen name="AllTrails" component={AllTrails} />
+        <Drawer.Screen name="AllTrails" >
+          {props => <AllTrails trails={ trails } />}
+        </Drawer.Screen>
         <Drawer.Screen name="Community" component={Community} />
       </Drawer.Navigator>
     </NavigationContainer>

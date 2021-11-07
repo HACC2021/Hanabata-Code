@@ -20,7 +20,7 @@ export default function Home(props) {
         <Marker
           key={index}
           coordinate={trail.coords}
-          title={trail.title}
+          title={trail.name}
           description={trail.description}
           />
         ))}
