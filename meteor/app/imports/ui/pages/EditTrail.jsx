@@ -1,24 +1,43 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
 import swal from 'sweetalert';
-import { AutoForm, ErrorsField, HiddenField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField, LongTextField } from 'uniforms-semantic';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import { Trails } from '../../api/trail/Trail';
+import UploadImg from '../components/UploadImg';
+import { createImg, extractFileType, uploadImg } from '../../api/uploadImg';
 
 const bridge = new SimpleSchema2Bridge(Trails.schema);
 
 /** Renders the Page for editing a single document. */
 class EditTrail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.imgRef = createRef();
+  }
 
   // On successful submit, insert the data.
   submit(data) {
-    const { name, image, location, length, difficulty, busyTime, price, description, _id } = data;
-    Trails.collection.update(_id, { $set: { name, image, location, length, difficulty, busyTime, price, description } }, (error) => (error ?
-      swal('Error', error.message, 'error') :
-      swal('Success', 'Item updated successfully', 'success')));
+    let { name, image, location, length, difficulty, busyTime, price, description, _id } = data;
+    image = this.imgRef.current ? extractFileType(this.imgRef.current) : (image || '');
+    Trails.collection.update(
+      _id,
+      { $set: { name, image, location, length, difficulty, busyTime, price, description } },
+      (error) => {
+        if (error) {
+          swal('Error', error.message, 'error');
+        } else {
+          if (this.imgRef.current) {
+            const file = createImg(this.imgRef.current, _id);
+            uploadImg(file);
+          }
+          swal('Success', 'Trail updated successfully', 'success');
+        }
+      },
+    );
   }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
@@ -35,16 +54,17 @@ class EditTrail extends React.Component {
           <AutoForm schema={bridge} onSubmit={data => this.submit(data)} model={this.props.doc}>
             <Segment>
               <TextField name='name'/>
-              <TextField name='image'/>
               <TextField name='location'/>
               <TextField name='length'/>
               <SelectField name='difficulty'/>
               <TextField name='busyTime'/>
               <SelectField name='price'/>
-              <TextField name='description'/>
+              <LongTextField name='description'/>
+              <UploadImg imgRef={this.imgRef} />
               <SubmitField value='Submit'/>
               <ErrorsField/>
               <HiddenField name='owner' />
+              <HiddenField name="image" />
             </Segment>
           </AutoForm>
         </Grid.Column>
@@ -67,11 +87,11 @@ export default withTracker(({ match }) => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Trails.adminPublicationName);
   // Determine if the subscription is ready
-  const ready = subscription.ready();
+  // const ready = subscription.ready();
   // Get the document
-  const doc = Trails.collection.findOne(documentId);
+  // const doc = Trails.collection.findOne(documentId);
   return {
-    doc,
-    ready,
+    doc: Trails.collection.findOne(documentId),
+    ready: subscription.ready(),
   };
 })(EditTrail);

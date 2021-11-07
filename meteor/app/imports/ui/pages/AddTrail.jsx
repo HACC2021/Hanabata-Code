@@ -1,16 +1,17 @@
-import React from 'react';
+import React, { createRef } from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, NumField, SelectField, SubmitField, TextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SelectField, SubmitField, TextField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Trails } from '../../api/trail/Trail';
+import UploadImg from '../components/UploadImg';
+import { extractFileType, uploadImg, createImg } from '../../api/uploadImg';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   name: String,
-  image: String,
   location: String,
   length: String,
   difficulty: {
@@ -28,27 +29,41 @@ const formSchema = new SimpleSchema({
   owner: {
     type: String,
     optional: true,
-  }
+  },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /** Renders the Page for adding a document. */
 class AddTrail extends React.Component {
+  constructor(props) {
+    super(props);
+    this.imgRef = createRef();
+  }
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { name, image, location, length, difficulty, busyTime, price, description } = data;
+    const image = this.imgRef.current
+      ? extractFileType(this.imgRef.current)
+      : '';
+    const { name, location, length, difficulty, busyTime, price, description } = data;
     const owner = Meteor.user().username;
-    Trails.collection.insert({ name, image, location, length, difficulty, busyTime, price, description, owner },
-      (error) => {
+
+    Trails.collection.insert(
+      { name, image, location, length, difficulty, busyTime, price, description, owner },
+      (error, id) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Item added successfully', 'success');
+          if (this.imgRef.current) {
+            const file = createImg(this.imgRef.current, id);
+            uploadImg(file);
+          }
+          swal('Success', 'Trail added successfully', 'success');
           formRef.reset();
         }
-      });
+      },
+    );
   }
 
   // Render the form. Use Uniforms: https://github.com/vazco/uniforms
@@ -61,13 +76,13 @@ class AddTrail extends React.Component {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <TextField name='name'/>
-              <TextField name='image'/>
               <TextField name='location'/>
               <TextField name='length'/>
               <SelectField name='difficulty'/>
               <TextField name='busyTime'/>
               <SelectField name='price'/>
-              <TextField name='description'/>
+              <LongTextField name='description'/>
+              <UploadImg imgRef={this.imgRef} />
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>
