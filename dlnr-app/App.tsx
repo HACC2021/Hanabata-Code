@@ -4,13 +4,15 @@ import { createDrawerNavigator } from '@react-navigation/drawer';
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
+import Login from "./pages/Login";
 
 const Drawer = createDrawerNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator initialRouteName="Login">
+        <Drawer.Screen name="Login" component={Login} />
         <Drawer.Screen name="Home" component={Home} />
         <Drawer.Screen name="AllTrails" component={AllTrails} />
         <Drawer.Screen name="Community" component={Community} />
