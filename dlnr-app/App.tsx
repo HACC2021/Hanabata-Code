@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
 import { useEffect, useState } from 'react';
+import Login from "./pages/Login";
 
 const Drawer = createDrawerNavigator();
 
@@ -23,13 +24,14 @@ function App() {
 
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Home">
+      <Drawer.Navigator initialRouteName="Login">
         <Drawer.Screen name="Home" >
           {props => <Home trails={ trails } />}
         </Drawer.Screen>
         <Drawer.Screen name="AllTrails" >
           {props => <AllTrails trails={ trails } />}
         </Drawer.Screen>
+        <Drawer.Screen name="Login" component={Login} />
         <Drawer.Screen name="Community" component={Community} />
       </Drawer.Navigator>
     </NavigationContainer>
