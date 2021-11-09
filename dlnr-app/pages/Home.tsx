@@ -5,7 +5,6 @@ import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { useEffect } from 'react';
 
 export default function Home(props) {
-  console.log(props.trails);
 
   return (
     <View style={styles.container}>

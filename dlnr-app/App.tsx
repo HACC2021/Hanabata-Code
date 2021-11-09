@@ -36,9 +36,11 @@ function App() {
   );
 
   function getTrails() {
+      console.log("getting trails from api...");
       fetch('http://localhost:3000/api/trails', { method: "GET" })
         .then(res => res.json())
         .then(response => {
+          console.log("successfully receieved trails");
           setTrails(response);
           setIsLoading(false);
         })
