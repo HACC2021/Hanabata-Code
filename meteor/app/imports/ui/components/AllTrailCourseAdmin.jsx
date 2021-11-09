@@ -16,7 +16,7 @@ export class AllTrailCourseAdmin extends React.Component {
     })
         .then((willDelete) => {
           if (willDelete) {
-            this.props.Events.collection.remove(docID);
+            this.props.Trails.collection.remove(docID);
             swal('Delete successful', {
               icon: 'success',
             });
