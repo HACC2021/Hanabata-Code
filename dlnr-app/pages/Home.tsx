@@ -3,6 +3,7 @@ import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
 import { useEffect } from 'react';
+import AllTrails from './AllTrails';
 
 export default function Home(props) {
 

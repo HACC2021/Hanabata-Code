@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar } from "react-native";
 
 export default function AllTrails(props) {
@@ -12,6 +12,8 @@ export default function AllTrails(props) {
   const renderItem = ({ item }) => (
     <Item title={item.name} />
   );
+
+    useEffect(()=>{ console.log(props.trails)}, []);
 
   return (
     // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>

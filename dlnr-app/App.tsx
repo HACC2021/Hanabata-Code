@@ -39,11 +39,13 @@ function App() {
 
   function getTrails() {
       console.log("getting trails from api...");
-      fetch('http://localhost:3000/api/trails', { method: "GET" })
+      //check this solution if it doesnt fetch
+      //https://stackoverflow.com/questions/62031415/unhandled-promise-rejection-typeerror-network-request-failed-expo-node-backend
+      fetch('http://192.168.1.24:3000/api/trails', { method: "GET" })
         .then(res => res.json())
         .then(response => {
           console.log("successfully receieved trails");
-          setTrails(response);
+          setTrails(response.filter( trail => trail.coords));
           setIsLoading(false);
         })
         .catch(error => console.log(error));
