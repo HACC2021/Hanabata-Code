@@ -1,36 +1,43 @@
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import React from "react";
 import { Text, View, StyleSheet, SafeAreaView, FlatList, StatusBar } from "react-native";
+import { TouchableHighlight } from "react-native-gesture-handler";
+import TrailDetail from "./TrailDetail";
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 
 export default function AllTrails(props) {
-
-  const Item = ({ title }) => (
-    <View style={styles.item}>
-      <Text style={styles.title}>{title}</Text>
-    </View>
-  );
-
-  const renderItem = ({ item }) => (
-    <Item title={item.name} />
-  );
-
+  const Stack = createNativeStackNavigator();
   return (
-    // <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-    //   <Text>Alltrails Screen</Text>
+    <Stack.Navigator>
+      <Stack.Screen name="AllTrails">
+        {p => <AllTrailsComponent {...props} />}
+      </Stack.Screen>
+      <Stack.Screen name="TrailDetail" component={TrailDetail}/>
 
-    // </View>
-    
+    </Stack.Navigator>
+  );
+}
+
+const AllTrailsComponent = (props) => {
+  return (
     <SafeAreaView style={styles.container}>
       <FlatList
         data={props.trails}
-        renderItem={renderItem}
+        renderItem={item => renderItem(item.item, props.navigation)}
         keyExtractor={item => item.idKey}
       />
     </SafeAreaView>
-
-  );
-
-
+  )
 }
+
+const renderItem = (trail, navigation) => {
+  return (<TouchableHighlight onPress={() => navigation.navigate('TrailDetail', { trail })}>
+    <View style={styles.item}>
+      <Text style={styles.title}>{trail.name}</Text>
+    </View>
+  </TouchableHighlight>
+)};
 
 const styles = StyleSheet.create({
   container: {

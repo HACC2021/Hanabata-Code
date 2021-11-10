@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { StyleSheet, Text, View, Dimensions } from 'react-native';
-import { NavigationContainer } from "@react-navigation/native";
+import { NavigationContainer, StackActions } from "@react-navigation/native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
@@ -26,10 +28,10 @@ function App() {
     <NavigationContainer>
       <Drawer.Navigator initialRouteName="Login">
         <Drawer.Screen name="Home" >
-          {props => <Home trails={ trails } />}
+          {props => <Home trails={ trails } { ...props } />}
         </Drawer.Screen>
-        <Drawer.Screen name="AllTrails" >
-          {props => <AllTrails trails={ trails } />}
+        <Drawer.Screen name="All Trails" >
+          {props => <AllTrails trails={ trails } { ...props }/>}
         </Drawer.Screen>
         <Drawer.Screen name="Login" component={Login} />
         <Drawer.Screen name="Community" component={Community} />
