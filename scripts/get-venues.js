@@ -1,6 +1,6 @@
 import pkg from 'mongodb';
 const { MongoClient } = pkg;
-
+import config from './config';
 import fetch from 'node-fetch';
 copyData();
 
@@ -16,7 +16,7 @@ async function copyData() {
 
     for (let trail of trails) {
         let queryOptions = { 
-            'api_key_private': 'PRIVATE_API_KEY',
+            'api_key_private': config.besttimes_private_key,
             'q': '',
             'fast': false,
             'lat': 0.0,
