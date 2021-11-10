@@ -1,0 +1,6572 @@
+[{
+  "_id": {
+    "$oid": "618711f567316037bfde40d7"
+  },
+  "idKey": 301,
+  "name": "‘Ōhi‘a Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 2,
+  "lengthKm": 3.22,
+  "elevationFeet": 472,
+  "elevationMeters": 143.87,
+  "coords": {
+    "idKey": 625,
+    "latitude": 19.79687340012338,
+    "longitude": -155.83717179318074
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40d8"
+  },
+  "idKey": 237,
+  "name": "‘Ualaka‘a Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.53,
+  "lengthKm": 0.85,
+  "elevationFeet": 400,
+  "elevationMeters": 121.92,
+  "coords": {
+    "idKey": 263,
+    "latitude": 21.31851180406337,
+    "longitude": -157.81772375106812
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_59425962547a433078466f5277484174316133504364484a496843",
+    "venue_lat": 21.3185361,
+    "venue_lon": -157.818731,
+    "venue_name": "'Ualaka'a Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "'Ualaka'a Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3185361,
+        "lng": -157.818731
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.31988592989272,
+          "lng": -157.8173811701073
+        },
+        "southwest": {
+          "lat": 21.31718627010728,
+          "lng": -157.8200808298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "'Ualaka'a Trail",
+    "place_id": "ChIJHdCP3a1tAHwRoFx0CzTbYBY",
+    "reference": "ChIJHdCP3a1tAHwRoFx0CzTbYBY",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJHdCP3a1tAHwRoFx0CzTbYBY",
+    "name": "'Ualaka'a Trail",
+    "address": "'Ualaka'a Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3185361,
+      "lng": -157.818731
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40d9"
+  },
+  "idKey": 213,
+  "name": "Aihualama Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1.3,
+  "lengthKm": 2.09,
+  "elevationFeet": 1200,
+  "elevationMeters": 365.76,
+  "coords": {
+    "idKey": 265,
+    "latitude": 21.34235722745681,
+    "longitude": -157.80907094478607
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": true,
+    "processed": true,
+    "venue_address": "Na Ala Hele: Aihualama Trail, Honolulu, HI 96822",
+    "venue_id": "ven_6b72732d754e713435626352774841734a762d4154576f4a496843",
+    "venue_lat": 21.3413975,
+    "venue_lon": -157.7996972,
+    "venue_name": "Aihualama Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Na Ala Hele: Aihualama Trail, Honolulu, HI 96822, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3413975,
+        "lng": -157.7996972
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34274732989272,
+          "lng": -157.7983473701073
+        },
+        "southwest": {
+          "lat": 21.34004767010727,
+          "lng": -157.8010470298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Aihualama Trail",
+    "photos": [
+      {
+        "height": 3456,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/112640143080486264186\">bryan gardea</a>"
+        ],
+        "photo_reference": "Aap_uECeIlMc-0VuzFmjffSJIwkYaZh54b1FCJX97Ci1JDNu0O-6gjay6emJiAeloWOL0b604OZsUUubGNNloq8oOK0WZ48n30t_0FL1XP8GMpazj1HcAVz52vpvRscrCttfIRrmnEVuylh73_Lg27zP8-QP0SeUWn0VG8QcyitAFAacTDSp",
+        "width": 4608
+      }
+    ],
+    "place_id": "ChIJoWTA-vJsAHwRcb54qNu-srk",
+    "plus_code": {
+      "compound_code": "86R2+H4 Honolulu, Hawaii",
+      "global_code": "73H486R2+H4"
+    },
+    "rating": 4.7,
+    "reference": "ChIJoWTA-vJsAHwRcb54qNu-srk",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 188
+  },
+  "googlePlaceData": {
+    "id": "ChIJoWTA-vJsAHwRcb54qNu-srk",
+    "name": "Aihualama Trail",
+    "address": "Na Ala Hele: Aihualama Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.3413975,
+      "lng": -157.7996972
+    },
+    "rating": 4.7,
+    "rating_n": 188,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          12,
+          34,
+          68,
+          97,
+          100,
+          73,
+          43,
+          34,
+          36,
+          36,
+          26,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          19,
+          48,
+          80,
+          90,
+          70,
+          56,
+          68,
+          85,
+          75,
+          41,
+          14,
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          7,
+          21,
+          46,
+          73,
+          92,
+          90,
+          68,
+          51,
+          46,
+          51,
+          43,
+          26,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          24,
+          53,
+          78,
+          78,
+          68,
+          82,
+          73,
+          26,
+          19,
+          26,
+          14,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          26,
+          82,
+          90,
+          75,
+          70,
+          43,
+          26,
+          34,
+          41,
+          36,
+          19,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          7,
+          21,
+          48,
+          70,
+          73,
+          65,
+          63,
+          68,
+          63,
+          46,
+          24,
+          9,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          29,
+          68,
+          82,
+          60,
+          51,
+          46,
+          31,
+          26,
+          51,
+          56,
+          24,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40da"
+  },
+  "idKey": 5,
+  "name": "Ala Kahakai Trail",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 7.7,
+  "lengthKm": 12.39,
+  "elevationFeet": 30,
+  "elevationMeters": 9.14,
+  "coords": {
+    "idKey": 457,
+    "latitude": 20.02233696090464,
+    "longitude": -155.82247138023376
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40db"
+  },
+  "idKey": 69,
+  "name": "Alakai Swamp Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 3.5,
+  "lengthKm": 5.63,
+  "elevationFeet": 329,
+  "elevationMeters": 100.28,
+  "coords": {
+    "idKey": 521,
+    "latitude": 22.13001215996323,
+    "longitude": -159.62782859802246
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40dc"
+  },
+  "idKey": 61,
+  "name": "Awaawapuhi Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 3.1,
+  "lengthKm": 4.99,
+  "elevationFeet": 1180,
+  "elevationMeters": 359.66,
+  "coords": {
+    "idKey": 61,
+    "latitude": 22.14069643789911,
+    "longitude": -159.6497597595199
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40dd"
+  },
+  "idKey": 117,
+  "name": "Boundary Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 4.4,
+  "lengthKm": 7.08,
+  "elevationFeet": 1220,
+  "elevationMeters": 371.86,
+  "coords": {
+    "idKey": 479,
+    "latitude": 20.71035621768117,
+    "longitude": -156.30413711071014
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40de"
+  },
+  "idKey": 57,
+  "name": "Contour Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 6.3,
+  "lengthKm": 10.14,
+  "elevationFeet": 240,
+  "elevationMeters": 73.15,
+  "coords": {
+    "idKey": 481,
+    "latitude": 22.07461922455144,
+    "longitude": -159.67953622341156
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40df"
+  },
+  "idKey": 51,
+  "name": "Haeleele Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 6.5,
+  "lengthKm": 10.46,
+  "elevationFeet": 2180,
+  "elevationMeters": 664.46,
+  "coords": {
+    "idKey": 273,
+    "latitude": 22.09064043042015,
+    "longitude": -159.67286825180054
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e0"
+  },
+  "idKey": 147,
+  "name": "Haleakala Ridge",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.6,
+  "lengthKm": 2.57,
+  "elevationFeet": 850,
+  "elevationMeters": 259.08,
+  "coords": {
+    "idKey": 275,
+    "latitude": 20.67342846121354,
+    "longitude": -156.33018404245377
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e1"
+  },
+  "idKey": 179,
+  "name": "Hau‘ula Loop Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 700,
+  "elevationMeters": 213.36,
+  "coords": {
+    "idKey": 339,
+    "latitude": 21.60950740198349,
+    "longitude": -157.9148519039154
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": true,
+    "processed": true,
+    "venue_address": "54-55 Maakua Rd, Laie, HI 96762",
+    "venue_id": "ven_555546674875474545646352774841464a7777496a62544a496843",
+    "venue_lat": 21.6096177,
+    "venue_lon": -157.9153307,
+    "venue_name": "Hauʻula Loop Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "54-55 Maakua Rd, Laie, HI 96762, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.6096177,
+        "lng": -157.9153307
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.61099307989273,
+          "lng": -157.9139861201073
+        },
+        "southwest": {
+          "lat": 21.60829342010728,
+          "lng": -157.9166857798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Hauʻula Loop Trail",
+    "opening_hours": {
+      "open_now": true
+    },
+    "photos": [
+      {
+        "height": 2448,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/113416233417957770232\">Jeffrey Hasebe</a>"
+        ],
+        "photo_reference": "Aap_uECvllsMqsuuSdSdkSzaByoNiKj5mmbXqmgq9t1W8QQVnTpEudKHwx1w2foeP3r6rkpQGY_xcHPBT79Uk0PZLEPymMx0UJ7lb0UR_PvThyFm7LjiapiqKO46zsncQDIRZVzInK92e6SXZBbw--zwZk_paULhJFLN1KJgOFYXhT45bsgC",
+        "width": 3264
+      }
+    ],
+    "place_id": "ChIJTbjIwwJFAHwRcdEEGuHgFUU",
+    "plus_code": {
+      "compound_code": "J35M+RV Laie, Hawaii",
+      "global_code": "73H4J35M+RV"
+    },
+    "rating": 4.5,
+    "reference": "ChIJTbjIwwJFAHwRcdEEGuHgFUU",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 116
+  },
+  "googlePlaceData": {
+    "id": "ChIJTbjIwwJFAHwRcdEEGuHgFUU",
+    "name": "Hauʻula Loop Trail",
+    "address": "54-55 Maakua Rd, Laie, HI 96762, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.6096177,
+      "lng": -157.9153307
+    },
+    "rating": 4.5,
+    "rating_n": 116,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          11,
+          22,
+          30,
+          36,
+          41,
+          47,
+          52,
+          55,
+          58,
+          61,
+          61,
+          58,
+          55,
+          47,
+          36,
+          25,
+          11,
+          2
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          2,
+          2,
+          2,
+          2,
+          11,
+          11,
+          16,
+          30,
+          52,
+          69,
+          75,
+          69,
+          58,
+          52,
+          52,
+          52,
+          50,
+          41,
+          30,
+          19,
+          8,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          2,
+          5,
+          8,
+          11,
+          2,
+          5,
+          13,
+          19,
+          30,
+          38,
+          47,
+          55,
+          63,
+          66,
+          69,
+          69,
+          66,
+          61,
+          52,
+          44,
+          33,
+          25,
+          16,
+          8
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          2,
+          2,
+          2,
+          2,
+          5,
+          2,
+          5,
+          16,
+          38,
+          69,
+          86,
+          80,
+          55,
+          30,
+          16,
+          16,
+          25,
+          30,
+          30,
+          27,
+          19,
+          13,
+          8,
+          5
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          5,
+          5,
+          8,
+          5,
+          2,
+          2,
+          8,
+          25,
+          44,
+          58,
+          66,
+          63,
+          52,
+          38,
+          30,
+          33,
+          44,
+          55,
+          52,
+          38,
+          19,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          13,
+          5,
+          2,
+          2,
+          2,
+          2,
+          2,
+          11,
+          25,
+          38,
+          58,
+          75,
+          88,
+          97,
+          100,
+          94,
+          83,
+          66,
+          52,
+          38,
+          25,
+          16,
+          11,
+          5
+        ]
+      }
+    ],
+    "time_spent": [
+      30,
+      30
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e2"
+  },
+  "idKey": 201,
+  "name": "Hawaii‘loa Ridge Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 3.5,
+  "lengthKm": 5.63,
+  "elevationFeet": 1700,
+  "elevationMeters": 518.16,
+  "coords": {
+    "idKey": 497,
+    "latitude": 21.29716156725354,
+    "longitude": -157.74590492248535
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96821",
+    "venue_id": "ven_304f337479734e577971365277484153674e31686a55754a496843",
+    "venue_lat": 21.3104421,
+    "venue_lon": -157.7444579,
+    "venue_name": "Hawaii Loa Ridge Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Hawaii Loa Ridge Trail, Honolulu, HI 96821, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3104421,
+        "lng": -157.7444579
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.31179192989272,
+          "lng": -157.7431080701072
+        },
+        "southwest": {
+          "lat": 21.30909227010728,
+          "lng": -157.7458077298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Hawaii Loa Ridge Trail",
+    "place_id": "ChIJuUjh1NgSAHwR6qyWNsyt3O0",
+    "reference": "ChIJuUjh1NgSAHwR6qyWNsyt3O0",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJuUjh1NgSAHwR6qyWNsyt3O0",
+    "name": "Hawaii Loa Ridge Trail",
+    "address": "Hawaii Loa Ridge Trail, Honolulu, HI 96821, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3104421,
+      "lng": -157.7444579
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e3"
+  },
+  "idKey": 157,
+  "name": "Hoapili Trail",
+  "island": "MAUI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 12.5,
+  "lengthKm": 20.12,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 441,
+    "latitude": 20.59370095641884,
+    "longitude": -156.41324400901794
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e4"
+  },
+  "idKey": 109,
+  "name": "Hulopoe-Huawai Fishing Trail",
+  "island": "LANAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 1.75,
+  "lengthKm": 2.82,
+  "elevationFeet": 140,
+  "elevationMeters": 42.67,
+  "coords": {
+    "idKey": 343,
+    "latitude": 20.73820478992402,
+    "longitude": -156.91728472709656
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e5"
+  },
+  "idKey": 25,
+  "name": "Humuʻula Trail",
+  "island": "HAWAII",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 5.25,
+  "lengthKm": 8.45,
+  "elevationFeet": 3240,
+  "elevationMeters": 987.55,
+  "coords": {
+    "idKey": 595,
+    "latitude": 19.97838037921583,
+    "longitude": -155.2947896718979
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e6"
+  },
+  "idKey": 23,
+  "name": "ʻĀinapō Road",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 8.1,
+  "lengthKm": 13.04,
+  "elevationFeet": 2950,
+  "elevationMeters": 899.16,
+  "coords": {
+    "idKey": 271,
+    "latitude": 19.33709217183657,
+    "longitude": -155.39482533931732
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e7"
+  },
+  "idKey": 21,
+  "name": "ʻĀinapō Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 10.9,
+  "lengthKm": 17.54,
+  "elevationFeet": 7622,
+  "elevationMeters": 2323.19,
+  "coords": {
+    "idKey": 603,
+    "latitude": 19.3688872636436,
+    "longitude": -155.48023223876953
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e8"
+  },
+  "idKey": 81,
+  "name": "Iliau Nature Loop",
+  "island": "KAUAI",
+  "difficulty": "EASY",
+  "lengthMiles": 0.3,
+  "lengthKm": 0.48,
+  "elevationFeet": 40,
+  "elevationMeters": 12.19,
+  "coords": {
+    "idKey": 81,
+    "latitude": 22.05171418730539,
+    "longitude": -159.6600582278467
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40e9"
+  },
+  "idKey": 215,
+  "name": "Judd Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.75,
+  "lengthKm": 1.21,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 369,
+    "latitude": 21.34692649143421,
+    "longitude": -157.82080560922623
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96817",
+    "venue_id": "ven_6362735263475a4f6e665852774841734a456c4569576d4a496843",
+    "venue_lat": 21.3449606,
+    "venue_lon": -157.8226582,
+    "venue_name": "Judd Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Judd Trail, Honolulu, HI 96817, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3449606,
+        "lng": -157.8226582
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34631042989272,
+          "lng": -157.8213083701073
+        },
+        "southwest": {
+          "lat": 21.34361077010728,
+          "lng": -157.8240080298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Judd Trail",
+    "place_id": "ChIJmWiElEJsAHwRXfnOZGcRsbc",
+    "reference": "ChIJmWiElEJsAHwRXfnOZGcRsbc",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJmWiElEJsAHwRXfnOZGcRsbc",
+    "name": "Judd Trail",
+    "address": "Judd Trail, Honolulu, HI 96817, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3449606,
+      "lng": -157.8226582
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40ea"
+  },
+  "idKey": 47,
+  "name": "Kaaweiki Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 4.3,
+  "lengthKm": 6.92,
+  "elevationFeet": 1917,
+  "elevationMeters": 584.3,
+  "coords": {
+    "idKey": 47,
+    "latitude": 22.10350071724107,
+    "longitude": -159.6896480918035
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40eb"
+  },
+  "idKey": 135,
+  "name": "Kahakapao Recreational Area",
+  "island": "MAUI",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 385,
+    "latitude": 20.83186537491682,
+    "longitude": -156.27559170126915
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40ec"
+  },
+  "idKey": 291,
+  "name": "Kahauale‘a",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 3.37,
+  "lengthKm": 5.42,
+  "elevationFeet": 165,
+  "elevationMeters": 50.29,
+  "coords": {
+    "idKey": 611,
+    "latitude": 19.44546506016436,
+    "longitude": -155.12215498068042
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40ed"
+  },
+  "idKey": 277,
+  "name": "Kāheawai Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 6.5,
+  "lengthKm": 10.46,
+  "elevationFeet": 1950,
+  "elevationMeters": 594.36,
+  "coords": {
+    "idKey": 571,
+    "latitude": 19.098108,
+    "longitude": -155.80674440905736
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40ee"
+  },
+  "idKey": 173,
+  "name": "Kahuku Motocross Park",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.63,
+  "lengthKm": 1.01,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 495,
+    "latitude": 21.67712047829829,
+    "longitude": -158.01865339279175
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "58-288 Kamehameha Hwy, Haleiwa, HI 96712",
+    "venue_id": "ven_4177413039497a7869666352774841516c706b752d30684a496843",
+    "venue_lat": 21.681694,
+    "venue_lon": -158.031484,
+    "venue_name": "Kahuku Motocross Track"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "58-288 Kamehameha Hwy, Haleiwa, HI 96712, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.681694,
+        "lng": -158.031484
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.68307282989272,
+          "lng": -158.0301597201073
+        },
+        "southwest": {
+          "lat": 21.68037317010728,
+          "lng": -158.0328593798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Kahuku Motocross Track",
+    "opening_hours": {
+      "open_now": false
+    },
+    "photos": [
+      {
+        "height": 4032,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/109387040319604762796\">Green Beret Unlimited</a>"
+        ],
+        "photo_reference": "Aap_uEBKvoa90J4HIPa4jcvVpVZ-tvpkxzbC_eCML1N43F_0jK7QenfRsX-PnnqqKRTeKv9gteS1fPx0-h7uwgQiryVfkvS_was8ZAGXfo4c_XqiJbTqWZlv8YoPFBAEFzkqhl79B1hS0mADCkl9ryC2n4FwA7cEA5Ly0-qp4msh4WJj6gtc",
+        "width": 3024
+      }
+    ],
+    "place_id": "ChIJh0-ukplQAHwRcfixzI90AwA",
+    "plus_code": {
+      "compound_code": "MXJ9+MC Haleiwa, Hawaii",
+      "global_code": "73H3MXJ9+MC"
+    },
+    "rating": 4.7,
+    "reference": "ChIJh0-ukplQAHwRcfixzI90AwA",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 63
+  },
+  "googlePlaceData": {
+    "id": "ChIJh0-ukplQAHwRcfixzI90AwA",
+    "name": "Kahuku Motocross Track",
+    "address": "58-288 Kamehameha Hwy, Haleiwa, HI 96712, USA",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.681694,
+      "lng": -158.031484
+    },
+    "rating": 4.7,
+    "rating_n": 63
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40ef"
+  },
+  "idKey": 217,
+  "name": "Kalawahine Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1.5,
+  "lengthKm": 2.41,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 347,
+    "latitude": 21.33085474298567,
+    "longitude": -157.8212857246399
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_6b6e2d5372662d4d4770545277484173703144484f37564a496843",
+    "venue_lat": 21.3343096,
+    "venue_lon": -157.8169156,
+    "venue_name": "Na Ala Hele: Kalawahine Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Kalawahine Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3343096,
+        "lng": -157.8169156
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.33565942989272,
+          "lng": -157.8155657701072
+        },
+        "southwest": {
+          "lat": 21.33295977010728,
+          "lng": -157.8182654298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Kalawahine Trail",
+    "place_id": "ChIJV7OHD1psAHwRTpGM-frS-nk",
+    "reference": "ChIJV7OHD1psAHwRTpGM-frS-nk",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJV7OHD1psAHwRTpGM-frS-nk",
+    "name": "Na Ala Hele: Kalawahine Trail",
+    "address": "Na Ala Hele: Kalawahine Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3343096,
+      "lng": -157.8169156
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f0"
+  },
+  "idKey": 27,
+  "name": "Kaluakauka (Dr.'s Pit) Trail",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 0.2,
+  "lengthKm": 0.32,
+  "elevationFeet": 120,
+  "elevationMeters": 36.58,
+  "coords": {
+    "idKey": 437,
+    "latitude": 19.88844294142264,
+    "longitude": -155.3404462337494
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f1"
+  },
+  "idKey": 189,
+  "name": "Kamananui Valley Road",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 4,
+  "lengthKm": 6.44,
+  "elevationFeet": 600,
+  "elevationMeters": 182.88,
+  "coords": {
+    "idKey": 283,
+    "latitude": 21.3739669224162,
+    "longitude": -157.88062155246735
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": true,
+    "processed": true,
+    "venue_address": "1849 Ala Aolani St, Honolulu, HI 96819",
+    "venue_id": "ven_6f6b596f33344c557a423752774841755637686f7a62654a496843",
+    "venue_lat": 21.373624,
+    "venue_lon": -157.8809696,
+    "venue_name": "Moanalua Valley Trail Start (Kulana'ahane)"
+  },
+  "googlePlace": {
+    "formatted_address": "Kamananui Stream, Hawaii, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.6149294,
+        "lng": -158.0018739
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.6374179,
+          "lng": -157.952363
+        },
+        "southwest": {
+          "lat": 21.5847092,
+          "lng": -158.0477509
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Kamananui Stream",
+    "place_id": "ChIJx-anhEpaAHwRouDg9W00Puw",
+    "rating": 0,
+    "reference": "ChIJx-anhEpaAHwRouDg9W00Puw",
+    "types": [
+      "natural_feature",
+      "establishment"
+    ],
+    "user_ratings_total": 0
+  },
+  "googlePlaceData": {
+    "id": "ChIJx-anhEpaAHwRouDg9W00Puw",
+    "name": "Kamananui Stream",
+    "address": "Kamananui Stream, Hawaii, USA",
+    "types": [
+      "natural_feature",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.6149294,
+      "lng": -158.0018739
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f2"
+  },
+  "idKey": 219,
+  "name": "Kanealole Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.7,
+  "lengthKm": 1.13,
+  "elevationFeet": 600,
+  "elevationMeters": 182.88,
+  "coords": {
+    "idKey": 629,
+    "latitude": 21.31420860349871,
+    "longitude": -157.82909552064646
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_30506765546e432d54433852774841744e4c415647594d4a496843",
+    "venue_lat": 21.3215672,
+    "venue_lon": -157.825195,
+    "venue_name": "Kanealole Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Kanealole Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3215672,
+        "lng": -157.825195
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32291702989272,
+          "lng": -157.8238451701073
+        },
+        "southwest": {
+          "lat": 21.32021737010728,
+          "lng": -157.8265448298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Kanealole Trail",
+    "place_id": "ChIJMYGVALNtAHwR8CT-CnTegP0",
+    "reference": "ChIJMYGVALNtAHwR8CT-CnTegP0",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJMYGVALNtAHwR8CT-CnTegP0",
+    "name": "Kanealole Trail",
+    "address": "Kanealole Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3215672,
+      "lng": -157.825195
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f3"
+  },
+  "idKey": 45,
+  "name": "Kauhao Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 5,
+  "lengthKm": 8.05,
+  "elevationFeet": 1917,
+  "elevationMeters": 584.3,
+  "coords": {
+    "idKey": 45,
+    "latitude": 22.10455391506937,
+    "longitude": -159.675195665779
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f4"
+  },
+  "idKey": 285,
+  "name": "Kaulana Manu Nature Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 1,
+  "lengthKm": 1.61,
+  "elevationFeet": 63,
+  "elevationMeters": 19.2,
+  "coords": {
+    "idKey": 601,
+    "latitude": 19.67042302248714,
+    "longitude": -155.36646366119385
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f5"
+  },
+  "idKey": 29,
+  "name": "Kaūmana Trail",
+  "island": "HAWAII",
+  "difficulty": "EASY",
+  "lengthMiles": 1.5,
+  "lengthKm": 2.41,
+  "elevationFeet": 550,
+  "elevationMeters": 167.64,
+  "coords": {
+    "idKey": 465,
+    "latitude": 19.67590872117295,
+    "longitude": -155.32822608947754
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f6"
+  },
+  "idKey": 171,
+  "name": "Kaunala Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 600,
+  "elevationMeters": 182.88,
+  "coords": {
+    "idKey": 503,
+    "latitude": 21.63874047946084,
+    "longitude": -158.01836505532265
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "North Shore, HI 96712",
+    "venue_id": "ven_3831735a7558334d452d37527748415174374d756779434a496843",
+    "venue_lat": 21.6803468,
+    "venue_lon": -158.0318406,
+    "venue_name": "Kaunala St"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Paalaa Uka Pupukea Rd, Haleiwa, HI 96712, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.638067,
+        "lng": -158.0184744
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.63945032989272,
+          "lng": -158.0171119201073
+        },
+        "southwest": {
+          "lat": 21.63675067010728,
+          "lng": -158.0198115798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Kaunala trail",
+    "photos": [
+      {
+        "height": 3492,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/103748808236890714885\">A Google User</a>"
+        ],
+        "photo_reference": "Aap_uEBOx-XhhjEuSuTjMY_aa0szkAa98h5QuX2gNkvST_50Byg3DCdFFqB-H0kvpq2Bb14GIu1kxQbQkVlaAnD6O82EUt7_wIj3ko4ar-x0XnVAWj5eu64IZeq7yskWROkbtYeCkuv8vSoOcRydeiMaGIc4c1wTkuHedngf5cVi02gQ9Any",
+        "width": 4656
+      }
+    ],
+    "place_id": "ChIJhwhcpEZaAHwRwV3QlpM_z9c",
+    "plus_code": {
+      "compound_code": "JXQJ+6J Haleiwa, Hawaii",
+      "global_code": "73H3JXQJ+6J"
+    },
+    "rating": 4.5,
+    "reference": "ChIJhwhcpEZaAHwRwV3QlpM_z9c",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 11
+  },
+  "googlePlaceData": {
+    "id": "ChIJhwhcpEZaAHwRwV3QlpM_z9c",
+    "name": "Kaunala trail",
+    "address": "Paalaa Uka Pupukea Rd, Haleiwa, HI 96712, USA",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.638067,
+      "lng": -158.0184744
+    },
+    "rating": 4.5,
+    "rating_n": 11
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f7"
+  },
+  "idKey": 71,
+  "name": "Kawaikoi Stream Trail",
+  "island": "KAUAI",
+  "difficulty": "EASY",
+  "lengthMiles": 1.8,
+  "lengthKm": 2.9,
+  "elevationFeet": 40,
+  "elevationMeters": 12.19,
+  "coords": {
+    "idKey": 71,
+    "latitude": 22.13085860684707,
+    "longitude": -159.6218780490396
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f8"
+  },
+  "idKey": 125,
+  "name": "Ke Ala Loa O Maui/Piilani Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.5,
+  "lengthKm": 2.41,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 445,
+    "latitude": 20.76748529333887,
+    "longitude": -155.9845733642578
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40f9"
+  },
+  "idKey": 163,
+  "name": "Kealia Access Road & Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 1600,
+  "elevationMeters": 487.68,
+  "coords": {
+    "idKey": 391,
+    "latitude": 21.57425665748225,
+    "longitude": -158.20623368024826
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": true,
+    "processed": true,
+    "venue_address": "Farrington Hwy, Waialua, HI 96791",
+    "venue_id": "ven_6b7559626b446e78546f555277484130446b31346a5f774a496843",
+    "venue_lat": 21.5774238,
+    "venue_lon": -158.2081344,
+    "venue_name": "Kealia Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Farrington Hwy, Waialua, HI 96791, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.5774238,
+        "lng": -158.2081344
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.57902247989272,
+          "lng": -158.2067914701073
+        },
+        "southwest": {
+          "lat": 21.57632282010728,
+          "lng": -158.2094911298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Kealia Trail",
+    "photos": [
+      {
+        "height": 1512,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/111119174299157705103\">A Google User</a>"
+        ],
+        "photo_reference": "Aap_uEBIFHZZttw4lz_0rrLPxzdZzTZbBxKRDGBrKynMu-l8XBicOR5rriziAeW-pMh3D2XdlK5nkGqJT-Qa6qyjHElnXSNgnU0aT-nOajtbBtZPATmZgmA2dTTjuC1sUOhFvqXj8RJ2G1NxwsihGjayaYIz-ZjmbRNpIR3tCVvBGhy7SADW",
+        "width": 2016
+      }
+    ],
+    "place_id": "ChIJw_j41kD0AHwRUoTxnDkbYuk",
+    "plus_code": {
+      "compound_code": "HQGR+XP Waialua, Hawaii",
+      "global_code": "73H3HQGR+XP"
+    },
+    "rating": 4.7,
+    "reference": "ChIJw_j41kD0AHwRUoTxnDkbYuk",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 146
+  },
+  "googlePlaceData": {
+    "id": "ChIJw_j41kD0AHwRUoTxnDkbYuk",
+    "name": "Kealia Trail",
+    "address": "Farrington Hwy, Waialua, HI 96791, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.5774238,
+      "lng": -158.2081344
+    },
+    "rating": 4.7,
+    "rating_n": 146,
+    "international_phone_number": "+1 808-637-4558",
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          13,
+          25,
+          36,
+          45,
+          50,
+          52,
+          50,
+          43,
+          31,
+          22,
+          13,
+          6,
+          0,
+          0,
+          2,
+          2,
+          0
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          6,
+          20,
+          34,
+          38,
+          27,
+          13,
+          11,
+          25,
+          40,
+          43,
+          27,
+          11,
+          2,
+          2,
+          9,
+          11,
+          0,
+          2
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          6,
+          18,
+          22,
+          15,
+          13,
+          20,
+          34,
+          45,
+          52,
+          47,
+          40,
+          40,
+          45,
+          38,
+          18,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          6,
+          20,
+          38,
+          45,
+          36,
+          56,
+          68,
+          31,
+          31,
+          34,
+          34,
+          34,
+          29,
+          25,
+          18,
+          13,
+          0,
+          4,
+          2
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          2,
+          0,
+          0,
+          0,
+          2,
+          11,
+          27,
+          27,
+          29,
+          45,
+          56,
+          59,
+          50,
+          38,
+          29,
+          25,
+          22,
+          20,
+          18,
+          11,
+          6,
+          4,
+          2,
+          0
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          13,
+          31,
+          56,
+          81,
+          93,
+          90,
+          86,
+          95,
+          93,
+          61,
+          27,
+          13,
+          11,
+          9,
+          6,
+          6,
+          4
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          2,
+          0,
+          0,
+          2,
+          4,
+          9,
+          15,
+          25,
+          36,
+          52,
+          70,
+          88,
+          100,
+          100,
+          88,
+          65,
+          40,
+          22,
+          11,
+          6,
+          4,
+          2,
+          2
+        ]
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40fa"
+  },
+  "idKey": 155,
+  "name": "Keanae Arboretum Walk",
+  "island": "MAUI",
+  "difficulty": "EASY",
+  "lengthMiles": 0.6,
+  "lengthKm": 0.97,
+  "elevationFeet": 40,
+  "elevationMeters": 12.19,
+  "coords": {
+    "idKey": 377,
+    "latitude": 20.85720015490232,
+    "longitude": -156.14899076521397
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40fb"
+  },
+  "idKey": 79,
+  "name": "Koaie Canyon Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 3,
+  "lengthKm": 4.83,
+  "elevationFeet": 720,
+  "elevationMeters": 219.46,
+  "coords": {
+    "idKey": 523,
+    "latitude": 22.0692949899945,
+    "longitude": -159.64520931243896
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40fc"
+  },
+  "idKey": 75,
+  "name": "Kohua Ridge Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 167,
+  "elevationMeters": 50.9,
+  "coords": {
+    "idKey": 75,
+    "latitude": 22.0953549834188,
+    "longitude": -159.6333465094766
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40fd"
+  },
+  "idKey": 221,
+  "name": "Kolowalu Trail (Manoa)",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1,
+  "lengthKm": 1.61,
+  "elevationFeet": 1100,
+  "elevationMeters": 335.28,
+  "coords": {
+    "idKey": 563,
+    "latitude": 21.32173506031343,
+    "longitude": -157.79836356639862
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_6f3156576d3952786b757652774841734a4f54553466304a496843",
+    "venue_lat": 21.3217154,
+    "venue_lon": -157.7928767,
+    "venue_name": "Kolowalu Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Kolowalu Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3217154,
+        "lng": -157.7928767
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32306522989272,
+          "lng": -157.7915268701072
+        },
+        "southwest": {
+          "lat": 21.32036557010727,
+          "lng": -157.7942265298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Kolowalu Trail",
+    "place_id": "EiFLb2xvd2FsdSBUcmFpbCwgSG9ub2x1bHUsIEhJLCBVU0EiLiosChQKEgnR_hRM4mwAfBG-6TFH2ZZXWhIUChIJo3uWrf9sAHwRHZjxloInK4c",
+    "rating": 0,
+    "reference": "EiFLb2xvd2FsdSBUcmFpbCwgSG9ub2x1bHUsIEhJLCBVU0EiLiosChQKEgnR_hRM4mwAfBG-6TFH2ZZXWhIUChIJo3uWrf9sAHwRHZjxloInK4c",
+    "types": [
+      "route"
+    ],
+    "user_ratings_total": 0
+  },
+  "googlePlaceData": {
+    "id": "EiFLb2xvd2FsdSBUcmFpbCwgSG9ub2x1bHUsIEhJLCBVU0EiLiosChQKEgnR_hRM4mwAfBG-6TFH2ZZXWhIUChIJo3uWrf9sAHwRHZjxloInK4c",
+    "name": "Kolowalu Trail",
+    "address": "Kolowalu Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3217154,
+      "lng": -157.7928767
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40fe"
+  },
+  "idKey": 101,
+  "name": "Kuamoo Trail",
+  "island": "KAUAI",
+  "difficulty": "EASY",
+  "lengthMiles": 2,
+  "lengthKm": 3.22,
+  "elevationFeet": 320,
+  "elevationMeters": 97.54,
+  "coords": {
+    "idKey": 415,
+    "latitude": 22.0514565970369,
+    "longitude": -159.3675148487091
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde40ff"
+  },
+  "idKey": 169,
+  "name": "Kuaokala Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 403,
+    "latitude": 21.563426633381,
+    "longitude": -158.2376155257225
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "North Shore, Waialua, HI 96791",
+    "venue_id": "ven_635359345f53734f48676452774841305f336b307a53704a496843",
+    "venue_lat": 21.5634821,
+    "venue_lon": -158.2374279,
+    "venue_name": "Kuaokala Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Na Ala Hele: Aihualama Trail, Honolulu, HI 96822, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3413975,
+        "lng": -157.7996972
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34274732989272,
+          "lng": -157.7983473701073
+        },
+        "southwest": {
+          "lat": 21.34004767010727,
+          "lng": -157.8010470298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Aihualama Trail",
+    "photos": [
+      {
+        "height": 3456,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/112640143080486264186\">bryan gardea</a>"
+        ],
+        "photo_reference": "Aap_uECscPxXwJm0jDaD1EBfyYSRjcxF8diAmmLk-il5k4BXMIsZ0BUgOpoDnyz4-excPiDGzd-HhdV2IdSZbrpOAan3BXY29-B_W4wA4tuimGVwzUfNhiKdITThms92pNG6AmkfwGgIrvSycnFiRGlkDBOdNjVLerP0v4DDGyBMcxPU_0aW",
+        "width": 4608
+      }
+    ],
+    "place_id": "ChIJoWTA-vJsAHwRcb54qNu-srk",
+    "plus_code": {
+      "compound_code": "86R2+H4 Honolulu, Hawaii",
+      "global_code": "73H486R2+H4"
+    },
+    "rating": 4.7,
+    "reference": "ChIJoWTA-vJsAHwRcb54qNu-srk",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 188
+  },
+  "googlePlaceData": {
+    "id": "ChIJoWTA-vJsAHwRcb54qNu-srk",
+    "name": "Aihualama Trail",
+    "address": "Na Ala Hele: Aihualama Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.3413975,
+      "lng": -157.7996972
+    },
+    "rating": 4.7,
+    "rating_n": 188,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          12,
+          34,
+          68,
+          97,
+          100,
+          73,
+          43,
+          34,
+          36,
+          36,
+          26,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          19,
+          48,
+          80,
+          90,
+          70,
+          56,
+          68,
+          85,
+          75,
+          41,
+          14,
+          2,
+          0,
+          0,
+          0,
+          0,
+          2
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          2,
+          2,
+          2,
+          0,
+          0,
+          0,
+          7,
+          21,
+          46,
+          73,
+          92,
+          90,
+          68,
+          51,
+          46,
+          51,
+          43,
+          26,
+          12,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          7,
+          24,
+          53,
+          78,
+          78,
+          68,
+          82,
+          73,
+          26,
+          19,
+          26,
+          14,
+          2,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          26,
+          82,
+          90,
+          75,
+          70,
+          43,
+          26,
+          34,
+          41,
+          36,
+          19,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          7,
+          21,
+          48,
+          70,
+          73,
+          65,
+          63,
+          68,
+          63,
+          46,
+          24,
+          9,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          4,
+          29,
+          68,
+          82,
+          60,
+          51,
+          46,
+          31,
+          26,
+          51,
+          56,
+          24,
+          4,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4100"
+  },
+  "idKey": 91,
+  "name": "Kuilau Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2.1,
+  "lengthKm": 3.38,
+  "elevationFeet": 640,
+  "elevationMeters": 195.07,
+  "coords": {
+    "idKey": 91,
+    "latitude": 22.07132309481509,
+    "longitude": -159.4163556055547
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4101"
+  },
+  "idKey": 83,
+  "name": "Kukui Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 2240,
+  "elevationMeters": 682.75,
+  "coords": {
+    "idKey": 423,
+    "latitude": 22.05149388699473,
+    "longitude": -159.65992122888565
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4102"
+  },
+  "idKey": 191,
+  "name": "Kulana‘ahane",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.75,
+  "lengthKm": 4.43,
+  "elevationFeet": 1400,
+  "elevationMeters": 426.72,
+  "coords": {
+    "idKey": 367,
+    "latitude": 21.38747902187569,
+    "longitude": -157.84937381744385
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": true,
+    "processed": true,
+    "venue_address": "1849 Ala Aolani St, Honolulu, HI 96819",
+    "venue_id": "ven_6f6b596f33344c557a423752774841755637686f7a62654a496843",
+    "venue_lat": 21.373624,
+    "venue_lon": -157.8809696,
+    "venue_name": "Moanalua Valley Trail Start (Kulana'ahane)"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "1849 Ala Aolani St, Honolulu, HI 96819, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.373624,
+        "lng": -157.8809696
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.37504187989272,
+          "lng": -157.8796761201073
+        },
+        "southwest": {
+          "lat": 21.37234222010728,
+          "lng": -157.8823757798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Moanalua Valley Trail Start (Kulana'ahane)",
+    "opening_hours": {
+      "open_now": false
+    },
+    "photos": [
+      {
+        "height": 4000,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/111638946964316699540\">小川拓郎</a>"
+        ],
+        "photo_reference": "Aap_uEBz-b5JbhG_34LOIYX7RokGUHh6qCAihJnqaFurWeTp2LfQN5ulQcs2H1YDecrwaGFv7KEhHK5jrkqp9mBXh5M1CRn-xDRa-ruHgAS-koWpGLi0glvOlE_XojtRrHJ6dtWhVvQ51F81BrARTddlkXn4d8wkjwz7xs_eGHpHvw7r0pkP",
+        "width": 6000
+      }
+    ],
+    "place_id": "ChIJebzoh7VuAHwR7BzUL43oYko",
+    "plus_code": {
+      "compound_code": "94F9+CJ Honolulu, Hawaii",
+      "global_code": "73H494F9+CJ"
+    },
+    "rating": 4.7,
+    "reference": "ChIJebzoh7VuAHwR7BzUL43oYko",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 512
+  },
+  "googlePlaceData": {
+    "id": "ChIJebzoh7VuAHwR7BzUL43oYko",
+    "name": "Moanalua Valley Trail Start (Kulana'ahane)",
+    "address": "1849 Ala Aolani St, Honolulu, HI 96819, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.373624,
+      "lng": -157.8809696
+    },
+    "rating": 4.7,
+    "rating_n": 512,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          65,
+          60,
+          53,
+          50,
+          52,
+          54,
+          56,
+          56,
+          53,
+          49,
+          43,
+          35,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          61,
+          70,
+          70,
+          63,
+          53,
+          45,
+          40,
+          37,
+          36,
+          34,
+          32,
+          28,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          59,
+          56,
+          64,
+          72,
+          66,
+          53,
+          45,
+          43,
+          42,
+          40,
+          38,
+          34,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          57,
+          55,
+          59,
+          63,
+          65,
+          63,
+          58,
+          52,
+          45,
+          38,
+          32,
+          26,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          67,
+          77,
+          74,
+          59,
+          42,
+          28,
+          26,
+          34,
+          46,
+          53,
+          48,
+          34,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          75,
+          84,
+          81,
+          80,
+          85,
+          94,
+          100,
+          99,
+          92,
+          80,
+          68,
+          56,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          60,
+          71,
+          77,
+          81,
+          84,
+          87,
+          90,
+          91,
+          87,
+          76,
+          61,
+          43,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ],
+    "time_spent": [
+      45,
+      45
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4103"
+  },
+  "idKey": 299,
+  "name": "Kūlanihāko‘i Mountain Bike Park",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 9,
+  "lengthKm": 14.48,
+  "elevationFeet": 216,
+  "elevationMeters": 65.84,
+  "coords": {
+    "idKey": 627,
+    "latitude": 19.63155667487978,
+    "longitude": -155.08277142731316
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4104"
+  },
+  "idKey": 205,
+  "name": "Kuli‘ou‘ou Ridge Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 2000,
+  "elevationMeters": 609.6,
+  "coords": {
+    "idKey": 559,
+    "latitude": 21.30597291415756,
+    "longitude": -157.72464036941528
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_593379446f71444b573178527748415359566a2d6564774a496843",
+    "venue_lat": 21.3133566,
+    "venue_lon": -157.722038,
+    "venue_name": "Hahaione St"
+  },
+  "googlePlace": {
+    "formatted_address": "Hahaione St, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3133566,
+        "lng": -157.722038
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.31470642989273,
+          "lng": -157.7206881701073
+        },
+        "southwest": {
+          "lat": 21.31200677010728,
+          "lng": -157.7233878298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Hahaione St",
+    "place_id": "ChIJdXYE8QQTAHwRUbEas4m515E",
+    "rating": 0,
+    "reference": "ChIJdXYE8QQTAHwRUbEas4m515E",
+    "types": [
+      "route"
+    ],
+    "user_ratings_total": 0
+  },
+  "googlePlaceData": {
+    "id": "ChIJdXYE8QQTAHwRUbEas4m515E",
+    "name": "Hahaione Street",
+    "address": "Hahaione St, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3133566,
+      "lng": -157.722038
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4105"
+  },
+  "idKey": 203,
+  "name": "Kuli‘ou‘ou Valley Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1.5,
+  "lengthKm": 2.41,
+  "elevationFeet": 300,
+  "elevationMeters": 91.44,
+  "coords": {
+    "idKey": 499,
+    "latitude": 21.30334156044833,
+    "longitude": -157.72424340248108
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96821",
+    "venue_id": "ven_41464d6270414b6a35366b5277484153777632364836704a496843",
+    "venue_lat": 21.3073112,
+    "venue_lon": -157.7252782,
+    "venue_name": "Kuli'ou'ou Valley Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Kuli'ou'ou Valley Trail, Honolulu, HI 96821, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3073112,
+        "lng": -157.7252782
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.30866102989272,
+          "lng": -157.7239283701072
+        },
+        "southwest": {
+          "lat": 21.30596137010728,
+          "lng": -157.7266280298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Kuli'ou'ou Valley Trail",
+    "place_id": "ChIJp6H62vwSAHwRk65jKApbMFA",
+    "reference": "ChIJp6H62vwSAHwRk65jKApbMFA",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJp6H62vwSAHwRk65jKApbMFA",
+    "name": "Kuli'ou'ou Valley Trail",
+    "address": "Kuli'ou'ou Valley Trail, Honolulu, HI 96821, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3073112,
+      "lng": -157.7252782
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4106"
+  },
+  "idKey": 113,
+  "name": "Lahaina Pali Trail",
+  "island": "MAUI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 5.5,
+  "lengthKm": 8.85,
+  "elevationFeet": 1600,
+  "elevationMeters": 487.68,
+  "coords": {
+    "idKey": 447,
+    "latitude": 20.79170000104186,
+    "longitude": -156.56402438879013
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4107"
+  },
+  "idKey": 53,
+  "name": "Lapa Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 3.5,
+  "lengthKm": 5.63,
+  "elevationFeet": 320,
+  "elevationMeters": 97.54,
+  "coords": {
+    "idKey": 53,
+    "latitude": 22.08048384128073,
+    "longitude": -159.694360464267
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4108"
+  },
+  "idKey": 265,
+  "name": "Lower Waimano Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 539,
+    "latitude": 21.42364833925742,
+    "longitude": -157.93915271759033
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "O‘ahu Hawaii, USA, Pearl City, HI 96782",
+    "venue_id": "ven_6777796e2d4a7567754664527748416f353133576f556a4a496843",
+    "venue_lat": 21.4329898,
+    "venue_lon": -157.921768,
+    "venue_name": "Waimano Falls"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "2430-2898 Waimano Home Rd, Pearl City, HI 96782, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.4169893,
+        "lng": -157.9509876
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.41832222989272,
+          "lng": -157.9496193701073
+        },
+        "southwest": {
+          "lat": 21.41562257010727,
+          "lng": -157.9523190298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Waimano Valley / Ridge Trail Head",
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/115175632941216911586\">Alexander Lee</a>"
+        ],
+        "photo_reference": "Aap_uECF8KV-UieXn0MROR0SxHUDvpfqDUXYLy0ncQJvOv3YNWpliAyWwesqEEioXq9Ednh_qC3MyrcA3JbgIfRHwfTy56OSA2HJV6LHYr1xVAgzgHbPMR1gboDpW90aSJ3eU5gGFI5gPUgFanvq9jjFxhsmML-OqoFwPYXADjt21oVPyRzh",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJ1zXflZ1oAHwRCvpyfwysE0Q",
+    "plus_code": {
+      "compound_code": "C28X+QJ Pearl City, Hawaii",
+      "global_code": "73H4C28X+QJ"
+    },
+    "rating": 4.6,
+    "reference": "ChIJ1zXflZ1oAHwRCvpyfwysE0Q",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 93
+  },
+  "googlePlaceData": {
+    "id": "ChIJ1zXflZ1oAHwRCvpyfwysE0Q",
+    "name": "Waimano Valley / Ridge Trail Head",
+    "address": "2430-2898 Waimano Home Rd, Pearl City, HI 96782, USA",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.4169893,
+      "lng": -157.9509876
+    },
+    "rating": 4.6,
+    "rating_n": 93,
+    "current_popularity": 22,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          3,
+          6,
+          9,
+          12,
+          13,
+          12,
+          11,
+          9,
+          89,
+          26,
+          5,
+          4,
+          3,
+          2,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          3,
+          5,
+          7,
+          9,
+          15,
+          53,
+          58,
+          17,
+          10,
+          8,
+          5,
+          3,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          9,
+          10,
+          8,
+          7,
+          6,
+          8,
+          30,
+          100,
+          30,
+          9,
+          8,
+          6,
+          4,
+          3,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          2,
+          5,
+          7,
+          9,
+          9,
+          8,
+          10,
+          55,
+          92,
+          23,
+          11,
+          10,
+          8,
+          5,
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          2,
+          2,
+          3,
+          6,
+          12,
+          17,
+          15,
+          9,
+          5,
+          33,
+          93,
+          23,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          2,
+          2,
+          2,
+          2,
+          1,
+          3,
+          6,
+          11,
+          15,
+          18,
+          18,
+          16,
+          14,
+          13,
+          13,
+          12,
+          10,
+          7,
+          4,
+          2,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          3,
+          9,
+          17,
+          20,
+          20,
+          18,
+          17,
+          16,
+          14,
+          11,
+          8,
+          5,
+          2,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4109"
+  },
+  "idKey": 143,
+  "name": "Lower Waiohuli Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.4,
+  "lengthKm": 2.25,
+  "elevationFeet": 800,
+  "elevationMeters": 243.84,
+  "coords": {
+    "idKey": 491,
+    "latitude": 20.69191228206916,
+    "longitude": -156.31549894809723
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde410a"
+  },
+  "idKey": 183,
+  "name": "Ma‘akua Ridge - Papali Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 800,
+  "elevationMeters": 243.84,
+  "coords": {
+    "idKey": 353,
+    "latitude": 21.60581731566603,
+    "longitude": -157.91696950793266
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "54-55 Maakua Rd, Laie, HI 96762 Maakua Rd, Laie, HI 96762",
+    "venue_id": "ven_41454455646850505750615277484145316656394b64494a496843",
+    "venue_lat": 21.6078275,
+    "venue_lon": -157.9163397,
+    "venue_name": "Ma'akua Ridge Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "54-55 Maakua Rd, Laie, HI 96762 Maakua Rd, Laie, HI 96762, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.6078275,
+        "lng": -157.9163397
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.60956417989272,
+          "lng": -157.9147702701073
+        },
+        "southwest": {
+          "lat": 21.60686452010728,
+          "lng": -157.9174699298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Ma'akua Ridge Trail",
+    "photos": [
+      {
+        "height": 3120,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107847997448579565809\">A Google User</a>"
+        ],
+        "photo_reference": "Aap_uEAcvTFi-evUgZH--8Ry47FZfoe3MiNEI92Ip059kLNYmEHCpYrIOrHEIEEdxC9Q2fhzQ8aSr-C9r0xMBVaEJgZhiVIZhDuJi6C6I-dMzxRWABbOxw7peO3dH3DewZSF30TqetwkULhcKzncXElkw2Iu65QOXMqsJRGHWTFdOa_dzrNa",
+        "width": 4160
+      }
+    ],
+    "place_id": "ChIJIdK9Vf1EAHwRaPWPPhdUDEA",
+    "plus_code": {
+      "compound_code": "J35M+4F Laie, Hawaii",
+      "global_code": "73H4J35M+4F"
+    },
+    "rating": 4.6,
+    "reference": "ChIJIdK9Vf1EAHwRaPWPPhdUDEA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 14
+  },
+  "googlePlaceData": {
+    "id": "ChIJIdK9Vf1EAHwRaPWPPhdUDEA",
+    "name": "Ma'akua Ridge Trail",
+    "address": "54-55 Maakua Rd, Laie, HI 96762 Maakua Rd, Laie, HI 96762, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.6078275,
+      "lng": -157.9163397
+    },
+    "rating": 4.6,
+    "rating_n": 14
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde410b"
+  },
+  "idKey": 43,
+  "name": "Makaha Arboretum Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 1,
+  "lengthKm": 1.61,
+  "elevationFeet": 226,
+  "elevationMeters": 68.88,
+  "coords": {
+    "idKey": 43,
+    "latitude": 22.12206463733661,
+    "longitude": -159.7117496904857
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde410c"
+  },
+  "idKey": 59,
+  "name": "Makaha Road",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 1340,
+  "elevationMeters": 408.43,
+  "coords": {
+    "idKey": 299,
+    "latitude": 22.11296667356812,
+    "longitude": -159.6708270907402
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde410d"
+  },
+  "idKey": 302,
+  "name": "Makāula-‘O‘oma Trails",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 4.3,
+  "lengthKm": 6.92,
+  "elevationFeet": 673,
+  "elevationMeters": 205.13,
+  "coords": {
+    "idKey": 622,
+    "latitude": 19.71824126826286,
+    "longitude": -155.94867084492114
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde410e"
+  },
+  "idKey": 207,
+  "name": "Makiki Valley Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1.1,
+  "lengthKm": 1.77,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 567,
+    "latitude": 21.32581774996111,
+    "longitude": -157.82501935958862
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_6b32525341386f6c7a4b5a52774841744a4c6d626163514a496843",
+    "venue_lat": 21.322921,
+    "venue_lon": -157.8218737,
+    "venue_name": "Na Ala Hele: Makiki Valley Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Makiki Valley Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.322921,
+        "lng": -157.8218737
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32427082989272,
+          "lng": -157.8205238701073
+        },
+        "southwest": {
+          "lat": 21.32157117010727,
+          "lng": -157.8232235298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Makiki Valley Trail",
+    "place_id": "ChIJQcabmLJtAHwRZKzlo8ASR2k",
+    "reference": "ChIJQcabmLJtAHwRZKzlo8ASR2k",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJQcabmLJtAHwRZKzlo8ASR2k",
+    "name": "Na Ala Hele: Makiki Valley Trail",
+    "address": "Na Ala Hele: Makiki Valley Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.322921,
+      "lng": -157.8218737
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde410f"
+  },
+  "idKey": 151,
+  "name": "Mamane Trail",
+  "island": "MAUI",
+  "difficulty": "EASY",
+  "lengthMiles": 1.8,
+  "lengthKm": 2.9,
+  "elevationFeet": 520,
+  "elevationMeters": 158.5,
+  "coords": {
+    "idKey": 453,
+    "latitude": 20.69093745853739,
+    "longitude": -156.31138175725937
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4110"
+  },
+  "idKey": 185,
+  "name": "Manana Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 6,
+  "lengthKm": 9.66,
+  "elevationFeet": 1700,
+  "elevationMeters": 518.16,
+  "coords": {
+    "idKey": 527,
+    "latitude": 21.43173801330597,
+    "longitude": -157.93275833129883
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Hawaii 96782",
+    "venue_id": "ven_516b6942506370335a4848527748416f46326e4e5961594a496843",
+    "venue_lat": 21.443734,
+    "venue_lon": -157.9071673,
+    "venue_name": "Manana Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Manana Trail, Hawaii 96782, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.443734,
+        "lng": -157.9071673
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.44508382989272,
+          "lng": -157.9058174701073
+        },
+        "southwest": {
+          "lat": 21.44238417010728,
+          "lng": -157.9085171298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Manana Trail",
+    "place_id": "ChIJYaYNn2FoAHwRHHZ3pcPBikQ",
+    "reference": "ChIJYaYNn2FoAHwRHHZ3pcPBikQ",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJYaYNn2FoAHwRHHZ3pcPBikQ",
+    "name": "Manana Trail",
+    "address": "Manana Trail, Hawaii 96782, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.443734,
+      "lng": -157.9071673
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4111"
+  },
+  "idKey": 223,
+  "name": "Manoa Cliff Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.3,
+  "lengthKm": 3.7,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 301,
+    "latitude": 21.32625249724769,
+    "longitude": -157.8126060962677
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_6377357a596e49357346455277484173643178644f30664a496843",
+    "venue_lat": 21.3317288,
+    "venue_lon": -157.810437,
+    "venue_name": "Na Ala Hele: Manoa Cliff Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Manoa Cliff Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3317288,
+        "lng": -157.810437
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.33307862989273,
+          "lng": -157.8090871701072
+        },
+        "southwest": {
+          "lat": 21.33037897010728,
+          "lng": -157.8117868298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Manoa Cliff Trail",
+    "place_id": "ChIJf0Odx1dsAHwREFs5InYz5wc",
+    "reference": "ChIJf0Odx1dsAHwREFs5InYz5wc",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJf0Odx1dsAHwREFs5InYz5wc",
+    "name": "Na Ala Hele: Manoa Cliff Trail",
+    "address": "Na Ala Hele: Manoa Cliff Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3317288,
+      "lng": -157.810437
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4112"
+  },
+  "idKey": 225,
+  "name": "Manoa Falls Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.8,
+  "lengthKm": 1.29,
+  "elevationFeet": 800,
+  "elevationMeters": 243.84,
+  "coords": {
+    "idKey": 309,
+    "latitude": 21.33312333217694,
+    "longitude": -157.80072927474976
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_455f6a7336794355696e3552774841734a504b7a6255764a496843",
+    "venue_lat": 21.3359812,
+    "venue_lon": -157.7998863,
+    "venue_name": "Na Ala Hele: Manoa Falls Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Manoa Falls Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3359812,
+        "lng": -157.7998863
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.33733102989272,
+          "lng": -157.7985364701073
+        },
+        "southwest": {
+          "lat": 21.33463137010728,
+          "lng": -157.8012361298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Manoa Falls Trail",
+    "place_id": "ChIJvUbzKPJsAHwR5niUCy6sj_E",
+    "reference": "ChIJvUbzKPJsAHwR5niUCy6sj_E",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJvUbzKPJsAHwR5niUCy6sj_E",
+    "name": "Na Ala Hele: Manoa Falls Trail",
+    "address": "Na Ala Hele: Manoa Falls Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3359812,
+      "lng": -157.7998863
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4113"
+  },
+  "idKey": 275,
+  "name": "Manukā Nature Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 2.1,
+  "lengthKm": 3.38,
+  "elevationFeet": 400,
+  "elevationMeters": 121.92,
+  "coords": {
+    "idKey": 569,
+    "latitude": 19.109139,
+    "longitude": -155.82502085362174
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4114"
+  },
+  "idKey": 137,
+  "name": "Maui Motocross Track",
+  "island": "MAUI",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 483,
+    "latitude": 20.81449177951145,
+    "longitude": -156.45604133605957
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4115"
+  },
+  "idKey": 13,
+  "name": "Mauna Kea Access Road (R-1)",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 32,
+  "lengthKm": 51.5,
+  "elevationFeet": 2750,
+  "elevationMeters": 838.2,
+  "coords": {
+    "idKey": 467,
+    "latitude": 19.75678074467534,
+    "longitude": -155.45632034540176
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4116"
+  },
+  "idKey": 19,
+  "name": "Mauna Loa Observatory Road",
+  "island": "HAWAII",
+  "difficulty": "EASY",
+  "lengthMiles": 17.5,
+  "lengthKm": 28.16,
+  "elevationFeet": 4440,
+  "elevationMeters": 1353.31,
+  "coords": {
+    "idKey": 581,
+    "latitude": 19.53819436499987,
+    "longitude": -155.57507514953613
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4117"
+  },
+  "idKey": 159,
+  "name": "Maunahui Road (Molokai Forest Reserve Road)",
+  "island": "MOLOKAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 9.8,
+  "lengthKm": 15.77,
+  "elevationFeet": 3250,
+  "elevationMeters": 990.6,
+  "coords": {
+    "idKey": 255,
+    "latitude": 21.1296608170219,
+    "longitude": -156.92081451416016
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4118"
+  },
+  "idKey": 227,
+  "name": "Maunalaha Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.7,
+  "lengthKm": 1.13,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 630,
+    "latitude": 21.31421307664687,
+    "longitude": -157.82910088150734
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_6b626c686b675136364c4b5277484174467268536258554a496843",
+    "venue_lat": 21.3182877,
+    "venue_lon": -157.8236219,
+    "venue_name": "Na Ala Hele: Maunalaha Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Maunalaha Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3182877,
+        "lng": -157.8236219
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.31963752989272,
+          "lng": -157.8222720701073
+        },
+        "southwest": {
+          "lat": 21.31693787010728,
+          "lng": -157.8249717298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Maunalaha Trail",
+    "place_id": "ChIJUXbShrFtAHwRKL66Qgkhlbk",
+    "reference": "ChIJUXbShrFtAHwRKL66Qgkhlbk",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJUXbShrFtAHwRKL66Qgkhlbk",
+    "name": "Na Ala Hele: Maunalaha Trail",
+    "address": "Na Ala Hele: Maunalaha Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3182877,
+      "lng": -157.8236219
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4119"
+  },
+  "idKey": 209,
+  "name": "Maunawili Ditch Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.75,
+  "lengthKm": 4.43,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 543,
+    "latitude": 21.34933223038387,
+    "longitude": -157.733952999115
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Waikupanaha St, Waimanalo, HI 96795",
+    "venue_id": "ven_3075797a5859384459535252774841544d3038784238584a496843",
+    "venue_lat": 21.3426834,
+    "venue_lon": -157.7432791,
+    "venue_name": "Maunawili Ditch Trailhead"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Waikupanaha St, Waimanalo, HI 96795, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3426834,
+        "lng": -157.7432791
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34388662989272,
+          "lng": -157.7418659201072
+        },
+        "southwest": {
+          "lat": 21.34118697010727,
+          "lng": -157.7445655798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Maunawili Ditch Trailhead",
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107838926667657617709\">James Ramsay</a>"
+        ],
+        "photo_reference": "Aap_uEBno_MUUQKY6hBn1ofEbZWfqWfxtRVtMAw1PWhKAIy8-xtjf86990XSYEyvwNl_eTn6LI-bM1AntkI8I1j9FHIh_qfMqYTqmXxaSXz75u5jk11jUqvfyrx9NrfqiYYNdJJOplIIP0ZIof1v8J401DD_AWLvu9EhTumY1Ce1YYlkNCq-",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJX8Bx80MTAHwRRSYD8YXzyu0",
+    "plus_code": {
+      "compound_code": "87V4+3M Waimanalo, Hawaii",
+      "global_code": "73H487V4+3M"
+    },
+    "rating": 4.6,
+    "reference": "ChIJX8Bx80MTAHwRRSYD8YXzyu0",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 16
+  },
+  "googlePlaceData": {
+    "id": "ChIJX8Bx80MTAHwRRSYD8YXzyu0",
+    "name": "Maunawili Ditch Trailhead",
+    "address": "Waikupanaha St, Waimanalo, HI 96795, USA",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.34268339999999,
+      "lng": -157.7432791
+    },
+    "rating": 4.6,
+    "rating_n": 16
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde411a"
+  },
+  "idKey": 269,
+  "name": "Maunawili Falls Connector Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 551,
+    "latitude": 21.34924729323247,
+    "longitude": -157.7823293209076
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Kailua, HI 96734",
+    "venue_id": "ven_594173526c652d496b50655277484173703637343463674a496843",
+    "venue_lat": 21.3489562,
+    "venue_lon": -157.7723691,
+    "venue_name": "Maunawili Falls"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Kailua, HI 96734, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3489562,
+        "lng": -157.7723691
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.3641788,
+          "lng": -157.75919055
+        },
+        "southwest": {
+          "lat": 21.343882,
+          "lng": -157.77676195
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Maunawili Falls",
+    "photos": [
+      {
+        "height": 2772,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/111185628521364195647\">Jim Clinton</a>"
+        ],
+        "photo_reference": "Aap_uEBJ21k5iH8LCq3MfAv7pbeegA_LpzANDSzAH29tD8WTw4HpE7DdXR2xZTw9QtqQ93Ja8_inYnDRCOef9wTdhi-TreX_WPGMZr4LyUFXdOdcLh4qdoPMt5M5UnGqhg5hXkUJj2ko06FBrTqP1Ql5Z82zIuk7Me7K8qWLetrDFUEKSrAb",
+        "width": 2772
+      }
+    ],
+    "place_id": "ChIJ06IU76psAHwRAf0PREH7zYA",
+    "plus_code": {
+      "compound_code": "86XH+H3 Kailua, Hawaii",
+      "global_code": "73H486XH+H3"
+    },
+    "rating": 4.6,
+    "reference": "ChIJ06IU76psAHwRAf0PREH7zYA",
+    "types": [
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 227
+  },
+  "googlePlaceData": {
+    "id": "ChIJ06IU76psAHwRAf0PREH7zYA",
+    "name": "Maunawili Falls",
+    "address": "Kailua, HI 96734, USA",
+    "types": [
+      "tourist_attraction",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.3489562,
+      "lng": -157.7723691
+    },
+    "rating": 4.6
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde411b"
+  },
+  "idKey": 271,
+  "name": "Maunawili Falls Trail - Portion of trail on State land is open.",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 631,
+    "latitude": 21.35054743953904,
+    "longitude": -157.7729965372705
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Hawaii 96734",
+    "venue_id": "ven_594173526c652d496b50655277484173703637343463674a496843",
+    "venue_lat": 21.3489433,
+    "venue_lon": -157.7722308,
+    "venue_name": "Maunawili Falls"
+  },
+  "googlePlace": {
+    "business_status": "CLOSED_TEMPORARILY",
+    "formatted_address": "1201-1209 Kelewina St, Kailua, HI 96734, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3591237,
+        "lng": -157.7635304
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.36043452989272,
+          "lng": -157.7622150201072
+        },
+        "southwest": {
+          "lat": 21.35773487010728,
+          "lng": -157.7649146798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Maunawili Falls Trailhead",
+    "photos": [
+      {
+        "height": 4032,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/110831501443813294693\">Brittany Lewis</a>"
+        ],
+        "photo_reference": "Aap_uECdMrwsk5LW-qShXNJLiJUdInjcN5K9WrtIVQW168NLSI9UExRjgb3CZcmdtb7A3GK7IX5yansUICZaspTIb6mAaSksbyB8rWxbbfRjALKKPvW95HdQqFzSnJ7RhbeUsww-KR_w5LublrEsjUQgGzs5Pg9KOs3wovaP4lBdBxq1W0Rf",
+        "width": 3024
+      }
+    ],
+    "place_id": "ChIJ_WBs76psAHwRCUicig7XOVQ",
+    "plus_code": {
+      "compound_code": "965P+JH Kailua, Hawaii",
+      "global_code": "73H4965P+JH"
+    },
+    "rating": 4.6,
+    "reference": "ChIJ_WBs76psAHwRCUicig7XOVQ",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 387
+  },
+  "googlePlaceData": {
+    "id": "ChIJ_WBs76psAHwRCUicig7XOVQ",
+    "name": "Maunawili Falls Trailhead",
+    "address": "1201-1209 Kelewina St, Kailua, HI 96734, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.3591237,
+      "lng": -157.7635304
+    },
+    "rating": 4.6
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde411c"
+  },
+  "idKey": 193,
+  "name": "Maunawili Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 10,
+  "lengthKm": 16.09,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 632,
+    "latitude": 21.36339114863299,
+    "longitude": -157.7812671661377
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Hawaii 96734",
+    "venue_id": "ven_594173526c652d496b50655277484173703637343463674a496843",
+    "venue_lat": 21.3489433,
+    "venue_lon": -157.7722308,
+    "venue_name": "Maunawili Falls"
+  },
+  "googlePlace": {
+    "business_status": "CLOSED_TEMPORARILY",
+    "formatted_address": "1201-1209 Kelewina St, Kailua, HI 96734, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3591237,
+        "lng": -157.7635304
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.36043452989272,
+          "lng": -157.7622150201072
+        },
+        "southwest": {
+          "lat": 21.35773487010728,
+          "lng": -157.7649146798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Maunawili Falls Trailhead",
+    "photos": [
+      {
+        "height": 4032,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/110831501443813294693\">Brittany Lewis</a>"
+        ],
+        "photo_reference": "Aap_uECU9-GF5F3NzrK2RsjZhynjMB453OsPEOLYXv4S0F-9FGZj4_5nVRPakY-lhwRaS-gTWDyesrTi-JNAFgwBaZNDlWqsA9A0-CsOrGhlDQ-PzEVJe3gLML5-U9r-7Nt9n2TOZXHoxE2xr4ql8ukogEa1oROwALqkHoyc4W1WgbUsG6oN",
+        "width": 3024
+      }
+    ],
+    "place_id": "ChIJ_WBs76psAHwRCUicig7XOVQ",
+    "plus_code": {
+      "compound_code": "965P+JH Kailua, Hawaii",
+      "global_code": "73H4965P+JH"
+    },
+    "rating": 4.6,
+    "reference": "ChIJ_WBs76psAHwRCUicig7XOVQ",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 387
+  },
+  "googlePlaceData": {
+    "id": "ChIJ_WBs76psAHwRCUicig7XOVQ",
+    "name": "Maunawili Falls Trailhead",
+    "address": "1201-1209 Kelewina St, Kailua, HI 96734, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.3591237,
+      "lng": -157.7635304
+    },
+    "rating": 4.6
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde411d"
+  },
+  "idKey": 197,
+  "name": "Maunawili-Waimanalo Road",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1,
+  "lengthKm": 1.61,
+  "elevationFeet": 400,
+  "elevationMeters": 121.92,
+  "coords": {
+    "idKey": 541,
+    "latitude": 21.34259706114628,
+    "longitude": -157.74277210235596
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Waikupanaha St, Waimanalo, HI 96795",
+    "venue_id": "ven_3075797a5859384459535252774841544d3038784238584a496843",
+    "venue_lat": 21.3426834,
+    "venue_lon": -157.7432791,
+    "venue_name": "Maunawili Ditch Trailhead"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Waikupanaha St, Waimanalo, HI 96795, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3426834,
+        "lng": -157.7432791
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34388662989272,
+          "lng": -157.7418659201072
+        },
+        "southwest": {
+          "lat": 21.34118697010727,
+          "lng": -157.7445655798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Maunawili Ditch Trailhead",
+    "photos": [
+      {
+        "height": 3024,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107838926667657617709\">James Ramsay</a>"
+        ],
+        "photo_reference": "Aap_uECVsgHzIYQN7V3ExLPXm9hGWWQVKQ8j6e7IGyoHEMdQ-Hv9AGIrPXudzDbF6hVSlVhzDTR_oMjsIL3lasucHggPRT8P9ivrXU53cC2cAAMkA29PEPq88IBlUmr-0c-nDWr8f662iW-nyuf84jgotSdrd_6xaF5gHoOnlVIp8D63OY4U",
+        "width": 4032
+      }
+    ],
+    "place_id": "ChIJX8Bx80MTAHwRRSYD8YXzyu0",
+    "plus_code": {
+      "compound_code": "87V4+3M Waimanalo, Hawaii",
+      "global_code": "73H487V4+3M"
+    },
+    "rating": 4.6,
+    "reference": "ChIJX8Bx80MTAHwRRSYD8YXzyu0",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 16
+  },
+  "googlePlaceData": {
+    "id": "ChIJX8Bx80MTAHwRRSYD8YXzyu0",
+    "name": "Maunawili Ditch Trailhead",
+    "address": "Waikupanaha St, Waimanalo, HI 96795, USA",
+    "types": [
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.34268339999999,
+      "lng": -157.7432791
+    },
+    "rating": 4.6,
+    "rating_n": 16
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde411e"
+  },
+  "idKey": 37,
+  "name": "Milolii Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 3.8,
+  "lengthKm": 6.12,
+  "elevationFeet": 540,
+  "elevationMeters": 164.59,
+  "coords": {
+    "idKey": 37,
+    "latitude": 22.11365883711625,
+    "longitude": -159.6731138130777
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde411f"
+  },
+  "idKey": 39,
+  "name": "Milolii Vista Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 3.5,
+  "lengthKm": 5.63,
+  "elevationFeet": 1340,
+  "elevationMeters": 408.43,
+  "coords": {
+    "idKey": 39,
+    "latitude": 22.12634759630369,
+    "longitude": -159.6892268982994
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4120"
+  },
+  "idKey": 95,
+  "name": "Moalepe Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 680,
+  "elevationMeters": 207.26,
+  "coords": {
+    "idKey": 411,
+    "latitude": 22.08299292980048,
+    "longitude": -159.3839406967163
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4121"
+  },
+  "idKey": 65,
+  "name": "Mohihi-Camp 10 Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 6.1,
+  "lengthKm": 9.82,
+  "elevationFeet": 280,
+  "elevationMeters": 85.34,
+  "coords": {
+    "idKey": 383,
+    "latitude": 22.13086003211738,
+    "longitude": -159.6537595242262
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4122"
+  },
+  "idKey": 77,
+  "name": "Mohihi-Waialae Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 4,
+  "lengthKm": 6.44,
+  "elevationFeet": 880,
+  "elevationMeters": 268.22,
+  "coords": {
+    "idKey": 425,
+    "latitude": 22.11724066260737,
+    "longitude": -159.6019721031189
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4123"
+  },
+  "idKey": 161,
+  "name": "Mokuleia & Kuaokala Firebreak Roads",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 6,
+  "lengthKm": 9.66,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 401,
+    "latitude": 21.56337424919412,
+    "longitude": -158.23775231838226
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "North Shore, Waialua, HI 96791",
+    "venue_id": "ven_635359345f53734f48676452774841305f336b307a53704a496843",
+    "venue_lat": 21.5634821,
+    "venue_lon": -158.2374279,
+    "venue_name": "Kuaokala Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "North Shore, Waialua, HI 96791, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.5634821,
+        "lng": -158.2374279
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.56483192989272,
+          "lng": -158.2360780701073
+        },
+        "southwest": {
+          "lat": 21.56213227010728,
+          "lng": -158.2387777298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Kuaokala Trail",
+    "photos": [
+      {
+        "height": 2340,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107847997448579565809\">A Google User</a>"
+        ],
+        "photo_reference": "Aap_uEBrODJY1FzE_YUdkKQ_wJ7bVC2QUBjEDFKA-r8Im1bercx3ZGOiIa1axWFvkiutUo1Z3jbCe8aFPj83zlE5Nbvdl7rHcDOSEfjffkhETNrGv4-lW5zAC7zqELoEke4zjaOcdfxsPYUgCLzDIIsiHqVDJCtit5Zx2uxaO4OIWPGaIPqJ",
+        "width": 4160
+      }
+    ],
+    "place_id": "ChIJpSz0k3_0AHwRdgHOsS_4YSc",
+    "plus_code": {
+      "compound_code": "HQ77+92 Waialua, Hawaii",
+      "global_code": "73H3HQ77+92"
+    },
+    "rating": 4.5,
+    "reference": "ChIJpSz0k3_0AHwRdgHOsS_4YSc",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 22
+  },
+  "googlePlaceData": {
+    "id": "ChIJpSz0k3_0AHwRdgHOsS_4YSc",
+    "name": "Kuaokala Trail",
+    "address": "North Shore, Waialua, HI 96791, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.5634821,
+      "lng": -158.2374279
+    },
+    "rating": 4.5,
+    "rating_n": 22
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4124"
+  },
+  "idKey": 165,
+  "name": "Mokuleia Forest Reserve Access Road",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 4.2,
+  "lengthKm": 6.76,
+  "elevationFeet": 1400,
+  "elevationMeters": 426.72,
+  "coords": {
+    "idKey": 389,
+    "latitude": 21.57604006976264,
+    "longitude": -158.1629602611065
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Waialua, HI 96791",
+    "venue_id": "ven_7777586a726d786b513046527748413154776a313552744a496843",
+    "venue_lat": 21.5296276,
+    "venue_lon": -158.1590259,
+    "venue_name": "Mokulēʻia Forest Reserve"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "Honolulu, HI 96822, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.3380022,
+        "lng": -157.798762
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.39687215,
+          "lng": -157.7705036
+        },
+        "southwest": {
+          "lat": 21.27744395,
+          "lng": -157.8517676
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Honolulu Watershed Forest Reserve",
+    "photos": [
+      {
+        "height": 3036,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/100787184245922952312\">Mark Kawamura</a>"
+        ],
+        "photo_reference": "Aap_uECatH8hnZwenKFYRXdcjfwCf3xglbubL_vMCR2Z8662VY_66sl97h7QP27TCf-BszGnB-HBITKO8b7Jh8rIPMky5YVJrhl4GF_9cuJX-I4vwysAGt_SHmrrLP2qIBBqimSk1Z4gNm0qSFR4OefUmbYzH0CQjdStt07vsWExzwnsRyG9",
+        "width": 4048
+      }
+    ],
+    "place_id": "ChIJN3PQHu5sAHwRhceyEdb1WkY",
+    "plus_code": {
+      "compound_code": "86Q2+6F Honolulu, Hawaii",
+      "global_code": "73H486Q2+6F"
+    },
+    "rating": 4.7,
+    "reference": "ChIJN3PQHu5sAHwRhceyEdb1WkY",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 2021
+  },
+  "googlePlaceData": {
+    "id": "ChIJN3PQHu5sAHwRhceyEdb1WkY",
+    "name": "Honolulu Watershed Forest Reserve",
+    "address": "Honolulu, HI 96822, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.3380022,
+      "lng": -157.798762
+    },
+    "rating": 4.7,
+    "rating_n": 2021,
+    "current_popularity": 27,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          6,
+          7,
+          7,
+          5,
+          0,
+          2,
+          9,
+          22,
+          42,
+          66,
+          87,
+          100,
+          99,
+          88,
+          72,
+          55,
+          39,
+          25,
+          15,
+          8,
+          4,
+          1,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          1,
+          2,
+          7,
+          17,
+          34,
+          53,
+          68,
+          75,
+          73,
+          66,
+          58,
+          50,
+          41,
+          31,
+          21,
+          13,
+          8,
+          5,
+          3,
+          2
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          2,
+          2,
+          1,
+          1,
+          0,
+          0,
+          6,
+          21,
+          43,
+          68,
+          88,
+          95,
+          87,
+          69,
+          50,
+          37,
+          29,
+          21,
+          12,
+          4,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          8,
+          37,
+          75,
+          98,
+          91,
+          71,
+          58,
+          50,
+          41,
+          29,
+          18,
+          9,
+          3,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          8,
+          23,
+          43,
+          64,
+          76,
+          76,
+          67,
+          56,
+          48,
+          43,
+          37,
+          29,
+          19,
+          10,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          25,
+          52,
+          79,
+          91,
+          86,
+          73,
+          66,
+          70,
+          75,
+          70,
+          54,
+          32,
+          13,
+          3,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          4,
+          5,
+          10,
+          23,
+          41,
+          62,
+          77,
+          82,
+          78,
+          72,
+          66,
+          59,
+          48,
+          33,
+          18,
+          7,
+          2,
+          1,
+          3,
+          5
+        ]
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4125"
+  },
+  "idKey": 167,
+  "name": "Mokuleia Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 3.5,
+  "lengthKm": 5.63,
+  "elevationFeet": 1200,
+  "elevationMeters": 365.76,
+  "coords": {
+    "idKey": 163,
+    "latitude": 21.54110366644314,
+    "longitude": -158.1821790638026
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "North Shore, HI 96791",
+    "venue_id": "ven_302d52687166786e6659635277484130484868767232654a496843",
+    "venue_lat": 21.5763,
+    "venue_lon": -158.229206,
+    "venue_name": "Mokuleia Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Mokuleia Trail, North Shore, HI 96791, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.5763,
+        "lng": -158.229206
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.57764982989272,
+          "lng": -158.2278561701073
+        },
+        "southwest": {
+          "lat": 21.57495017010728,
+          "lng": -158.2305558298928
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Mokuleia Trail",
+    "place_id": "ChIJe2rvhHH0AHwRcYfnxfqhR-0",
+    "reference": "ChIJe2rvhHH0AHwRcYfnxfqhR-0",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJe2rvhHH0AHwRcYfnxfqhR-0",
+    "name": "Mokuleia Trail",
+    "address": "Mokuleia Trail, North Shore, HI 96791, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.5763,
+      "lng": -158.229206
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4126"
+  },
+  "idKey": 229,
+  "name": "Moleka Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.75,
+  "lengthKm": 1.21,
+  "elevationFeet": 300,
+  "elevationMeters": 91.44,
+  "coords": {
+    "idKey": 317,
+    "latitude": 21.32589395575674,
+    "longitude": -157.81283006072044
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_494e4565394261585661795277484174786172543336444a496843",
+    "venue_lat": 21.3233435,
+    "venue_lon": -157.8159264,
+    "venue_name": "Na Ala Hele: Moleka Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Moleka Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3233435,
+        "lng": -157.8159264
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32469332989273,
+          "lng": -157.8145765701072
+        },
+        "southwest": {
+          "lat": 21.32199367010728,
+          "lng": -157.8172762298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Moleka Trail",
+    "place_id": "ChIJD63TraxtAHwRyaVXaB9eENI",
+    "reference": "ChIJD63TraxtAHwRyaVXaB9eENI",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJD63TraxtAHwRyaVXaB9eENI",
+    "name": "Na Ala Hele: Moleka Trail",
+    "address": "Na Ala Hele: Moleka Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3233435,
+      "lng": -157.8159264
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4127"
+  },
+  "idKey": 11,
+  "name": "Muliwai Trail",
+  "island": "HAWAII",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 9,
+  "lengthKm": 14.48,
+  "elevationFeet": 1200,
+  "elevationMeters": 365.76,
+  "coords": {
+    "idKey": 513,
+    "latitude": 20.121063353999,
+    "longitude": -155.5986785888672
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4128"
+  },
+  "idKey": 231,
+  "name": "Nahuina Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.75,
+  "lengthKm": 1.21,
+  "elevationFeet": 600,
+  "elevationMeters": 182.88,
+  "coords": {
+    "idKey": 303,
+    "latitude": 21.33069484110256,
+    "longitude": -157.82119989395142
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_596665417a5130426b6a65527748417331556c64317a484a496843",
+    "venue_lat": 21.3278381,
+    "venue_lon": -157.8225876,
+    "venue_name": "Na Ala Hele: Nahuina Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Nahuina Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3278381,
+        "lng": -157.8225876
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32918792989272,
+          "lng": -157.8212377701072
+        },
+        "southwest": {
+          "lat": 21.32648827010728,
+          "lng": -157.8239374298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Nahuina Trail",
+    "place_id": "ChIJHz1dlU1sAHwRejkB0QzAefY",
+    "reference": "ChIJHz1dlU1sAHwRejkB0QzAefY",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJHz1dlU1sAHwRejkB0QzAefY",
+    "name": "Na Ala Hele: Nahuina Trail",
+    "address": "Na Ala Hele: Nahuina Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3278381,
+      "lng": -157.8225876
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4129"
+  },
+  "idKey": 97,
+  "name": "Nounou-East Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2,
+  "lengthKm": 3.22,
+  "elevationFeet": 960,
+  "elevationMeters": 292.61,
+  "coords": {
+    "idKey": 419,
+    "latitude": 22.06177311043433,
+    "longitude": -159.34668481349945
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde412a"
+  },
+  "idKey": 99,
+  "name": "Nounou-West Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 1.5,
+  "lengthKm": 2.41,
+  "elevationFeet": 800,
+  "elevationMeters": 243.84,
+  "coords": {
+    "idKey": 417,
+    "latitude": 22.06840014096601,
+    "longitude": -159.3627968430519
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde412b"
+  },
+  "idKey": 241,
+  "name": "Nu‘uanu Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1.5,
+  "lengthKm": 2.41,
+  "elevationFeet": 600,
+  "elevationMeters": 182.88,
+  "coords": {
+    "idKey": 371,
+    "latitude": 21.34099816247388,
+    "longitude": -157.81078353524208
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_457655307a4a6e4f6130495277484173784653445a79484a496843",
+    "venue_lat": 21.3418895,
+    "venue_lon": -157.8170186,
+    "venue_name": "Nu'uanu Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Nu'uanu Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3418895,
+        "lng": -157.8170186
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34323932989273,
+          "lng": -157.8156687701072
+        },
+        "southwest": {
+          "lat": 21.34053967010728,
+          "lng": -157.8183684298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Nu'uanu Trail",
+    "place_id": "ChIJHyZDSFxsAHwRI0aOnJz0UvE",
+    "reference": "ChIJHyZDSFxsAHwRI0aOnJz0UvE",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJHyZDSFxsAHwRI0aOnJz0UvE",
+    "name": "Nu'uanu Trail",
+    "address": "Nu'uanu Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3418895,
+      "lng": -157.8170186
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde412c"
+  },
+  "idKey": 35,
+  "name": "Nualolo Cliff Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2.1,
+  "lengthKm": 3.38,
+  "elevationFeet": 780,
+  "elevationMeters": 237.74,
+  "coords": {
+    "idKey": 519,
+    "latitude": 22.14611154195289,
+    "longitude": -159.69181537628174
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde412d"
+  },
+  "idKey": 63,
+  "name": "Nualolo Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 3.8,
+  "lengthKm": 6.12,
+  "elevationFeet": 1566,
+  "elevationMeters": 477.32,
+  "coords": {
+    "idKey": 63,
+    "latitude": 22.12908099465715,
+    "longitude": -159.6597770728523
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde412e"
+  },
+  "idKey": 127,
+  "name": "Ohai Loop Trail and Overlook",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.2,
+  "lengthKm": 1.93,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 449,
+    "latitude": 21.01605222107575,
+    "longitude": -156.5765529870987
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde412f"
+  },
+  "idKey": 87,
+  "name": "Okolehao Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2.3,
+  "lengthKm": 3.7,
+  "elevationFeet": 1232,
+  "elevationMeters": 375.51,
+  "coords": {
+    "idKey": 87,
+    "latitude": 22.2032053336682,
+    "longitude": -159.4734291250413
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4130"
+  },
+  "idKey": 31,
+  "name": "Onomea and Donkey Trails",
+  "island": "HAWAII",
+  "difficulty": "EASY",
+  "lengthMiles": 0.6,
+  "lengthKm": 0.97,
+  "elevationFeet": 140,
+  "elevationMeters": 42.67,
+  "coords": {
+    "idKey": 463,
+    "latitude": 19.80613372452159,
+    "longitude": -155.0922131538391
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4131"
+  },
+  "idKey": 303,
+  "name": "Palila Forest Discovery Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 0.92,
+  "lengthKm": 1.48,
+  "elevationFeet": 194,
+  "elevationMeters": 59.13,
+  "coords": {
+    "idKey": 624,
+    "latitude": 19.83170666394088,
+    "longitude": -155.5947990769256
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4132"
+  },
+  "idKey": 55,
+  "name": "Papaalai Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 8,
+  "lengthKm": 12.87,
+  "elevationFeet": 2410,
+  "elevationMeters": 734.57,
+  "coords": {
+    "idKey": 323,
+    "latitude": 22.07931691195451,
+    "longitude": -159.66724634170532
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4133"
+  },
+  "idKey": 233,
+  "name": "Pauoa Flats Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.75,
+  "lengthKm": 1.21,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 307,
+    "latitude": 21.33802016722568,
+    "longitude": -157.81209111213684
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_412d794e396a6e5964614a5277484173565f68776a5f784a496843",
+    "venue_lat": 21.3419565,
+    "venue_lon": -157.8097119,
+    "venue_name": "Pauoa Flats Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Pauoa Flats Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3419565,
+        "lng": -157.8097119
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.34330632989272,
+          "lng": -157.8083620701073
+        },
+        "southwest": {
+          "lat": 21.34060667010728,
+          "lng": -157.8110617298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Pauoa Flats Trail",
+    "place_id": "ChIJx_jwh_VsAHwRJadYnj9Ny-A",
+    "reference": "ChIJx_jwh_VsAHwRJadYnj9Ny-A",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJx_jwh_VsAHwRJadYnj9Ny-A",
+    "name": "Pauoa Flats Trail",
+    "address": "Pauoa Flats Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3419565,
+      "lng": -157.8097119
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4134"
+  },
+  "idKey": 67,
+  "name": "Pihea Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 3.8,
+  "lengthKm": 6.12,
+  "elevationFeet": 284,
+  "elevationMeters": 86.56,
+  "coords": {
+    "idKey": 67,
+    "latitude": 22.14740323771451,
+    "longitude": -159.6313622185428
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4135"
+  },
+  "idKey": 41,
+  "name": "Pine Forest Drive",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 1.3,
+  "lengthKm": 2.09,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 41,
+    "latitude": 22.12648359066302,
+    "longitude": -159.7157773171467
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4136"
+  },
+  "idKey": 257,
+  "name": "Pineapple Express Downhill Flow Trail",
+  "island": "MAUI",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 507,
+    "latitude": 20.81380983130042,
+    "longitude": -156.26880168914795
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4137"
+  },
+  "idKey": 119,
+  "name": "Plum Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.7,
+  "lengthKm": 2.74,
+  "elevationFeet": 600,
+  "elevationMeters": 182.88,
+  "coords": {
+    "idKey": 119,
+    "latitude": 20.6709667075654,
+    "longitude": -156.3392280607093
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4138"
+  },
+  "idKey": 175,
+  "name": "Poamoho Trail & Poamoho Hele Loa Access (On-line permit)",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 3.5,
+  "lengthKm": 5.63,
+  "elevationFeet": 800,
+  "elevationMeters": 243.84,
+  "coords": {
+    "idKey": 171,
+    "latitude": 21.53995662308542,
+    "longitude": -158.02618503570557
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Plantation Rd, Wahiawa, HI 96786",
+    "venue_id": "ven_382d49414d736851544d6e52774841635a6a583551626b4a496843",
+    "venue_lat": 21.5399756,
+    "venue_lon": -158.026177,
+    "venue_name": "Poamoho Trail"
+  },
+  "googlePlace": {
+    "business_status": "CLOSED_TEMPORARILY",
+    "formatted_address": "Plantation Rd, Wahiawa, HI 96786, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.5399756,
+        "lng": -158.026177
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.54133257989272,
+          "lng": -158.0248261701073
+        },
+        "southwest": {
+          "lat": 21.53863292010728,
+          "lng": -158.0275258298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Poamoho Trail",
+    "photos": [
+      {
+        "height": 3072,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107847997448579565809\">A Google User</a>"
+        ],
+        "photo_reference": "Aap_uEBBe_T65SRJ8E6n5DFe6ahuAwQ0EojzEQX7YKYclOMHlA45uYNn_6LGO2lyrNmXDBmydOrCDBHyGJ05vEoxjIjo0ieZG-8fdmSp881cjnAOemb3w4A6Z7Ysl3j890n8b0X0f2bbw1AAgxWEiMEW52kEnHHOkTx6cmxpMy7KTzitJ43M",
+        "width": 4096
+      }
+    ],
+    "place_id": "ChIJkbQ5XjZcAHwRnMTQhsMAI-8",
+    "plus_code": {
+      "compound_code": "GXQF+XG Wahiawa, Hawaii",
+      "global_code": "73H3GXQF+XG"
+    },
+    "rating": 4.2,
+    "reference": "ChIJkbQ5XjZcAHwRnMTQhsMAI-8",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 26
+  },
+  "googlePlaceData": {
+    "id": "ChIJkbQ5XjZcAHwRnMTQhsMAI-8",
+    "name": "Poamoho Trail",
+    "address": "Plantation Rd, Wahiawa, HI 96786, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.5399756,
+      "lng": -158.026177
+    },
+    "rating": 4.2,
+    "rating_n": 26
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4139"
+  },
+  "idKey": 49,
+  "name": "Polihale Ridge Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 5.3,
+  "lengthKm": 8.53,
+  "elevationFeet": 1960,
+  "elevationMeters": 597.41,
+  "coords": {
+    "idKey": 325,
+    "latitude": 22.10164494637453,
+    "longitude": -159.67732071876526
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde413a"
+  },
+  "idKey": 123,
+  "name": "Polipoli Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 0.6,
+  "lengthKm": 0.97,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 123,
+    "latitude": 20.67195370645749,
+    "longitude": -156.3332812317027
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde413b"
+  },
+  "idKey": 9,
+  "name": "Pololū Trail",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 0.5,
+  "lengthKm": 0.8,
+  "elevationFeet": 420,
+  "elevationMeters": 128.02,
+  "coords": {
+    "idKey": 459,
+    "latitude": 20.20382981225385,
+    "longitude": -155.73382437229156
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde413c"
+  },
+  "idKey": 73,
+  "name": "Poomau Canyon Vista Trail",
+  "island": "KAUAI",
+  "difficulty": "EASY",
+  "lengthMiles": 0.3,
+  "lengthKm": 0.48,
+  "elevationFeet": 80,
+  "elevationMeters": 24.38,
+  "coords": {
+    "idKey": 73,
+    "latitude": 22.12121561279245,
+    "longitude": -159.6221295219162
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde413d"
+  },
+  "idKey": 89,
+  "name": "Powerline Trail",
+  "island": "KAUAI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 11.2,
+  "lengthKm": 18.02,
+  "elevationFeet": 1568,
+  "elevationMeters": 477.93,
+  "coords": {
+    "idKey": 89,
+    "latitude": 22.18643376749067,
+    "longitude": -159.4568714489752
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde413e"
+  },
+  "idKey": 261,
+  "name": "Pu‘u Ki-Wai‘alae Trail",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 11,
+  "lengthKm": 17.7,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 517,
+    "latitude": 22.01054110880205,
+    "longitude": -159.66053009033203
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde413f"
+  },
+  "idKey": 235,
+  "name": "Pu‘u Ohia Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.75,
+  "lengthKm": 1.21,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 305,
+    "latitude": 21.33095468157411,
+    "longitude": -157.81423687934875
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_594836456333346c37635452774841736c6c713347595a4a496843",
+    "venue_lat": 21.3368217,
+    "venue_lon": -157.8124488,
+    "venue_name": "Pu'u Ohia Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Pu'u Ohia Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3368217,
+        "lng": -157.8124488
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.33817152989272,
+          "lng": -157.8110989701073
+        },
+        "southwest": {
+          "lat": 21.33547187010728,
+          "lng": -157.8137986298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Pu'u Ohia Trail",
+    "place_id": "ChIJZYG3qllsAHwRTc7l43cE6HY",
+    "reference": "ChIJZYG3qllsAHwRTc7l43cE6HY",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJZYG3qllsAHwRTc7l43cE6HY",
+    "name": "Pu'u Ohia Trail",
+    "address": "Pu'u Ohia Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3368217,
+      "lng": -157.8124488
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4140"
+  },
+  "idKey": 243,
+  "name": "Pu‘u Pia Trail (Manoa)",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 1.2,
+  "lengthKm": 1.93,
+  "elevationFeet": 400,
+  "elevationMeters": 121.92,
+  "coords": {
+    "idKey": 327,
+    "latitude": 21.32302934019464,
+    "longitude": -157.79635190963745
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_3445416d66595a6a69496a52774841734e2d647a7357734a496843",
+    "venue_lat": 21.3247413,
+    "venue_lon": -157.7945002,
+    "venue_name": "Pu'u Pia Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Pu'u Pia Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3247413,
+        "lng": -157.7945002
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32609112989272,
+          "lng": -157.7931503701072
+        },
+        "southwest": {
+          "lat": 21.32339147010728,
+          "lng": -157.7958500298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Pu'u Pia Trail",
+    "place_id": "ChIJsWszd-NsAHwRjIijZYfmAE4",
+    "reference": "ChIJsWszd-NsAHwRjIijZYfmAE4",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJsWszd-NsAHwRjIijZYfmAE4",
+    "name": "Pu'u Pia Trail",
+    "address": "Pu'u Pia Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3247413,
+      "lng": -157.7945002
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4141"
+  },
+  "idKey": 300,
+  "name": "Pu‘uwa‘awa‘a Cone Trail",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 1.9,
+  "lengthKm": 3.06,
+  "elevationFeet": 1080,
+  "elevationMeters": 329.18,
+  "coords": {
+    "idKey": 626,
+    "latitude": 19.78018344566575,
+    "longitude": -155.8314964353883
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4142"
+  },
+  "idKey": 15,
+  "name": "Puʻu Huluhulu Trail",
+  "island": "HAWAII",
+  "difficulty": "EASY",
+  "lengthMiles": 1,
+  "lengthKm": 1.61,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 591,
+    "latitude": 19.68823822947265,
+    "longitude": -155.466810464859
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4143"
+  },
+  "idKey": 17,
+  "name": "Puʻu ʻŌʻō Trail",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 3.7,
+  "lengthKm": 5.95,
+  "elevationFeet": 398,
+  "elevationMeters": 121.31,
+  "coords": {
+    "idKey": 475,
+    "latitude": 19.67721697701194,
+    "longitude": -155.38450956344604
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4144"
+  },
+  "idKey": 7,
+  "name": "Puʻu Lāʻau Road (R-1)",
+  "island": "HAWAII",
+  "difficulty": "MODERATE",
+  "lengthMiles": 4.2,
+  "lengthKm": 6.76,
+  "elevationFeet": 1760,
+  "elevationMeters": 536.45,
+  "coords": {
+    "idKey": 387,
+    "latitude": 19.80691854402356,
+    "longitude": -155.6310260295868
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4145"
+  },
+  "idKey": 33,
+  "name": "Puna Trail",
+  "island": "HAWAII",
+  "difficulty": "EASY",
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 20,
+  "elevationMeters": 6.1,
+  "coords": {
+    "idKey": 439,
+    "latitude": 19.61829447379827,
+    "longitude": -154.95962619781494
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4146"
+  },
+  "idKey": 145,
+  "name": "Redwood Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.7,
+  "lengthKm": 2.74,
+  "elevationFeet": 900,
+  "elevationMeters": 274.32,
+  "coords": {
+    "idKey": 329,
+    "latitude": 20.67803080681271,
+    "longitude": -156.3301169872284
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4147"
+  },
+  "idKey": 177,
+  "name": "Schofield-Waikane Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 4,
+  "lengthKm": 6.44,
+  "elevationFeet": 700,
+  "elevationMeters": 213.36,
+  "coords": {
+    "idKey": 361,
+    "latitude": 21.50718568779384,
+    "longitude": -157.95685395598412
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": true,
+    "processed": true,
+    "venue_address": "2645 California Ave, Wahiawa, HI 96786",
+    "venue_id": "ven_6b44456e4c444765456c4152774841644a68515f2d7a4e4a496843",
+    "venue_lat": 21.5083795,
+    "venue_lon": -157.9865557,
+    "venue_name": "Schofield Waikane Trail"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "2645 California Ave, Wahiawa, HI 96786, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.5083795,
+        "lng": -157.9865557
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.50969957989272,
+          "lng": -157.9852048201073
+        },
+        "southwest": {
+          "lat": 21.50699992010728,
+          "lng": -157.9879044798927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/park-71.png",
+    "icon_background_color": "#4DB546",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/tree_pinlet",
+    "name": "Schofield Waikane Trail",
+    "photos": [
+      {
+        "height": 2340,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/107847997448579565809\">A Google User</a>"
+        ],
+        "photo_reference": "Aap_uEDktkJYPIyCuzvHLuPdBoEM0YrGq5u91fbnmGj1ZCrvuSkljhVrhAlT869U8zOd0z52BFOtEIFnrpYRa6afGunxpFuWuOLAgbWFFYlzhphpKX0l-eN_v5GrV96gsGp1MUUSfIWOaopH6_gzo9_HBoV6-2W6NcDXeDc5ZXrrMonuhWSF",
+        "width": 4160
+      }
+    ],
+    "place_id": "ChIJNz-_QhJdAHwRAlEeGDLnEDk",
+    "plus_code": {
+      "compound_code": "G257+99 Wahiawa, Hawaii",
+      "global_code": "73H4G257+99"
+    },
+    "rating": 4.2,
+    "reference": "ChIJNz-_QhJdAHwRAlEeGDLnEDk",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 48
+  },
+  "googlePlaceData": {
+    "id": "ChIJNz-_QhJdAHwRAlEeGDLnEDk",
+    "name": "Schofield Waikane Trail",
+    "address": "2645 California Ave, Wahiawa, HI 96786, USA",
+    "types": [
+      "tourist_attraction",
+      "park",
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.5083795,
+      "lng": -157.9865557
+    },
+    "rating": 4.2,
+    "rating_n": 48,
+    "current_popularity": 35,
+    "populartimes": [
+      {
+        "name": "Monday",
+        "data": [
+          0,
+          1,
+          1,
+          0,
+          45,
+          73,
+          95,
+          100,
+          95,
+          91,
+          95,
+          98,
+          100,
+          96,
+          88,
+          78,
+          66,
+          55,
+          43,
+          33,
+          25,
+          18,
+          11,
+          6
+        ]
+      },
+      {
+        "name": "Tuesday",
+        "data": [
+          5,
+          3,
+          8,
+          20,
+          10,
+          28,
+          53,
+          78,
+          93,
+          96,
+          90,
+          78,
+          68,
+          60,
+          53,
+          45,
+          36,
+          26,
+          16,
+          8,
+          1,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Wednesday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          11,
+          26,
+          45,
+          65,
+          81,
+          93,
+          95,
+          91,
+          83,
+          71,
+          60,
+          48,
+          36,
+          28,
+          20,
+          15,
+          11,
+          8,
+          5,
+          3
+        ]
+      },
+      {
+        "name": "Thursday",
+        "data": [
+          0,
+          0,
+          0,
+          3,
+          6,
+          20,
+          33,
+          48,
+          61,
+          73,
+          80,
+          78,
+          71,
+          61,
+          48,
+          36,
+          30,
+          25,
+          21,
+          16,
+          13,
+          6,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Friday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          10,
+          28,
+          46,
+          56,
+          53,
+          41,
+          30,
+          23,
+          20,
+          16,
+          11,
+          6,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Saturday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          6,
+          11,
+          18,
+          31,
+          50,
+          68,
+          75,
+          61,
+          38,
+          13,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      {
+        "name": "Sunday",
+        "data": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          5,
+          3,
+          0,
+          5,
+          13,
+          23,
+          30,
+          31,
+          28,
+          21,
+          11,
+          3,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      }
+    ]
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4148"
+  },
+  "idKey": 279,
+  "name": "Skyline Road (R-10)",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 6.2,
+  "lengthKm": 9.98,
+  "elevationFeet": 2805,
+  "elevationMeters": 854.96,
+  "coords": {
+    "idKey": 575,
+    "latitude": 19.83906000930461,
+    "longitude": -155.5814266204834
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4149"
+  },
+  "idKey": 149,
+  "name": "Skyline Trail",
+  "island": "MAUI",
+  "difficulty": null,
+  "lengthMiles": 6.8,
+  "lengthKm": 10.94,
+  "elevationFeet": 2600,
+  "elevationMeters": 792.48,
+  "coords": {
+    "idKey": 455,
+    "latitude": 20.70569212869371,
+    "longitude": -156.26184940338135
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde414a"
+  },
+  "idKey": 245,
+  "name": "Tantalus-Arboretum Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 0.25,
+  "lengthKm": 0.4,
+  "elevationFeet": 100,
+  "elevationMeters": 30.48,
+  "coords": {
+    "idKey": 349,
+    "latitude": 21.32642739521811,
+    "longitude": -157.82648921012878
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96822",
+    "venue_id": "ven_775047545a464c584c7242527748417378456c6b5179414a496843",
+    "venue_lat": 21.3263023,
+    "venue_lon": -157.8266611,
+    "venue_name": "Na Ala Hele: Tantalus-Arboretum Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Na Ala Hele: Tantalus-Arboretum Trail, Honolulu, HI 96822, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3263023,
+        "lng": -157.8266611
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32765212989272,
+          "lng": -157.8253112701073
+        },
+        "southwest": {
+          "lat": 21.32495247010728,
+          "lng": -157.8280109298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele: Tantalus-Arboretum Trail",
+    "place_id": "ChIJAyQklExsAHwRBrLXLFZTGPw",
+    "reference": "ChIJAyQklExsAHwRBrLXLFZTGPw",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJAyQklExsAHwRBrLXLFZTGPw",
+    "name": "Na Ala Hele: Tantalus-Arboretum Trail",
+    "address": "Na Ala Hele: Tantalus-Arboretum Trail, Honolulu, HI 96822, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3263023,
+      "lng": -157.8266611
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde414b"
+  },
+  "idKey": 121,
+  "name": "Tie Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 0.5,
+  "lengthKm": 0.8,
+  "elevationFeet": 250,
+  "elevationMeters": 76.2,
+  "coords": {
+    "idKey": 121,
+    "latitude": 20.68096538087878,
+    "longitude": -156.3377326433852
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde414c"
+  },
+  "idKey": 267,
+  "name": "Upper Waiākea ATV/Dirt Bike Park",
+  "island": "HAWAII",
+  "difficulty": null,
+  "lengthMiles": 37.1,
+  "lengthKm": 59.71,
+  "elevationFeet": 950,
+  "elevationMeters": 289.56,
+  "coords": {
+    "idKey": 593,
+    "latitude": 19.58775115023232,
+    "longitude": -155.16758054494858
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde414d"
+  },
+  "idKey": 253,
+  "name": "Upper Waiakoa Trail",
+  "island": "MAUI",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 485,
+    "latitude": 20.72868251414006,
+    "longitude": -156.28907918930054
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde414e"
+  },
+  "idKey": 141,
+  "name": "Upper Waiohuli / Waiakoa Trail",
+  "island": "MAUI",
+  "difficulty": "DIFFICULT",
+  "lengthMiles": 7,
+  "lengthKm": 11.27,
+  "elevationFeet": 1200,
+  "elevationMeters": 365.76,
+  "coords": {
+    "idKey": 137,
+    "latitude": 20.69189598638918,
+    "longitude": -156.3154389710241
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde414f"
+  },
+  "idKey": 255,
+  "name": "Upper Waiohuli Trail",
+  "island": "MAUI",
+  "difficulty": null,
+  "lengthMiles": null,
+  "lengthKm": null,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 489,
+    "latitude": 20.69173162026591,
+    "longitude": -156.31557941436768
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4150"
+  },
+  "idKey": 239,
+  "name": "Wa‘ahila Ridge Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 2.4,
+  "lengthKm": 3.86,
+  "elevationFeet": 500,
+  "elevationMeters": 152.4,
+  "coords": {
+    "idKey": 561,
+    "latitude": 21.30730731483741,
+    "longitude": -157.7973175048828
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI",
+    "venue_id": "ven_6b2d77486f544c37426c755277484174787845757866564a496843",
+    "venue_lat": 21.3215294,
+    "venue_lon": -157.7883779,
+    "venue_name": "Wa'ahila Ridge Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Wa'ahila Ridge Trail, Honolulu, HI, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3215294,
+        "lng": -157.7883779
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.32287922989272,
+          "lng": -157.7870280701073
+        },
+        "southwest": {
+          "lat": 21.32017957010727,
+          "lng": -157.7897277298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Wa'ahila Ridge Trail",
+    "place_id": "ChIJVfxuExxtAHwRulB7LToHw-k",
+    "reference": "ChIJVfxuExxtAHwRulB7LToHw-k",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJVfxuExxtAHwRulB7LToHw-k",
+    "name": "Wa'ahila Ridge Trail",
+    "address": "Wa'ahila Ridge Trail, Honolulu, HI, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3215294,
+      "lng": -157.7883779
+    }
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4151"
+  },
+  "idKey": 139,
+  "name": "Waiakoa Loop Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 3,
+  "lengthKm": 4.83,
+  "elevationFeet": 400,
+  "elevationMeters": 121.92,
+  "coords": {
+    "idKey": 135,
+    "latitude": 20.71798421440273,
+    "longitude": -156.3005266855166
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4152"
+  },
+  "idKey": 111,
+  "name": "Waihee Ridge Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 2.5,
+  "lengthKm": 4.02,
+  "elevationFeet": 1563,
+  "elevationMeters": 476.4,
+  "coords": {
+    "idKey": 111,
+    "latitude": 20.95279521282336,
+    "longitude": -156.5317247758331
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4153"
+  },
+  "idKey": 115,
+  "name": "Waihou Spring Trail",
+  "island": "MAUI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 1.1,
+  "lengthKm": 1.77,
+  "elevationFeet": null,
+  "elevationMeters": null,
+  "coords": {
+    "idKey": 333,
+    "latitude": 20.80415692463528,
+    "longitude": -156.28115594387054
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4154"
+  },
+  "idKey": 153,
+  "name": "Waikamoi Ridge",
+  "island": "MAUI",
+  "difficulty": "EASY",
+  "lengthMiles": 0.8,
+  "lengthKm": 1.29,
+  "elevationFeet": 200,
+  "elevationMeters": 60.96,
+  "coords": {
+    "idKey": 149,
+    "latitude": 20.87240199437279,
+    "longitude": -156.1892221748095
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4155"
+  },
+  "idKey": 93,
+  "name": "Wailua Forestry Management Road",
+  "island": "KAUAI",
+  "difficulty": null,
+  "lengthMiles": 3,
+  "lengthKm": 4.83,
+  "elevationFeet": 120,
+  "elevationMeters": 36.58,
+  "coords": {
+    "idKey": 597,
+    "latitude": 22.07174088176147,
+    "longitude": -159.4170069694519
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4156"
+  },
+  "idKey": 187,
+  "name": "Waimano Trail Access",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 7.2,
+  "lengthKm": 11.59,
+  "elevationFeet": 1600,
+  "elevationMeters": 487.68,
+  "coords": {
+    "idKey": 609,
+    "latitude": 21.41702660603083,
+    "longitude": -157.95106440782547
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "O‘ahu Hawaii, USA, Pearl City, HI 96782",
+    "venue_id": "ven_6777796e2d4a7567754664527748416f353133576f556a4a496843",
+    "venue_lat": 21.4329898,
+    "venue_lon": -157.921768,
+    "venue_name": "Waimano Falls"
+  },
+  "googlePlace": {
+    "business_status": "OPERATIONAL",
+    "formatted_address": "2135 Makiki Heights Dr, Honolulu, HI 96822, United States",
+    "geometry": {
+      "location": {
+        "lat": 21.317581,
+        "lng": -157.8261808
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.31893082989273,
+          "lng": -157.8248309701073
+        },
+        "southwest": {
+          "lat": 21.31623117010728,
+          "lng": -157.8275306298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/generic_business-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Na Ala Hele Trail and Access",
+    "photos": [
+      {
+        "height": 4608,
+        "html_attributions": [
+          "<a href=\"https://maps.google.com/maps/contrib/104531366611880902278\">Logan Webber</a>"
+        ],
+        "photo_reference": "Aap_uEAPj1wFxlNW0P0ACSO0Z2ZKq397KgoKLqFVmzANjFzXLLxNMB244ALlLRA3UIepEyDVMbpvHp4UkOqhqBRaNCuIt7fjAPhP9HDvmvvO45oab04Atl-TXsEHl0mxs8I2VPKGrlMbcnK6xYJNeXWs7goQiFsiK_ixiYSevcCT7y1_LKBv",
+        "width": 3456
+      }
+    ],
+    "place_id": "ChIJCwkL0LZtAHwR7hBWjNYQv3s",
+    "plus_code": {
+      "compound_code": "859F+2G Honolulu, Hawaii",
+      "global_code": "73H4859F+2G"
+    },
+    "rating": 4.5,
+    "reference": "ChIJCwkL0LZtAHwR7hBWjNYQv3s",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "user_ratings_total": 20
+  },
+  "googlePlaceData": {
+    "id": "ChIJCwkL0LZtAHwR7hBWjNYQv3s",
+    "name": "Na Ala Hele Trail and Access",
+    "address": "2135 Makiki Heights Dr, Honolulu, HI 96822, USA",
+    "types": [
+      "point_of_interest",
+      "establishment"
+    ],
+    "coordinates": {
+      "lat": 21.317581,
+      "lng": -157.8261808
+    },
+    "rating": 4.5,
+    "rating_n": 20,
+    "international_phone_number": "+1 808-973-9782"
+  }
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4157"
+  },
+  "idKey": 85,
+  "name": "Waimea Canyon Trail",
+  "island": "KAUAI",
+  "difficulty": "MODERATE",
+  "lengthMiles": 7,
+  "lengthKm": 11.27,
+  "elevationFeet": 780,
+  "elevationMeters": 237.74,
+  "coords": {
+    "idKey": 421,
+    "latitude": 21.98066255538165,
+    "longitude": -159.6592104434967
+  },
+  "closed": false
+},{
+  "_id": {
+    "$oid": "618711f567316037bfde4158"
+  },
+  "idKey": 199,
+  "name": "Wiliwilinui Access Road and Ridge Trail",
+  "island": "OAHU",
+  "difficulty": null,
+  "lengthMiles": 3,
+  "lengthKm": 4.83,
+  "elevationFeet": 1600,
+  "elevationMeters": 487.68,
+  "coords": {
+    "idKey": 337,
+    "latitude": 21.29896586224563,
+    "longitude": -157.76272773742676
+  },
+  "closed": false,
+  "venueInfo": {
+    "forecast": false,
+    "processed": true,
+    "venue_address": "Honolulu, HI 96821",
+    "venue_id": "ven_6b5a69704859416b4234625277484153554e71766a32634a496843",
+    "venue_lat": 21.3140598,
+    "venue_lon": -157.7598181,
+    "venue_name": "Wiliwilinui Ridge Trail"
+  },
+  "googlePlace": {
+    "formatted_address": "Wiliwilinui Ridge Trail, Honolulu, HI 96821, USA",
+    "geometry": {
+      "location": {
+        "lat": 21.3140598,
+        "lng": -157.7598181
+      },
+      "viewport": {
+        "northeast": {
+          "lat": 21.31540962989272,
+          "lng": -157.7584682701073
+        },
+        "southwest": {
+          "lat": 21.31270997010728,
+          "lng": -157.7611679298927
+        }
+      }
+    },
+    "icon": "https://maps.gstatic.com/mapfiles/place_api/icons/v1/png_71/geocode-71.png",
+    "icon_background_color": "#7B9EB0",
+    "icon_mask_base_uri": "https://maps.gstatic.com/mapfiles/place_api/icons/v2/generic_pinlet",
+    "name": "Wiliwilinui Ridge Trail",
+    "place_id": "ChIJc2jvqNUSAHwRb4BkAYHpiZk",
+    "reference": "ChIJc2jvqNUSAHwRb4BkAYHpiZk",
+    "types": [
+      "route"
+    ]
+  },
+  "googlePlaceData": {
+    "id": "ChIJc2jvqNUSAHwRb4BkAYHpiZk",
+    "name": "Wiliwilinui Ridge Trail",
+    "address": "Wiliwilinui Ridge Trail, Honolulu, HI 96821, USA",
+    "types": [
+      "route"
+    ],
+    "coordinates": {
+      "lat": 21.3140598,
+      "lng": -157.7598181
+    }
+  }
+}]

@@ -13,10 +13,16 @@ class TrailsCollection {
     this.schema = new SimpleSchema(
       {
         name: String,
+        island: String,
+        idKey: String,
         image: { type: String, optional: true },
         defaultImage: { type: String, optional: true },
         location: String,
         length: String,
+        lengthMiles: Number,
+        lengthKm: Number,
+        elevationFeet: Number,
+        elevationMeters: Number,
         difficulty: {
           type: String,
           allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme'],
