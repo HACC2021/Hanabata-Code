@@ -26,15 +26,18 @@ async function copyData() {
     };
     // queryOptions.venue_id = trail.venueInfo.venue_id;
     for (let trail of trails) {
-        queryOptions.venue_id = trail.venuInfo.venue_id;
+        queryOptions.venue_id = trail.venueInfo.venue_id;
 
         let params = new URLSearchParams(queryOptions);
         
-        let response = await fetch(`https://besttime.app/api/v1/forecasts/week/raw?${params}`, { method: 'GET' });
+        let response = await fetch(`https://besttime.app/api/v1/forecasts/week?${params}`, { method: 'POST' });
         let responseJson = await response.json();
 
-        console.log(responseJson);
-        break;
+        if (responseJson.status != 'error') {
+            console.log('got data for ', trail.name);
+        }
+
+        await client.db().collection('TrailsCollection').updateOne({ _id: trail._id }, { $set: { 'bestTimeData': responseJson.analysis }});
     }
     await client.close();
 
