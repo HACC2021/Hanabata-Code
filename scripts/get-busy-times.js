@@ -1,6 +1,6 @@
 import pkg from 'mongodb';
 const { MongoClient } = pkg;
-import config from './config';
+import config from './config.js';
 
 import fetch from 'node-fetch';
 
@@ -26,11 +26,9 @@ async function copyData() {
     };
     // queryOptions.venue_id = trail.venueInfo.venue_id;
     for (let trail of trails) {
-        queryOptions.venue_id = "ven_59666648587039304d416b5277484173465f70727231454a496843";
+        queryOptions.venue_id = trail.venuInfo.venue_id;
 
         let params = new URLSearchParams(queryOptions);
-
-        console.log(params);
         
         let response = await fetch(`https://besttime.app/api/v1/forecasts/week/raw?${params}`, { method: 'GET' });
         let responseJson = await response.json();
