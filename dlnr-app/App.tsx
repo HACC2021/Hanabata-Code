@@ -1,23 +1,36 @@
 import React from "react";
-import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from '@react-navigation/drawer';
-import Home from "./pages/Home";
-import AllTrails from "./pages/AllTrails";
-import Community from "./pages/Community";
-import Login from "./pages/Login";
+import Navigator from "./Navigator";
+import { UserInfoProvider } from "./services/useUserInfo";
 
-const Drawer = createDrawerNavigator();
+async function getData() {
+  try {
+    const response = await fetch("http://192.168.1.24:3000/test", {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer vKBRO4U0Wo61qUT2Rme0GzOpMgnaldOwoltRBUYN-hy",
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: JSON.stringify({
+        userId: "5cb9vmypaNxGMfwc6",
+        token: "vKBRO4U0Wo61qUT2Rme0GzOpMgnaldOwoltRBUYN-hy",
+      }), // body data type must match "Content-Type" header
+    });
+    const json = await response.json();
+    console.log(json);
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
 
 function App() {
   return (
-    <NavigationContainer>
-      <Drawer.Navigator initialRouteName="Login">
-        <Drawer.Screen name="Login" component={Login} />
-        <Drawer.Screen name="Home" component={Home} />
-        <Drawer.Screen name="AllTrails" component={AllTrails} />
-        <Drawer.Screen name="Community" component={Community} />
-      </Drawer.Navigator>
-    </NavigationContainer>
+    <UserInfoProvider>
+      <Navigator />
+    </UserInfoProvider>
   );
 }
 
