@@ -18,7 +18,6 @@ class TrailsCollection {
         image: { type: String, optional: true },
         defaultImage: { type: String, optional: true },
         location: String,
-        length: String,
         lengthMiles: Number,
         lengthKm: Number,
         elevationFeet: Number,
