@@ -3,23 +3,22 @@ import MapView from "react-native-maps";
 import { Marker, Callout } from "react-native-maps";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { useEffect } from "react";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
 
-export default function Home(props) {
-  const Stack = createNativeStackNavigator();
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="Map">
-        {(p) => <MapComponent {...props} />}
-      </Stack.Screen>
-      <Stack.Screen name="TrailDetail" component={TrailDetail} />
-    </Stack.Navigator>
-  );
-}
+// export default function Home(props) {
+//   const Stack = createNativeStackNavigator();
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="Map">
+//         {(p) => <MapComponent {...props} />}
+//       </Stack.Screen>
+//       <Stack.Screen name="TrailDetail" component={TrailDetail} />
+//     </Stack.Navigator>
+//   );
+// }
 
-const MapComponent = (props) => {
+export default function Home(props) {
   const { state: userInfo, dispatch: setUserInfo } = useUserInfo();
   return (
     <View style={styles.container}>
