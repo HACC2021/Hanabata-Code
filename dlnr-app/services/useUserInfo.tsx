@@ -55,7 +55,6 @@ const UserInfoProvider = ({ children }) => {
     });
 
     getTrails().then((res) => {
-      console.log("trails", res)
       dispatch({
         type: "ALL_TRAILS",
         payload: {
