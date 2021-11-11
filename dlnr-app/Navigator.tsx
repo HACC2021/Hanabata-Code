@@ -15,7 +15,6 @@ function Navigator() {
   const { state: userInfo, dispatch } = useUserInfo();
 
   const logout = async (navigation) => {
-    console.log("nav111111111111111111", navigation);
     await useLogout();
     await dispatch({
       type: "LOGIN",
@@ -45,7 +44,7 @@ function Navigator() {
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName={"Login"}>
-        {!userInfo.userId && (
+        {!userInfo?.userId && (
           <Drawer.Screen name="Login" component={Login} options={headerRight} />
         )}
         <Drawer.Screen name="Home" component={Home} options={headerRight} />

@@ -6,6 +6,7 @@ import React, {
 } from "react";
 import useEnhancedReducer from "./useEnhancedReducer";
 import { loginWithToken } from "./useLogin";
+import { getTrails } from "./apiService";
 
 const userInfo = createContext({
   state: undefined,
@@ -14,20 +15,32 @@ const userInfo = createContext({
 });
 const { Provider } = userInfo;
 
+let initialState = {
+  userId: undefined,
+  trails: undefined,
+};
+
 const UserInfoProvider = ({ children }) => {
   const [state, dispatch, getState] = useEnhancedReducer(
     useCallback((state, action) => {
-      const { userId } = action.payload;
-      console.log("context", userId)
+      const { userId, trails } = action.payload;
+      console.log("context", userId);
       switch (action.type) {
         case "LOGIN":
           return {
+            ...state,
             userId,
+          };
+        case "ALL_TRAILS":
+          return {
+            ...state,
+            trails,
           };
         default:
           return state;
       }
-    }, [])
+    }, []),
+    initialState
   );
 
   // const memo = useMemo(()=>({state, dispatch, getState}),[]);
@@ -37,6 +50,16 @@ const UserInfoProvider = ({ children }) => {
         type: "LOGIN",
         payload: {
           userId: res,
+        },
+      });
+    });
+
+    getTrails().then((res) => {
+      console.log("trails", res)
+      dispatch({
+        type: "ALL_TRAILS",
+        payload: {
+          trails: res,
         },
       });
     });
