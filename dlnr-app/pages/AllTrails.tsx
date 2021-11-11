@@ -13,17 +13,17 @@ import TrailDetail from "./TrailDetail";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useUserInfo } from "../services/useUserInfo";
 
-export default function AllTrails(props) {
-  const Stack = createNativeStackNavigator();
-  return (
-    <Stack.Navigator>
-      <Stack.Screen name="AllTrails" component={AllTrailsComponent} />
-      <Stack.Screen name="TrailDetail" component={TrailDetail} />
-    </Stack.Navigator>
-  );
-}
+// export default function AllTrails(props) {
+//   const Stack = createNativeStackNavigator();
+//   return (
+//     <Stack.Navigator>
+//       <Stack.Screen name="AllTrails" component={AllTrailsComponent} />
+//       <Stack.Screen name="TrailDetail" component={TrailDetail} />
+//     </Stack.Navigator>
+//   );
+// }
 
-const AllTrailsComponent = ({ navigation }) => {
+export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
   return (
     <SafeAreaView style={styles.container}>
@@ -34,12 +34,17 @@ const AllTrailsComponent = ({ navigation }) => {
       />
     </SafeAreaView>
   );
-};
+}
 
 const renderItem = (trail, navigation) => {
   return (
     <TouchableHighlight
-      onPress={() => navigation.navigate("TrailDetail", { trail })}
+      onPress={() =>
+        navigation.navigate("TrailDetail", {
+          trail,
+          previousScreen: "AllTrails",
+        })
+      }
     >
       <View style={styles.item}>
         <Text style={styles.title}>{trail.name}</Text>
