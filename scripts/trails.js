@@ -1,4 +1,5 @@
 import pkg from 'mongodb';
+
 const { MongoClient } = pkg;
 
 import fetch from 'node-fetch';
