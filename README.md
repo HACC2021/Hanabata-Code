@@ -6,8 +6,11 @@
 <br />
 
 ## Overview
-We thought about the meeting of people after the pandemic. Since the pandemic is not over yet, we thought people should meet safely above all else. 
-Through this application, users can post meetings or upload vaccine information of participants to ensure a safe meeting.<br /><br />
+Hiking trails application that allows to view information about the trails on their phone. Admins must use Meteor web app to add, edit, delete trails detail. also, they can assign admin roles to existing members who registered an account through the Meteor web app.
+
+This project contains two application. "dlnr-app" for smart phone application and "meteor" for web application. Meteor is the central database/server for the dlnr-app.
+All the data we collected from APIs and Users will go through the Meteor including sign up, sign in, sign out.
+
 
 ## Developer Guide: 
 
