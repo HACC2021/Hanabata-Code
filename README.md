@@ -72,6 +72,9 @@ After installation, you can run the application from the "dlnr-app" directory by
 $ npm run start
 ```
 
+![image](images/maps-view.png)
+![image](images/menu-view.png)
+
 ### Deployment
 
 
