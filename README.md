@@ -1,5 +1,7 @@
 # Hanabata-Code
 
+![img](/images/system.jpg)
+
 ## Table of Contents
 
 * [Developer Guide](#developer-guide)
@@ -9,8 +11,10 @@
 Hiking trails application that allows to view information about the trails on their phone. Admins must use Meteor web app to add, edit, delete trails detail. also, they can assign admin roles to existing members who registered an account through the Meteor web app.
 
 This project contains two application. "dlnr-app" for smart phone application and "meteor" for web application. Meteor is the central database/server for the dlnr-app.
+
 All the data we collected from APIs and Users will go through the Meteor including sign up, sign in, sign out.
 
+More information on our [Devpost page.](https://devpost.com/software/hanabata-code)
 
 ## Developer Guide: 
 
@@ -68,6 +72,9 @@ After installation, you can run the application from the "dlnr-app" directory by
 $ npm run start
 ```
 
+![image](images/maps-view.png)
+![image](images/menu-view.png)
+
 ### Deployment
 
 
@@ -81,6 +88,6 @@ $ npm run start
 
 [Cheolhoon Choi](https://cheolhoon.github.io) <br />
 
-[Keith Okuna]() <br /> <br /> <br />
+[Keith Okuna](https://okuna.github.io) <br /> <br /> <br />
 
 
