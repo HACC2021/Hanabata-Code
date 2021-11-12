@@ -10,18 +10,7 @@ import {
 } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import TrailDetail from "./TrailDetail";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { useUserInfo } from "../services/useUserInfo";
-
-// export default function AllTrails(props) {
-//   const Stack = createNativeStackNavigator();
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen name="AllTrails" component={AllTrailsComponent} />
-//       <Stack.Screen name="TrailDetail" component={TrailDetail} />
-//     </Stack.Navigator>
-//   );
-// }
 
 export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
@@ -42,7 +31,6 @@ const renderItem = (trail, navigation) => {
       onPress={() =>
         navigation.navigate("TrailDetail", {
           trail,
-          previousScreen: "AllTrails",
         })
       }
     >

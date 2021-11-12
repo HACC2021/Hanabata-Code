@@ -13,6 +13,8 @@ import Login from "./pages/Login";
 import { useUserInfo, UserInfoProvider } from "./services/useUserInfo";
 import { useLogin, useLogout } from "./services/useLogin";
 import TrailDetail from "./pages/TrailDetail";
+import CommunityDetail from "./pages/CommunityDetail";
+import AddPost from "./pages/AddPost";
 
 const Drawer = createDrawerNavigator();
 
@@ -79,6 +81,16 @@ function Navigator() {
         <Drawer.Screen
           name="TrailDetail"
           component={TrailDetail}
+          options={hiddenDrawerWithButton}
+        />
+        <Drawer.Screen
+          name="CommunityDetail"
+          component={CommunityDetail}
+          options={hiddenDrawerWithButton}
+        />
+        <Drawer.Screen
+          name="AddPost"
+          component={AddPost}
           options={hiddenDrawerWithButton}
         />
         <Drawer.Screen name="Home" component={Home} options={headerRight} />

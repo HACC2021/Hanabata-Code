@@ -18,12 +18,30 @@ const { Provider } = userInfo;
 let initialState = {
   userId: undefined,
   trails: undefined,
+  posts: undefined,
 };
+
+const posts = [
+  {
+    name: "Amy Farha",
+    avatar_url:
+      "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
+    subtitle: "Vice President",
+    detail: "heeyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+  },
+  {
+    name: "Chris Jackson",
+    avatar_url:
+      "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
+    subtitle: "Vice Chairman",
+    detail:"weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  },
+];
 
 const UserInfoProvider = ({ children }) => {
   const [state, dispatch, getState] = useEnhancedReducer(
     useCallback((state, action) => {
-      const { userId, trails } = action.payload;
+      const { userId, trails, posts, post } = action.payload;
       console.log("context", userId);
       switch (action.type) {
         case "LOGIN":
@@ -35,6 +53,16 @@ const UserInfoProvider = ({ children }) => {
           return {
             ...state,
             trails,
+          };
+        case "ADD_ALL_POSTS":
+          return {
+            ...state,
+            posts
+          };
+        case "ADD_POST":
+          return {
+            ...state,
+            posts: [...state.posts, post],
           };
         default:
           return state;
@@ -61,6 +89,13 @@ const UserInfoProvider = ({ children }) => {
           trails: res,
         },
       });
+    });
+
+    dispatch({
+      type: "ADD_ALL_POSTS",
+      payload: {
+        posts,
+      },
     });
   }, []);
 
