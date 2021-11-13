@@ -1,5 +1,5 @@
 import { NavigationContainer, StackActions } from "@react-navigation/native";
-import React from "react";
+import React, { useState } from "react";
 import {
   Text,
   View,
@@ -11,11 +11,13 @@ import {
 import { TouchableHighlight } from "react-native-gesture-handler";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
+import { SearchBar } from "react-native-elements";
 
 export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
   return (
     <SafeAreaView style={styles.container}>
+      <Search/>
       <FlatList
         data={userInfo.trails}
         renderItem={(item) => renderItem(item.item, navigation)}
@@ -56,3 +58,29 @@ const styles = StyleSheet.create({
     fontSize: 32,
   },
 });
+
+const Search = () => {
+  const [search, setSearch] = useState("");
+
+  return (
+    <SearchBar
+      placeholder="Type Here..."
+      onChangeText={setSearch as any}
+      value={search}
+      onBlur={undefined}
+      onFocus={undefined}
+      platform={"default"}
+      clearIcon={undefined}
+      searchIcon={undefined}
+      loadingProps={undefined}
+      showLoading={undefined}
+      onClear={undefined}
+      onCancel={undefined}
+      lightTheme={false}
+      round={false}
+      cancelButtonTitle={undefined}
+      cancelButtonProps={undefined}
+      showCancel={undefined}
+    />
+  );
+};
