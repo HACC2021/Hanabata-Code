@@ -1,17 +1,18 @@
-import { NavigationContainer, StackActions } from "@react-navigation/native";
+// import { NavigationContainer, StackActions } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
-  Text,
-  View,
-  StyleSheet,
-  SafeAreaView,
-  FlatList,
-  StatusBar,
+    Text,
+    View,
+    StyleSheet,
+    SafeAreaView,
+    FlatList,
+    StatusBar,
+    Image,
 } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
-import { SearchBar } from "react-native-elements";
+import {SearchBar, ListItem, Avatar} from "react-native-elements";
 
 export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
@@ -36,9 +37,12 @@ const renderItem = (trail, navigation) => {
         })
       }
     >
-      <View style={styles.item}>
-        <Text style={styles.title}>{trail.name}</Text>
-      </View>
+        <ListItem bottomDivider>
+            <Avatar source={{uri: trail.image}}/>
+            <ListItem.Content>
+                <ListItem.Title style={styles.title}>{trail.name}</ListItem.Title>
+            </ListItem.Content>
+        </ListItem>
     </TouchableHighlight>
   );
 };
@@ -55,7 +59,10 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   title: {
-    fontSize: 32,
+    fontSize: 15,
+  },
+  image: {
+
   },
 });
 
