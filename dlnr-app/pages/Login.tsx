@@ -7,20 +7,20 @@ const Login = ({ navigation }) => {
   const [id, onChangeId] = React.useState("");
   const [passwords, onChangePasswords] = React.useState(null);
 
-  const { state: userInfo, dispatch: setUserInfo } = useUserInfo();
+  const { state: data, dispatch: setData } = useUserInfo();
 
   const onLogin = () => {
     useLogin(id, passwords).then((res) => {
-      setUserInfo({
+      setData({
         type: "LOGIN",
-        payload: { userId: res },
+        payload: { userInfo: res },
       });
     });
   };
 
   useEffect(() => {
-    userInfo?.userId && navigation.navigate('Home');
-  }, [userInfo]);
+    data.userInfo && navigation.navigate('Home');
+  }, [data]);
 
   return (
     <SafeAreaView

@@ -33,7 +33,7 @@ const useLogout = async () => {
 async function validateUser(token) {
   try {
     const response = await fetch(
-      "http://192.168.1.17:3000/auth/loginWithToken",
+      "http://192.168.1.24:3000/auth/loginWithToken",
       {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -55,7 +55,7 @@ async function validateUser(token) {
 
 async function useLogin(email, password) {
   try {
-    const response = await fetch("http://192.168.1.17:3000/users/login", {
+    const response = await fetch("http://192.168.1.24:3000/users/login", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -68,20 +68,19 @@ async function useLogin(email, password) {
     const json = await response.json();
     console.log(json);
     await storeToken(json.token);
-    return json.id;
+    return json;
   } catch (error) {
     console.error(error);
   }
 }
 
 async function loginWithToken() {
-  let id = undefined;
+  let userId = undefined;
   const token = await getToken();
   if (token) {
-    id = await validateUser(token);
-    console.log("hi");
+    userId = await validateUser(token);
   }
-  return id;
+  return {userId , token};
 }
 
 export { useLogin, useLogout, loginWithToken };

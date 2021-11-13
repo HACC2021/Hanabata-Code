@@ -24,9 +24,9 @@ function Navigator() {
   const logout = async (navigation) => {
     await useLogout();
     await dispatch({
-      type: "LOGIN",
+      type: "LOGOUT",
       payload: {
-        userId: undefined,
+        userInfo: undefined,
       },
     });
     navigation.navigate("Login");
@@ -70,9 +70,9 @@ function Navigator() {
     };
   };
 
-  useEffect(() => {
-    console.log("app2", userInfo);
-  }, [userInfo]);
+  // useEffect(() => {
+  //   console.log("app2", userInfo);
+  // }, [userInfo]);
 
   return (
     <NavigationContainer>
