@@ -8,7 +8,7 @@ export default function CommunityDetail(props) {
   return (
     <>
       <ScrollView>
-        <Text>{props.route.params.name}</Text>
+        <Text>{props.route.params.detail}</Text>
       </ScrollView>
       <SpeedDial
         isOpen={open}

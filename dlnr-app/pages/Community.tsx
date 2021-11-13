@@ -8,19 +8,20 @@ export default function Community({ navigation }) {
   const { state: data } = useUserInfo();
 
   const renderItem = ({ item }) => {
+    // console.log(data.posts);
     return (
       <ListItem
         bottomDivider
         onPress={() =>
           navigation.navigate("CommunityDetail", {
-            name: item.detail,
+            detail: item.detail,
           })
         }
       >
-        <Avatar source={{ uri: item.avatar_url }} />
+        {/* <Avatar source={{ uri: item.avatar_url }} /> */}
         <ListItem.Content>
-          <ListItem.Title>{item.name}</ListItem.Title>
-          <ListItem.Subtitle>{item.subtitle}</ListItem.Subtitle>
+          <ListItem.Title>{item.title}</ListItem.Title>
+          <ListItem.Subtitle>{item.owner}</ListItem.Subtitle>
         </ListItem.Content>
       </ListItem>
     );
