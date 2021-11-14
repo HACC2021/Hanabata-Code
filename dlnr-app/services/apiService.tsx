@@ -45,6 +45,29 @@ async function makePost(token, title, detail) {
   }
 }
 
+export async function makeComment(token, comment) {
+    try {
+        const response = await fetch(
+            "http://192.168.1.17:3000/auth/commentOnCommunity",
+            {
+                method: "POST", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: "Bearer " + token,
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+            }
+        );
+        const json = await response.json();
+        return json;
+    } catch (error) {
+        console.error(error);
+    }
+}
+
 async function getAllPosts(token) {
   try {
     const response = await fetch("http://192.168.1.17:3000/auth/getAllPosts", {
@@ -62,6 +85,25 @@ async function getAllPosts(token) {
   } catch (error) {
     console.error(error);
   }
+}
+
+export async function getAllComments(token) {
+    try {
+        const response = await fetch("http://192.168.1.17:3000/auth/getAllComment", {
+            method: "GET", // *GET, POST, PUT, DELETE, etc.
+            mode: "cors", // no-cors, *cors, same-origin
+            cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+            headers: {
+                "Content-Type": "application/json",
+                Authorization: "Bearer " + token,
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+            }, // body data type must match "Content-Type" header
+        });
+        const json = await response.json();
+        return json;
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 function getTrails() {
