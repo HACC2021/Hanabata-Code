@@ -7,12 +7,12 @@ import {
     SafeAreaView,
     FlatList,
     StatusBar,
-    Image,
+    Image, Button,
 } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
-import {SearchBar, ListItem, Avatar} from "react-native-elements";
+import {SearchBar, ListItem, Avatar, Card} from "react-native-elements";
 
 export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
@@ -30,20 +30,26 @@ export default function AllTrails({ navigation }) {
 
 const renderItem = (trail, navigation) => {
   return (
-    <TouchableHighlight
-      onPress={() =>
-        navigation.navigate("TrailDetail", {
-          trail,
-        })
-      }
-    >
-        <ListItem bottomDivider>
-            <Avatar source={{uri: trail.image}}/>
-            <ListItem.Content>
-                <ListItem.Title style={styles.title}>{trail.name}</ListItem.Title>
-            </ListItem.Content>
-        </ListItem>
-    </TouchableHighlight>
+    <>
+        <Card>
+            <Card.Title>{trail.name}</Card.Title>
+            <Card.Divider/>
+            <Card.Image source={{uri: trail.image}}></Card.Image>
+            <Card.Divider/>
+            <Text style={{marginBottom: 10}}>
+                {trail.description}
+            </Text>
+            <Card.Divider/>
+            <View style={styles.viewDetails}>
+            <Text><Button title="View Details"
+                          onPress={() =>
+                            navigation.navigate("TrailDetail", {
+                                trail,
+                            })
+                          }/>
+            </Text></View>
+        </Card>
+    </>
   );
 };
 
@@ -61,8 +67,9 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 15,
   },
-  image: {
-
+  viewDetails: {
+      justifyContent: "center",
+      alignItems: 'center',
   },
 });
 

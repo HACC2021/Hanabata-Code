@@ -6,7 +6,7 @@ import { Button } from "react-native-elements";
 import { makeComment } from "../services/apiService";
 import { getAllComments } from "../services/apiService";
 
-export default function AddPost({ navigation }) {
+export default function AddComment({ navigation }) {
   const [comment, setComment] = useState("");
   const { state: data, dispatch: setData } = useUserInfo();
 
