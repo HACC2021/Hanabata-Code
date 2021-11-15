@@ -17,6 +17,11 @@ class CommunityCollection {
         title: String,
         detail: String,
         owner: String,
+        comments: { type: Array, optional: true },
+        "comments.$": Object,
+        "comments.$._id": String,
+        "comments.$.owner": String,
+        "comments.$.comment": String,
       },
       { tracker: Tracker }
     );
