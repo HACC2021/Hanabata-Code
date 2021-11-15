@@ -25,6 +25,7 @@ async function copyData() {
             idKey: obj.idKey,
             name: obj.name,
             island: obj.island,
+            image: "https://media.istockphoto.com/photos/two-hikers-enjoying-beautiful-view-picture-id1089175126?k=20&m=1089175126&s=612x612&w=0&h=8sW6gTeLEt0ujzNSfdxZRRSOjE1TAZJzR9qWPmQgOOk=",
             difficulty: obj.difficulty,
             lengthMiles: obj.lengthMiles,
             lengthKm: obj.lengthKm,

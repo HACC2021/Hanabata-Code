@@ -14,6 +14,12 @@ import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
 import {SearchBar, ListItem, Avatar, Card} from "react-native-elements";
 
+const trailImage = [
+    {
+        defaultImage: "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg"
+    }
+]
+
 export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
   return (
@@ -34,7 +40,7 @@ const renderItem = (trail, navigation) => {
         <Card>
             <Card.Title>{trail.name}</Card.Title>
             <Card.Divider/>
-            <Card.Image source={{uri: trail.image}}></Card.Image>
+            <Card.Image source={{uri: trail.image} || {uri: trail.newTrail.image}}></Card.Image>
             <Card.Divider/>
             <Text style={{marginBottom: 10}}>
                 {trail.description}
