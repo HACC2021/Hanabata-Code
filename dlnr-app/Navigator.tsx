@@ -9,6 +9,7 @@ import {
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
+import Account from "./pages/Account";
 import Login from "./pages/Login";
 import { useUserInfo, UserInfoProvider } from "./services/useUserInfo";
 import { useLogin, useLogout } from "./services/useLogin";
@@ -102,6 +103,11 @@ function Navigator() {
         <Drawer.Screen
           name="Community"
           component={Community}
+          options={headerRight}
+        />
+        <Drawer.Screen
+          name="Account"
+          component={Account}
           options={headerRight}
         />
       </Drawer.Navigator>
