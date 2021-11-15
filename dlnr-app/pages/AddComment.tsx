@@ -11,15 +11,15 @@ export default function AddComment({ navigation }) {
   const { state: data, dispatch: setData } = useUserInfo();
 
   const submit = async () => {
-    await makeComment(data.userInfo.token, comment);
-    await getAllComments(data.userInfo.token).then((res) => {
-      setData({
-        type: "ADD_ALL_POSTS",
-        payload: {
-          posts: res,
-        },
-      });
-    });
+    // await makeComment(data.userInfo.token, comment);
+    // await getAllComments(data.userInfo.token).then((res) => {
+    //   setData({
+    //     type: "ADD_ALL_POSTS",
+    //     payload: {
+    //       posts: res,
+    //     },
+    //   });
+    // });
     //     await setData({
     //       type: "ADD_POST",
     //       payload: {
