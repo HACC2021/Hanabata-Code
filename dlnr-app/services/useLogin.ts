@@ -32,9 +32,7 @@ const useLogout = async () => {
 
 async function validateUser(token) {
   try {
-    const response = await fetch(
-      "http://192.168.0.4:3000/auth/loginWithToken",
-      {
+    const response = await fetch("http://192.168.0.4:3000/auth/loginWithToken", {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached

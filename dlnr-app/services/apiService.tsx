@@ -1,6 +1,6 @@
 async function getData() {
   try {
-    const response = await fetch("http://192.168.1.24:3000/test", {
+    const response = await fetch("http://192.168.0.4:3000/test", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -25,7 +25,7 @@ async function getData() {
 async function makePost(token, title, detail) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/postOnCommunity",
+      "http://192.168.0.4:3000/auth/postOnCommunity",
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
