@@ -4,3 +4,4 @@ meteor/app/.meteor/packages
 meteor/app/.meteor/release
 meteor/app/.meteor/versions
 scripts/config.js
+package-lock.json
