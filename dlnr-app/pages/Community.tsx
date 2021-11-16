@@ -13,9 +13,7 @@ export default function Community({ navigation }) {
       <ListItem
         bottomDivider
         onPress={() =>
-          navigation.navigate("CommunityDetail", {
-            detail: item.detail,
-          })
+          navigation.navigate("CommunityDetail", item)
         }
       >
         {/* <Avatar source={{ uri: item.avatar_url }} /> */}

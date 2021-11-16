@@ -1,7 +1,7 @@
 import * as React from 'react';
 import MapView from 'react-native-maps';
 import { Marker } from 'react-native-maps';
-import { StyleSheet, Text, View, Dimensions } from 'react-native';
+import { StyleSheet, Dimensions, View, Text, Image } from 'react-native';
 import { useEffect } from 'react';
 import { ScrollView } from 'react-native-gesture-handler';
 import {

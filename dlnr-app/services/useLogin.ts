@@ -45,8 +45,12 @@ async function validateUser(token) {
         },
       }
     );
-    const json = await response.json();
-    console.log("validate user", json);
+    let json;
+    if (response.status === 200) {
+      json = await response.json();
+    }else {
+      json = undefined;
+    }
     return json;
   } catch (error) {
     console.error(error);
@@ -66,7 +70,25 @@ async function useLogin(email, password) {
       body: JSON.stringify({ email, password }), // body data type must match "Content-Type" header
     });
     const json = await response.json();
-    console.log(json);
+    await storeToken(json.token);
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function registerUser(email, password) {
+  try {
+    const response = await fetch("http://192.168.1.24:3000/users/register", {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }), // body data type must match "Content-Type" header
+    });
+    const json = await response.json();
     await storeToken(json.token);
     return json;
   } catch (error) {
@@ -80,7 +102,7 @@ async function loginWithToken() {
   if (token) {
     userId = await validateUser(token);
   }
-  return {userId , token};
+  return token ? { userId, token } : undefined;
 }
 
-export { useLogin, useLogout, loginWithToken };
+export { useLogin, useLogout, loginWithToken, registerUser };

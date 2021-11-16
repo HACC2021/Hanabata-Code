@@ -16,7 +16,10 @@ class TrailsCollection {
         island: String,
         idKey: String,
         image: { type: String, optional: true },
-        defaultImage: { type: String, optional: true },
+        defaultImage: {
+          type: String,
+          optional: true,
+        },
         location: String,
         lengthMiles: Number,
         lengthKm: Number,
