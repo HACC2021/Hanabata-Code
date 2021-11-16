@@ -72,8 +72,19 @@ After installation, you can run the application from the "dlnr-app" directory by
 $ npm run start
 ```
 
+#### App Features
+
 ![image](images/maps-view.png)
+
+Main map screen, with color indicating the predicted level of traffic at the trail. 
+
+![image](images/detail-view.png)
+
+Detail view displaying Google Popular Times data. 
+
 ![image](images/menu-view.png)
+
+![image](images/check-in-flow.png)
 
 ### Deployment
 
