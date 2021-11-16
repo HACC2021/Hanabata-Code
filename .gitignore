@@ -5,4 +5,3 @@ meteor/app/.meteor/release
 meteor/app/.meteor/versions
 scripts/config.js
 .DS_Store
-.gitignore
