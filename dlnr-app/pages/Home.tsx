@@ -20,6 +20,32 @@ import { useUserInfo } from "../services/useUserInfo";
 
 export default function Home(props) {
   const { state: userInfo, dispatch: setUserInfo } = useUserInfo();
+  if (userInfo.trails) {
+    let dayOfWeek = new Date().getDay() - 1;
+    let hour = new Date().getHours();
+    if (dayOfWeek < 0) dayOfWeek = 6;
+    for (let trail of userInfo.trails) {
+      if (trail.googlePlaceData?.populartimes) {
+        let busyValue = trail.googlePlaceData.populartimes[dayOfWeek].data[hour];
+        let color = "";
+        if (busyValue < 25) {
+          color = "#00FF00";
+        }
+        else if (busyValue < 60) {
+          color = "#00FFFF";
+        }
+        else if (busyValue < 80) {
+          color = "#FFA500";
+        }
+        else {
+          color = "#FF0000";
+        }
+        trail.color = color;
+      } else {
+        trail.color = "#AAAAAA";
+      }
+    }
+  }
   return (
     <View style={styles.container}>
       <MapView
@@ -36,6 +62,7 @@ export default function Home(props) {
             trail.coords && (
               <Marker
                 key={index}
+                pinColor={trail.color}
                 coordinate={trail.coords}
                 title={trail.name}
                 description={trail.description}
