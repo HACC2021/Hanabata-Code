@@ -5,3 +5,4 @@ meteor/app/.meteor/release
 meteor/app/.meteor/versions
 scripts/config.js
 package-lock.json
+dlnr-app/package-lock.json
