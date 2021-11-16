@@ -18,6 +18,7 @@ import { useUserInfo } from "../services/useUserInfo";
 //   );
 // }
 
+
 export default function Home(props) {
   const { state: userInfo, dispatch: setUserInfo } = useUserInfo();
   if (userInfo.trails) {
