@@ -5,7 +5,7 @@ import { ScrollView } from "react-native-gesture-handler";
 import InputScrollView from "react-native-input-scroll-view";
 import { getAllComments, makeComment } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
-import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
+// import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
 
 const renderItem = ({ item }) => {
   return (
@@ -60,7 +60,7 @@ export default function CommunityDetail(props) {
         onChangeText={(value) => setComment(value)}
         style={{ height: "100%" }}
       />
-        <Button title="Save" onPress={submit} />
+      <Button title="Save" onPress={submit} />
       <SpeedDial
         isOpen={open}
         icon={{ name: "edit", color: "#fff" }}
@@ -84,18 +84,18 @@ export default function CommunityDetail(props) {
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
-    TopView: {
-        flex: 1,
-        backgroundColor: '#E2FAB5',
-        padding: 13,
-    },
-    BottomView: {
-        flex: 1,
-    },
-    postText: {
-        fontSize: 17,
-    }
+  container: {
+    flex: 1,
+  },
+  TopView: {
+    flex: 1,
+    backgroundColor: "#E2FAB5",
+    padding: 13,
+  },
+  BottomView: {
+    flex: 1,
+  },
+  postText: {
+    fontSize: 17,
+  },
 });
