@@ -77,7 +77,7 @@ async function useLogin(email, password) {
 
 async function registerUser(email, password) {
   try {
-    const response = await fetch("http://192.168.1.24:3000/users/register", {
+    const response = await fetch("http://192.168.1.17:3000/users/register", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
