@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { FlatList, Text } from "react-native";
+import { FlatList, Text, StyleSheet, View } from "react-native";
 import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 import InputScrollView from "react-native-input-scroll-view";
 import { getAllComments, makeComment } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
+// import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
 
 const renderItem = ({ item }) => {
   return (
@@ -40,12 +41,18 @@ export default function CommunityDetail(props) {
   };
   return (
     <>
-      <Text>{props.route.params.detail}</Text>
-      <FlatList
-        data={detail.comments}
-        renderItem={renderItem}
-        keyExtractor={(item, i) => i.toString()}
-      />
+      <View style={styles.container}>
+        <View style={styles.TopView}>
+          <Text style={styles.postText}>{props.route.params.detail}</Text>
+        </View>
+        <View style={styles.BottomView}>
+          <FlatList
+            data={detail.comments}
+            renderItem={renderItem}
+            keyExtractor={(item, i) => i.toString()}
+          />
+        </View>
+      </View>
       <Input
         placeholder="Comment"
         leftIcon={{ type: "font-awesome", name: "comment" }}
@@ -54,7 +61,6 @@ export default function CommunityDetail(props) {
         style={{ height: "100%" }}
       />
       <Button title="Save" onPress={submit} />
-
       <SpeedDial
         isOpen={open}
         icon={{ name: "edit", color: "#fff" }}
@@ -76,3 +82,20 @@ export default function CommunityDetail(props) {
     </>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  TopView: {
+    flex: 1,
+    backgroundColor: "#E2FAB5",
+    padding: 13,
+  },
+  BottomView: {
+    flex: 1,
+  },
+  postText: {
+    fontSize: 17,
+  },
+});
