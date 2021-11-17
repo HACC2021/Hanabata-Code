@@ -6,6 +6,3 @@ meteor/app/.meteor/versions
 dlnr-app/package-lock.json
 scripts/config.js
 .DS_Store
-dlnr-app/package.json
-dlnr-app/services/apiService.tsx
-dlnr-app/services/useLogin.ts
