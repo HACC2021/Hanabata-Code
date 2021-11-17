@@ -1,6 +1,6 @@
 async function getData() {
   try {
-    const response = await fetch("http://192.168.1.24:3000/test", {
+    const response = await fetch("http://192.168.1.17:3000/test", {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -25,7 +25,7 @@ async function getData() {
 async function makePost(token, title, detail) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/postOnCommunity",
+      "http://192.168.1.17:3000/auth/postOnCommunity",
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -48,7 +48,7 @@ async function makePost(token, title, detail) {
 async function makeComment(token, _id, comment) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/commentOnCommunity",
+      "http://192.168.1.17:3000/auth/commentOnCommunity",
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -70,7 +70,7 @@ async function makeComment(token, _id, comment) {
 
 async function getAllPosts(token) {
   try {
-    const response = await fetch("http://192.168.1.24:3000/auth/getAllPosts", {
+    const response = await fetch("http://192.168.1.17:3000/auth/getAllPosts", {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -90,7 +90,7 @@ async function getAllPosts(token) {
 async function getAllComments(token, _id) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/getAllComments",
+      "http://192.168.1.17:3000/auth/getAllComments",
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -112,7 +112,7 @@ async function getAllComments(token, _id) {
 
 function getTrails() {
   console.log("getting trails from api...");
-  return fetch("http://192.168.1.24:3000/api/trails", { method: "GET" })
+  return fetch("http://192.168.1.17:3000/api/trails", { method: "GET" })
     .then((res) => {
       console.log("successfully receieved trails");
       return res.json();
@@ -123,7 +123,7 @@ function getTrails() {
 async function deleteComment(token, comment) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/deleteCommentOnCommunityDetail",
+      "http://192.168.1.17:3000/auth/deleteCommentOnCommunityDetail",
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -146,7 +146,7 @@ async function deleteComment(token, comment) {
 async function editComment(token, comment) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/editCommentOnCommunityDetail",
+      "http://192.168.1.17:3000/auth/editCommentOnCommunityDetail",
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
