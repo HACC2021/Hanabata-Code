@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ip4 } from "./http";
 
 const storeToken = async (token) => {
   try {
@@ -32,9 +32,7 @@ const useLogout = async () => {
 
 async function validateUser(token) {
   try {
-    const response = await fetch(
-      `http://${ip4}/auth/loginWithToken`,
-      {
+    const response = await fetch(`http://${ip4}/auth/loginWithToken`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
