@@ -71,14 +71,14 @@ class TrailsCollection {
         elevationMeters: { type: Number, optional: true },
         difficulty: {
           type: String,
-          allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme'],
+          allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme', 'Undefined'],
           defaultValue: 'Normal',
         },
         busyTime: String,
         price: {
           type: String,
-          allowedValues: ['$', '$$', '$$$'],
-          defaultValue: '$',
+          allowedValues: ['Free', 'Entrance Fees'],
+          defaultValue: 'Free',
         },
         description: String,
         owner: {

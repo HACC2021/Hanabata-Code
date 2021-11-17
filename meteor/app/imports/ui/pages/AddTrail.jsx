@@ -61,14 +61,17 @@ const formSchema = new SimpleSchema({
   lengthMiles: String,
   difficulty: {
     type: String,
-    allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme'],
+    allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme', 'Undefined'],
     defaultValue: 'Normal',
   },
-  busyTime: String,
+  busyTime: {
+    type: String,
+    optional: true,
+  },
   price: {
     type: String,
-    allowedValues: ['$', '$$', '$$$'],
-    defaultValue: '$',
+    allowedValues: ['Free', 'Entrance Fees'],
+    defaultValue: 'Free',
   },
   description: String,
   owner: {
