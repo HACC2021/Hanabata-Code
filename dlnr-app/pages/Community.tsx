@@ -1,20 +1,31 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, SafeAreaView, FlatList } from "react-native";
 import { ListItem, Avatar, SpeedDial } from "react-native-elements";
+import { getAllPosts } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
 
 export default function Community({ navigation }) {
   const [open, setOpen] = useState(false);
-  const { state: data } = useUserInfo();
+  const { state: data, dispatch: setData } = useUserInfo();
+
+  useEffect(() => {
+    getAllPosts(data.userInfo.token).then((res) => {
+      console.log(res);
+      setData({
+        type: "ADD_ALL_POSTS",
+        payload: {
+          posts: res,
+        },
+      });
+    });
+  }, []);
 
   const renderItem = ({ item }) => {
     // console.log(data.posts);
     return (
       <ListItem
         bottomDivider
-        onPress={() =>
-          navigation.navigate("CommunityDetail", item)
-        }
+        onPress={() => navigation.navigate("CommunityDetail", item)}
       >
         {/* <Avatar source={{ uri: item.avatar_url }} /> */}
         <ListItem.Content>

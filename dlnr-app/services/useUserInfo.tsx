@@ -96,14 +96,7 @@ const UserInfoProvider = ({ children }) => {
         });
       });
 
-      res && getAllPosts(res.token).then((res) => {
-        dispatch({
-          type: "ADD_ALL_POSTS",
-          payload: {
-            posts: res,
-          },
-        });
-      });
+      
     });
   }, []);
 
