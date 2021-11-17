@@ -1,3 +1,4 @@
+import { useNavigationState } from "@react-navigation/core";
 import React, { useState, useEffect } from "react";
 import { View, SafeAreaView, FlatList } from "react-native";
 import { ListItem, Avatar, SpeedDial } from "react-native-elements";
@@ -7,18 +8,20 @@ import { useUserInfo } from "../services/useUserInfo";
 export default function Community({ navigation }) {
   const [open, setOpen] = useState(false);
   const { state: data, dispatch: setData } = useUserInfo();
+  const navState = useNavigationState((state) => state);
 
   useEffect(() => {
-    getAllPosts(data.userInfo.token).then((res) => {
-      console.log(res);
-      setData({
-        type: "ADD_ALL_POSTS",
-        payload: {
-          posts: res,
-        },
+    navState.routeNames[navState.index] === "Community" &&
+      getAllPosts(data.userInfo.token).then((res) => {
+        console.log("Community");
+        setData({
+          type: "ADD_ALL_POSTS",
+          payload: {
+            posts: res,
+          },
+        });
       });
-    });
-  }, []);
+  }, [navState.index]);
 
   const renderItem = ({ item }) => {
     // console.log(data.posts);
