@@ -24,7 +24,7 @@ export class AllTrailCourse extends React.Component {
   render() {
     return (
       <Card>
-        <Image src={this.state.image}/>
+        <Image src={this.props.trail.defaultImage || this.state.image}/>
         <Card.Content>
           <Card.Header as='h2'><Link to={{ pathname: '/'}}>{this.props.trail.name}</Link></Card.Header>
           <Card.Description><strong>{this.props.trail.location}</strong></Card.Description>
