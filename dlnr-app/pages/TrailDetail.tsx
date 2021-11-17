@@ -86,6 +86,7 @@ export default function TrailDetail(props) {
 
   return (
     <>
+        <ScrollView>
       <Text
         h4
         style={{
@@ -131,7 +132,7 @@ export default function TrailDetail(props) {
               trail.coords && <Marker coordinate={trail.coords}></Marker>
           )}
         </MapView>
-      </View>
+      </View></ScrollView>
     </>
   );
 }
@@ -145,6 +146,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     alignItems: "center",
     justifyContent: "center",
+    marginBottom: 20,
   },
   map: {
     width: 400,

@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { FlatList, Text, StyleSheet, View } from "react-native";
+import React, {useState, useEffect} from "react";
+import { FlatList, Text, StyleSheet, View, TouchableOpacity } from "react-native";
 import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
 import { ScrollView } from "react-native-gesture-handler";
 import InputScrollView from "react-native-input-scroll-view";
 import { getAllComments, makeComment } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
+
 // import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
 
 const renderItem = ({ item }) => {
@@ -31,6 +32,7 @@ export default function CommunityDetail(props) {
     );
   }, [props.route.params._id]);
 
+
   const submit = async () => {
     await makeComment(
       data.userInfo.token,
@@ -39,6 +41,7 @@ export default function CommunityDetail(props) {
     ).then((res) => setDetail(res));
     setComment("");
   };
+
   return (
     <>
       <View style={styles.container}>
@@ -46,13 +49,16 @@ export default function CommunityDetail(props) {
           <Text style={styles.postText}>{props.route.params.detail}</Text>
         </View>
         <View style={styles.BottomView}>
-          <FlatList
-            data={detail.comments}
-            renderItem={renderItem}
-            keyExtractor={(item, i) => i.toString()}
-          />
+          <TouchableOpacity>
+            <FlatList
+              data={detail.comments}
+              renderItem={renderItem}
+              keyExtractor={(item, i) => i.toString()}
+            />
+          </TouchableOpacity>
         </View>
       </View>
+      <ScrollView><InputScrollView>
       <Input
         placeholder="Comment"
         leftIcon={{ type: "font-awesome", name: "comment" }}
@@ -61,6 +67,7 @@ export default function CommunityDetail(props) {
         style={{ height: "100%" }}
       />
       <Button title="Save" onPress={submit} />
+      </InputScrollView></ScrollView>
       <SpeedDial
         isOpen={open}
         icon={{ name: "edit", color: "#fff" }}
