@@ -16,48 +16,40 @@ const formSchema = new SimpleSchema({
   location: String,
   openHour: {
     type: String,
-    allowedValues: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
-    defaultValue:'5',
+    allowedValues: [
+      '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+      '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+    ],
+    defaultValue: '5',
   },
   openMinute: {
     type: String,
-    allowedValues: [
-      '00', '01', '02', '03', '04', '05', '06', '07', '08', '09',
-      '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
-      '20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
-      '30', '31', '32', '33', '34', '35', '36', '37', '38', '39',
-      '40', '41', '42', '43', '44', '45', '46', '47', '48', '49',
-      '50', '51', '52', '53', '54', '55', '56', '57', '58', '59',
-    ],
+    allowedValues: ['00', '15', '30', '45'],
     defaultValue: '00',
   },
-  open: {
-    type: String,
-    allowedValues: ['AM', 'PM'],
-    defaultValue: 'AM',
-  },
+  // open: {
+  //   type: String,
+  //   allowedValues: ['AM', 'PM'],
+  //   defaultValue: 'AM',
+  // },
   closeHour: {
     type: String,
-    allowedValues: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12'],
+    allowedValues: [
+      '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+      '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+    ],
     defaultValue: '6',
   },
   closeMinute: {
     type: String,
-    allowedValues: [
-      '00', '01', '02', '03', '04', '05', '06', '07', '08', '09',
-      '10', '11', '12', '13', '14', '15', '16', '17', '18', '19',
-      '20', '21', '22', '23', '24', '25', '26', '27', '28', '29',
-      '30', '31', '32', '33', '34', '35', '36', '37', '38', '39',
-      '40', '41', '42', '43', '44', '45', '46', '47', '48', '49',
-      '50', '51', '52', '53', '54', '55', '56', '57', '58', '59',
-    ],
+    allowedValues: ['00', '15', '30', '45'],
     defaultValue: '00',
   },
-  close: {
-    type: String,
-    allowedValues: ['AM', 'PM'],
-    defaultValue: 'AM',
-  },
+  // close: {
+  //   type: String,
+  //   allowedValues: ['AM', 'PM'],
+  //   defaultValue: 'AM',
+  // },
   lengthMiles: String,
   difficulty: {
     type: String,
@@ -66,7 +58,8 @@ const formSchema = new SimpleSchema({
   },
   busyTime: {
     type: String,
-    optional: true,
+    allowedValues: ['08:00 - 10:00', '10:00 - 12:00', '12:00 - 14:00', '14:00 - 16:00', '16:00 - 18:00'],
+    defaultValue: '12:00 - 14:00',
   },
   price: {
     type: String,
@@ -129,16 +122,16 @@ class AddTrail extends React.Component {
               <Form.Group>
                 <SelectField name='openHour'/>
                 <SelectField name='openMinute'/>
-                <SelectField name='open'/>
+                {/* <SelectField name='open'/> */}
               </Form.Group>
               <Form.Group>
                 <SelectField name='closeHour'/>
                 <SelectField name='closeMinute'/>
-                <SelectField name='close'/>
+                {/* <SelectField name='close'/> */}
               </Form.Group>
               <TextField name='lengthMiles'/>
               <SelectField name='difficulty'/>
-              <TextField name='busyTime'/>
+              <SelectField name='busyTime'/>
               <SelectField name='price'/>
               <LongTextField name='description'/>
               <UploadImg imgRef={this.imgRef} />

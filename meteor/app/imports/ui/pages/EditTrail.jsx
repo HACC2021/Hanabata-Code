@@ -58,16 +58,16 @@ class EditTrail extends React.Component {
               <Form.Group>
                 <SelectField name='openHour'/>
                 <SelectField name='openMinute'/>
-                <SelectField name='open'/>
+                {/* <SelectField name='open'/> */}
               </Form.Group>
               <Form.Group>
                 <SelectField name='closeHour'/>
                 <SelectField name='closeMinute'/>
-                <SelectField name='close'/>
+                {/* <SelectField name='close'/> */}
               </Form.Group>
               <TextField name='lengthMiles'/>
               <SelectField name='difficulty'/>
-              <TextField name='busyTime'/>
+              <SelectField name='busyTime'/>
               <SelectField name='price'/>
               <LongTextField name='description'/>
               <UploadImg imgRef={this.imgRef} />

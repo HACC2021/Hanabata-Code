@@ -106,10 +106,13 @@ export default function TrailDetail(props) {
       <Text style={styles.descriptionText}>{trail.description}</Text>
       <Divider orientation="horizontal" inset={true} insetType="middle" />
       <Text style={styles.descriptionText}>
-        Island: {trail.island}{"\n"}Location: {trail.location}{"\n"}
-        Open-Close: {trail.openHour}{"\n"}Busy Time: {trail.busyTime}{"\n"}
+        Island: {trail.island}{"\n"}
+        Open-Close: {trail.openHour}:{trail.openMinute} - {trail.closeHour}:{trail.closeMinute}{"\n"}
+        Busy Time: {trail.busyTime}{"\n"}
         Length Miles: {trail.lengthMiles} miles{"\n"}
-        Difficulty: {trail.difficulty}{"\n"}Price: {trail.price}
+        Difficulty: {trail.difficulty}{"\n"}
+        Price: {trail.price}{"\n"}
+        Location: {trail.location}
       </Text>
       <Divider orientation="horizontal" inset={true} insetType="middle" />
 
@@ -135,7 +138,7 @@ export default function TrailDetail(props) {
 
 const styles = StyleSheet.create({
   descriptionText: {
-    fontSize: 17,
+    fontSize: 16,
     padding: 13,
   },
   container: {
