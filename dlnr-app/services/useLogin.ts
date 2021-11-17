@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ip4 } from "./http";
 
 const storeToken = async (token) => {
   try {
@@ -32,7 +32,7 @@ const useLogout = async () => {
 
 async function validateUser(token) {
   try {
-    const response = await fetch("http://192.168.1.17:3000/auth/loginWithToken", {
+    const response = await fetch(`http://${ip4}/auth/loginWithToken`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -57,7 +57,7 @@ async function validateUser(token) {
 
 async function useLogin(email, password) {
   try {
-    const response = await fetch("http://192.168.1.17:3000/users/login", {
+    const response = await fetch(`http://${ip4}/users/login`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -77,7 +77,7 @@ async function useLogin(email, password) {
 
 async function registerUser(email, password) {
   try {
-    const response = await fetch("http://192.168.1.17:3000/users/register", {
+    const response = await fetch(`http://${ip4}/users/register`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
