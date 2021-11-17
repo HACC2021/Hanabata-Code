@@ -5,6 +5,7 @@ import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
+import Account from "./pages/Account";
 import Login from "./pages/Login";
 import { useUserInfo } from "./services/useUserInfo";
 import { useLogout } from "./services/useLogin";
