@@ -1,5 +1,5 @@
 import React, { createRef } from 'react';
-import { Grid, Loader, Header, Segment } from 'semantic-ui-react';
+import { Grid, Loader, Header, Segment, Form } from 'semantic-ui-react';
 import swal from 'sweetalert';
 import { AutoForm, ErrorsField, HiddenField, SelectField, SubmitField, TextField, LongTextField } from 'uniforms-semantic';
 import { Meteor } from 'meteor/meteor';
@@ -21,11 +21,11 @@ class EditTrail extends React.Component {
 
   // On successful submit, insert the data.
   submit(data) {
-    let { name, image, location, length, difficulty, busyTime, price, description, _id } = data;
+    let { name, island, idKey, image, location, openHour, openMinute, open, closeHour, closeMinute, close, lengthMiles, difficulty, busyTime, price, description, _id } = data;
     image = this.imgRef.current ? extractFileType(this.imgRef.current) : (image || '');
     Trails.collection.update(
       _id,
-      { $set: { name, image, location, length, difficulty, busyTime, price, description } },
+      { $set: { name, island, idKey, image, location, openHour, openMinute, open, closeHour, closeMinute, close, lengthMiles, difficulty, busyTime, price, description } },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -55,7 +55,17 @@ class EditTrail extends React.Component {
             <Segment>
               <TextField name='name'/>
               <TextField name='location'/>
-              <TextField name='length'/>
+              <Form.Group>
+                <SelectField name='openHour'/>
+                <SelectField name='openMinute'/>
+                <SelectField name='open'/>
+              </Form.Group>
+              <Form.Group>
+                <SelectField name='closeHour'/>
+                <SelectField name='closeMinute'/>
+                <SelectField name='close'/>
+              </Form.Group>
+              <TextField name='lengthMiles'/>
               <SelectField name='difficulty'/>
               <TextField name='busyTime'/>
               <SelectField name='price'/>
@@ -64,6 +74,7 @@ class EditTrail extends React.Component {
               <SubmitField value='Submit'/>
               <ErrorsField/>
               <HiddenField name='owner' />
+              <HiddenField name='idKey' />
               <HiddenField name="image" />
             </Segment>
           </AutoForm>
