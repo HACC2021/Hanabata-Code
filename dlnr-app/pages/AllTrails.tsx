@@ -1,29 +1,46 @@
 // import { NavigationContainer, StackActions } from "@react-navigation/native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import {
-    Text,
-    View,
-    StyleSheet,
-    SafeAreaView,
-    FlatList,
-    StatusBar,
-    Image, Button,
+  Text,
+  View,
+  StyleSheet,
+  SafeAreaView,
+  FlatList,
+  StatusBar,
+  Image,
+  Button,
 } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
-import {SearchBar, ListItem, Avatar, Card} from "react-native-elements";
+import { SearchBar, ListItem, Avatar, Card } from "react-native-elements";
+import { useNavigationState } from "@react-navigation/core";
+import { getTrails } from "../services/apiService";
 
-const trailImage = "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg"
-
+const trailImage =
+  "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
 
 export default function AllTrails({ navigation }) {
-  const { state: userInfo } = useUserInfo();
+  const { state: data, dispatch: setData } = useUserInfo();
+  const navState = useNavigationState((state) => state);
+
+  useEffect(() => {
+    navState.routeNames[navState.index] === "AllTrails" &&
+      getTrails().then((res) => {
+        console.log("AllTrails");
+        setData({
+          type: "ALL_TRAILS",
+          payload: {
+            trails: res,
+          },
+        });
+      });
+  }, [navState.index]);
   return (
     <SafeAreaView style={styles.container}>
-      <Search/>
+      <Search />
       <FlatList
-        data={userInfo.trails}
+        data={data.trails}
         renderItem={(item) => renderItem(item.item, navigation)}
         keyExtractor={(item) => item.idKey}
       />
@@ -34,24 +51,26 @@ export default function AllTrails({ navigation }) {
 const renderItem = (trail, navigation) => {
   return (
     <>
-        <Card>
-            <Card.Title>{trail.name}</Card.Title>
-            <Card.Divider/>
-            <Card.Image source={{uri: trail.image || trailImage}}></Card.Image>
-            <Card.Divider/>
-            <Text style={{marginBottom: 10}}>
-                {trail.description}
-            </Text>
-            <Card.Divider/>
-            <View style={styles.viewDetails}>
-            <Text><Button title="View Details"
-                          onPress={() =>
-                            navigation.navigate("TrailDetail", {
-                                trail,
-                            })
-                          }/>
-            </Text></View>
-        </Card>
+      <Card>
+        <Card.Title>{trail.name}</Card.Title>
+        <Card.Divider />
+        <Card.Image source={{ uri: trail.image || trailImage }}></Card.Image>
+        <Card.Divider />
+        <Text style={{ marginBottom: 10 }}>{trail.description}</Text>
+        <Card.Divider />
+        <View style={styles.viewDetails}>
+          <Text>
+            <Button
+              title="View Details"
+              onPress={() =>
+                navigation.navigate("TrailDetail", {
+                  trail,
+                })
+              }
+            />
+          </Text>
+        </View>
+      </Card>
     </>
   );
 };
@@ -71,8 +90,8 @@ const styles = StyleSheet.create({
     fontSize: 15,
   },
   viewDetails: {
-      justifyContent: "center",
-      alignItems: 'center',
+    justifyContent: "center",
+    alignItems: "center",
   },
 });
 

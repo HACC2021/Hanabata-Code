@@ -5,6 +5,8 @@ import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { useEffect } from "react";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
+import { getTrails } from "../services/apiService";
+import { useNavigationState } from "@react-navigation/core";
 
 // export default function Home(props) {
 //   const Stack = createNativeStackNavigator();
@@ -18,27 +20,26 @@ import { useUserInfo } from "../services/useUserInfo";
 //   );
 // }
 
-
 export default function Home(props) {
-  const { state: userInfo, dispatch: setUserInfo } = useUserInfo();
-  if (userInfo.trails) {
+  const { state: data, dispatch: setData } = useUserInfo();
+  const navState = useNavigationState((state) => state);
+
+  if (data.trails) {
     let dayOfWeek = new Date().getDay() - 1;
     let hour = new Date().getHours();
     if (dayOfWeek < 0) dayOfWeek = 6;
-    for (let trail of userInfo.trails) {
+    for (let trail of data.trails) {
       if (trail.googlePlaceData?.populartimes) {
-        let busyValue = trail.googlePlaceData.populartimes[dayOfWeek].data[hour];
+        let busyValue =
+          trail.googlePlaceData.populartimes[dayOfWeek].data[hour];
         let color = "";
         if (busyValue < 25) {
           color = "#00FF00";
-        }
-        else if (busyValue < 60) {
+        } else if (busyValue < 60) {
           color = "#00FFFF";
-        }
-        else if (busyValue < 80) {
+        } else if (busyValue < 80) {
           color = "#FFA500";
-        }
-        else {
+        } else {
           color = "#FF0000";
         }
         trail.color = color;
@@ -47,6 +48,20 @@ export default function Home(props) {
       }
     }
   }
+
+  useEffect(() => {
+    navState.routeNames[navState.index] === "Home" &&
+      getTrails().then((res) => {
+        console.log("Home");
+        setData({
+          type: "ALL_TRAILS",
+          payload: {
+            trails: res,
+          },
+        });
+      });
+  }, [navState.index]);
+
   return (
     <View style={styles.container}>
       <MapView
@@ -58,7 +73,7 @@ export default function Home(props) {
         }}
         style={styles.map}
       >
-        {userInfo.trails?.map(
+        {data.trails?.map(
           (trail, index) =>
             trail.coords && (
               <Marker
@@ -82,7 +97,7 @@ export default function Home(props) {
       </MapView>
     </View>
   );
-};
+}
 
 const styles = StyleSheet.create({
   container: {
