@@ -74,7 +74,10 @@ class TrailsCollection {
           allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme', 'Undefined'],
           defaultValue: 'Normal',
         },
-        busyTime: String,
+        busyTime: {
+          type: String,
+          optional: true,
+        },
         price: {
           type: String,
           allowedValues: ['Free', 'Entrance Fees'],
