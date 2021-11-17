@@ -78,6 +78,7 @@ const UserInfoProvider = ({ children }) => {
   // const memo = useMemo(()=>({state, dispatch, getState}),[]);
   useEffect(() => {
     loginWithToken().then((res) => {
+      console.log(res)
       dispatch({
         type: "LOGIN",
         payload: {
@@ -95,7 +96,7 @@ const UserInfoProvider = ({ children }) => {
         });
       });
 
-      getAllPosts(res.token).then((res) => {
+      res && getAllPosts(res.token).then((res) => {
         dispatch({
           type: "ADD_ALL_POSTS",
           payload: {

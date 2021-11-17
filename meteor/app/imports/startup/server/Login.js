@@ -10,9 +10,8 @@ JsonRoutes.Middleware.use(
 
 JsonRoutes.add("GET", "auth/loginWithToken", function (request, response) {
   // The authenticated user's ID will be set by this middleware
-  var userId = request.userId;
-
-  var statusCode = 200;
+  const userId = request.userId;
+  let statusCode = userId ? 200 : 401;
 
   JsonRoutes.sendResult(response, {
     code: statusCode,
