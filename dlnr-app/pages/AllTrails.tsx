@@ -20,9 +20,40 @@ import { getTrails } from "../services/apiService";
 const trailImage =
   "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
 
+const Search = (props) => {
+  const [search, setSearch] = useState("");
+  const onChange = (text) => {
+    setSearch(text);
+    props.setResult(props.trails.filter((trail) => trail.name.includes(text)));
+  };
+
+  return (
+    <SearchBar
+      placeholder="Type Here..."
+      onChangeText={onChange as any}
+      value={search}
+      onBlur={undefined}
+      onFocus={undefined}
+      platform={"default"}
+      clearIcon={undefined}
+      searchIcon={undefined}
+      loadingProps={undefined}
+      showLoading={undefined}
+      onClear={undefined}
+      onCancel={undefined}
+      lightTheme={false}
+      round={false}
+      cancelButtonTitle={undefined}
+      cancelButtonProps={undefined}
+      showCancel={undefined}
+    />
+  );
+};
+
 export default function AllTrails({ navigation }) {
   const { state: data, dispatch: setData } = useUserInfo();
   const navState = useNavigationState((state) => state);
+  const [result, setResult] = useState();
 
   useEffect(() => {
     navState.routeNames[navState.index] === "AllTrails" &&
@@ -36,11 +67,12 @@ export default function AllTrails({ navigation }) {
         });
       });
   }, [navState.index]);
+
   return (
     <SafeAreaView style={styles.container}>
-      <Search />
+      <Search trails={data.trails} setResult={setResult}/>
       <FlatList
-        data={data.trails}
+        data={result || data.trails}
         renderItem={(item) => renderItem(item.item, navigation)}
         keyExtractor={(item) => item.idKey}
       />
@@ -94,29 +126,3 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
 });
-
-const Search = () => {
-  const [search, setSearch] = useState("");
-
-  return (
-    <SearchBar
-      placeholder="Type Here..."
-      onChangeText={setSearch as any}
-      value={search}
-      onBlur={undefined}
-      onFocus={undefined}
-      platform={"default"}
-      clearIcon={undefined}
-      searchIcon={undefined}
-      loadingProps={undefined}
-      showLoading={undefined}
-      onClear={undefined}
-      onCancel={undefined}
-      lightTheme={false}
-      round={false}
-      cancelButtonTitle={undefined}
-      cancelButtonProps={undefined}
-      showCancel={undefined}
-    />
-  );
-};
