@@ -9,6 +9,10 @@ export default function AllLinkButton({ navigation }) {
         onPress={() => navigation.navigate("Home")}
       />
       <Button
+        title="Go to Intro"
+        onPress={() => navigation.navigate("Intro")}
+      />
+      <Button
         title="Go to AllTrails"
         onPress={() => navigation.navigate("AllTrails")}
       />

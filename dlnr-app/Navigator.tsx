@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { Button } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
 import Account from "./pages/Account";
@@ -73,7 +74,16 @@ function Navigator() {
       <Drawer.Navigator initialRouteName={"Login"} backBehavior="history">
         {data.userInfo ? (
           <>
-            <Drawer.Screen name="Home" component={Home} options={headerRight} />
+            <Drawer.Screen
+              name="Home"
+              component={Home}
+              options={headerRight}
+            />
+            <Drawer.Screen
+              name="Intro"
+              component={Intro}
+              options={headerRight}
+            />
             <Drawer.Screen
               name="AllTrails"
               component={AllTrails}
