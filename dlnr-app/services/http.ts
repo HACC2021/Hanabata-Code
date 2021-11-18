@@ -3,4 +3,4 @@ const choi = "192.168.0.4";
 const kai = "192.168.1.177";
 const yeji = "192.168.1.17";
 
-export const ip4 = `${yong}:3000`;
+export const ip4 = `${yeji}:3000`;

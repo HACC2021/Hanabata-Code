@@ -121,7 +121,7 @@ function getTrails() {
     .catch((error) => console.log(error));
 }
 
-async function deleteComment(token, comment) {
+async function deleteComment(token, post_id, comment_id, comment) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/deleteCommentOnCommunityDetail`,
@@ -134,7 +134,7 @@ async function deleteComment(token, comment) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();
@@ -144,7 +144,7 @@ async function deleteComment(token, comment) {
   }
 }
 
-async function editComment(token, comment) {
+async function editComment(token, post_id, comment_id, comment) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/editCommentOnCommunityDetail`,
@@ -157,7 +157,7 @@ async function editComment(token, comment) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();

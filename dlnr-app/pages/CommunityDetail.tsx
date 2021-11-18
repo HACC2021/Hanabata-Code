@@ -9,28 +9,37 @@ import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
 
-const renderItem = ({ item }) => {
-  return (
-    <>
-    <Swipeable renderRightActions={() => <MaterialCommunityIcons color="#FF0000" size={50} name='delete-outline'/>}
-               renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline'/> }>
-    <ListItem bottomDivider>
-      {/* <Avatar source={{ uri: item.avatar_url }} /> */}
-      <ListItem.Content>
-        <ListItem.Title>{item.comment}</ListItem.Title>
-        <ListItem.Subtitle>{item.owner + "/" + item._id}</ListItem.Subtitle>
-      </ListItem.Content>
-    </ListItem>
-    </Swipeable>
-    </>
-  );
-};
-
 export default function CommunityDetail(props) {
   const [open, setOpen] = useState(false);
   const [comment, setComment] = useState("");
   const [detail, setDetail] = useState({ comments: [] });
   const { state: data, dispatch: setData } = useUserInfo();
+
+    const renderItem = ({ item }) => {
+        const deleteCommentButton = async () => {
+            console.log(item);
+            await deleteComment(data.userInfo.token, props.route.params._id, item._id, item.comment);
+        };
+        const editCommentButton = async () => {
+            //console.log("edit")
+            console.log(item);
+            await editComment(data.userInfo.token, props.route.params._id, item._id, item.comment);
+        };
+        return (
+            <>
+                <Swipeable renderRightActions={() => <MaterialCommunityIcons color="#FF0000" size={50} name='delete-outline' onPress={deleteCommentButton}/>}
+                           renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline' onPress={editCommentButton}/> }>
+                    <ListItem bottomDivider>
+                        {/* <Avatar source={{ uri: item.avatar_url }} /> */}
+                        <ListItem.Content>
+                            <ListItem.Title>{item.comment}</ListItem.Title>
+                            <ListItem.Subtitle>{item.owner + "/" + item._id}</ListItem.Subtitle>
+                        </ListItem.Content>
+                    </ListItem>
+                </Swipeable>
+            </>
+        );
+    };
 
   useEffect(() => {
     getAllComments(data.userInfo.token, props.route.params._id).then((res) =>
@@ -48,12 +57,6 @@ export default function CommunityDetail(props) {
     setComment("");
   };
 
-  const deleteComment = async (comment) => {
-      return await data.action(async () => {
-          return await comment.destroyPermanently();
-      })
-  };
-
   return (
     <>
       <View style={styles.container}>
@@ -61,7 +64,6 @@ export default function CommunityDetail(props) {
           <Text style={styles.postText}>{props.route.params.detail}</Text>
         </View>
         <View style={styles.BottomView}>
-          <ScrollView>
             <FlatList
               data={detail.comments}
               horizontal={false}
@@ -69,7 +71,6 @@ export default function CommunityDetail(props) {
               renderItem={renderItem}
               keyExtractor={(item, i) => i.toString()}
             />
-          </ScrollView>
         </View>
       </View>
       <ScrollView><InputScrollView>
