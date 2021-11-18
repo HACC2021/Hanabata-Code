@@ -1,25 +1,23 @@
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { Button } from "react-native";
-import {
-  createDrawerNavigator,
-  DrawerContentScrollView,
-  DrawerItemList,
-} from "@react-navigation/drawer";
+import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
+import Account from "./pages/Account";
 import Login from "./pages/Login";
-import { useUserInfo, UserInfoProvider } from "./services/useUserInfo";
-import { useLogin, useLogout } from "./services/useLogin";
+import { useUserInfo } from "./services/useUserInfo";
+import { useLogout } from "./services/useLogin";
 import TrailDetail from "./pages/TrailDetail";
 import CommunityDetail from "./pages/CommunityDetail";
 import AddPost from "./pages/AddPost";
+import SignUp from "./pages/SignUp";
 
 const Drawer = createDrawerNavigator();
 
 function Navigator() {
-  const { state: userInfo, dispatch } = useUserInfo();
+  const { state: data, dispatch } = useUserInfo();
 
   const logout = async (navigation) => {
     await useLogout();
@@ -34,19 +32,14 @@ function Navigator() {
 
   const headerRight = ({ navigation }) => {
     return {
-      headerRight: () => (
-        <Button
-          onPress={() => logout(navigation)}
-          title="Logout"
-          color="blue"
-        />
-      ),
-    };
-  };
-
-  const hiddenDrawer = () => {
-    return {
-      drawerItemStyle: { display: "none" as "none" },
+      headerRight: () =>
+        data.userInfo && (
+          <Button
+            onPress={() => logout(navigation)}
+            title="Logout"
+            color="blue"
+          />
+        ),
     };
   };
 
@@ -70,40 +63,49 @@ function Navigator() {
     };
   };
 
-  // useEffect(() => {
-  //   console.log("app2", userInfo);
-  // }, [userInfo]);
+  useEffect(() => {
+    
+    // console.log(navigationRef);
+  }, []);
 
   return (
     <NavigationContainer>
       <Drawer.Navigator initialRouteName={"Login"} backBehavior="history">
-        <Drawer.Screen name="Login" component={Login} options={hiddenDrawer} />
-        <Drawer.Screen
-          name="TrailDetail"
-          component={TrailDetail}
-          options={hiddenDrawerWithButton}
-        />
-        <Drawer.Screen
-          name="CommunityDetail"
-          component={CommunityDetail}
-          options={hiddenDrawerWithButton}
-        />
-        <Drawer.Screen
-          name="AddPost"
-          component={AddPost}
-          options={hiddenDrawerWithButton}
-        />
-        <Drawer.Screen name="Home" component={Home} options={headerRight} />
-        <Drawer.Screen
-          name="AllTrails"
-          component={AllTrails}
-          options={headerRight}
-        />
-        <Drawer.Screen
-          name="Community"
-          component={Community}
-          options={headerRight}
-        />
+        {data.userInfo ? (
+          <>
+            <Drawer.Screen name="Home" component={Home} options={headerRight} />
+            <Drawer.Screen
+              name="AllTrails"
+              component={AllTrails}
+              options={headerRight}
+            />
+            <Drawer.Screen
+              name="Community"
+              component={Community}
+              options={headerRight}
+            />
+            <Drawer.Screen
+              name="TrailDetail"
+              component={TrailDetail}
+              options={hiddenDrawerWithButton}
+            />
+            <Drawer.Screen
+              name="CommunityDetail"
+              component={CommunityDetail}
+              options={hiddenDrawerWithButton}
+            />
+            <Drawer.Screen
+              name="AddPost"
+              component={AddPost}
+              options={hiddenDrawerWithButton}
+            />
+          </>
+        ) : (
+          <>
+            <Drawer.Screen name="Login" component={Login} />
+            <Drawer.Screen name="Sign Up" component={SignUp} />
+          </>
+        )}
       </Drawer.Navigator>
     </NavigationContainer>
   );

@@ -1,17 +1,21 @@
-import { NavigationContainer, StackActions } from "@react-navigation/native";
+// import { NavigationContainer, StackActions } from "@react-navigation/native";
 import React, { useState } from "react";
 import {
-  Text,
-  View,
-  StyleSheet,
-  SafeAreaView,
-  FlatList,
-  StatusBar,
+    Text,
+    View,
+    StyleSheet,
+    SafeAreaView,
+    FlatList,
+    StatusBar,
+    Image, Button,
 } from "react-native";
 import { TouchableHighlight } from "react-native-gesture-handler";
 import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
-import { SearchBar } from "react-native-elements";
+import {SearchBar, ListItem, Avatar, Card} from "react-native-elements";
+
+const trailImage = "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg"
+
 
 export default function AllTrails({ navigation }) {
   const { state: userInfo } = useUserInfo();
@@ -29,17 +33,26 @@ export default function AllTrails({ navigation }) {
 
 const renderItem = (trail, navigation) => {
   return (
-    <TouchableHighlight
-      onPress={() =>
-        navigation.navigate("TrailDetail", {
-          trail,
-        })
-      }
-    >
-      <View style={styles.item}>
-        <Text style={styles.title}>{trail.name}</Text>
-      </View>
-    </TouchableHighlight>
+    <>
+        <Card>
+            <Card.Title>{trail.name}</Card.Title>
+            <Card.Divider/>
+            <Card.Image source={{uri: trail.image || trailImage}}></Card.Image>
+            <Card.Divider/>
+            <Text style={{marginBottom: 10}}>
+                {trail.description}
+            </Text>
+            <Card.Divider/>
+            <View style={styles.viewDetails}>
+            <Text><Button title="View Details"
+                          onPress={() =>
+                            navigation.navigate("TrailDetail", {
+                                trail,
+                            })
+                          }/>
+            </Text></View>
+        </Card>
+    </>
   );
 };
 
@@ -55,7 +68,11 @@ const styles = StyleSheet.create({
     marginHorizontal: 16,
   },
   title: {
-    fontSize: 32,
+    fontSize: 15,
+  },
+  viewDetails: {
+      justifyContent: "center",
+      alignItems: 'center',
   },
 });
 

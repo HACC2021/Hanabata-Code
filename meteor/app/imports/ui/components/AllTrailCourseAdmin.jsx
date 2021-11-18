@@ -45,7 +45,7 @@ export class AllTrailCourseAdmin extends React.Component {
   render() {
     return (
       <Card>
-        <Image src={this.state.image}/>
+        <Image src={this.props.trail.defaultImage || this.state.image}/>
         <Card.Content>
           <Card.Header as='h2'>{this.props.trail.name}</Card.Header>
           <Card.Description><strong>{this.props.trail.location}</strong></Card.Description>
@@ -92,7 +92,13 @@ AllTrailCourseAdmin.propTypes = {
     name: PropTypes.string,
     image: PropTypes.string,
     location: PropTypes.string,
-    length: PropTypes.string,
+    openHour: PropTypes.string,
+    openMinute: PropTypes.string,
+    open: PropTypes.string,
+    closeHour: PropTypes.string,
+    closeMinute: PropTypes.string,
+    close: PropTypes.string,
+    lengthMiles: PropTypes.number,
     difficulty: PropTypes.string,
     busyTime: PropTypes.string,
     price: PropTypes.string,

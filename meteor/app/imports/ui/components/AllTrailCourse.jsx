@@ -24,13 +24,16 @@ export class AllTrailCourse extends React.Component {
   render() {
     return (
       <Card>
-        <Image src={this.state.image}/>
+        <Image src={this.props.trail.defaultImage || this.state.image}/>
         <Card.Content>
           <Card.Header as='h2'><Link to={{ pathname: '/'}}>{this.props.trail.name}</Link></Card.Header>
           <Card.Description><strong>{this.props.trail.location}</strong></Card.Description>
           <Card.Meta>
-            <span>{this.props.trail.length}</span>
+            <span>{this.props.trail.lengthMiles} miles</span>
           </Card.Meta>
+          <Card.Description>
+            Open/Close: {this.props.trail.openHour}:{this.props.trail.openMinute} - {this.props.trail.closeHour}:{this.props.trail.closeMinute}
+          </Card.Description>
           <Card.Description>
             Difficulty: {this.props.trail.difficulty}
           </Card.Description>

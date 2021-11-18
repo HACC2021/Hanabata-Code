@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
+import { ip4 } from "./http";
 
 const storeToken = async (token) => {
   try {
@@ -32,9 +32,7 @@ const useLogout = async () => {
 
 async function validateUser(token) {
   try {
-    const response = await fetch(
-      "http://192.168.1.24:3000/auth/loginWithToken",
-      {
+    const response = await fetch(`http://${ip4}/auth/loginWithToken`, {
         method: "GET", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -45,8 +43,12 @@ async function validateUser(token) {
         },
       }
     );
-    const json = await response.json();
-    console.log("validate user", json);
+    let json;
+    if (response.status === 200) {
+      json = await response.json();
+    }else {
+      json = undefined;
+    }
     return json;
   } catch (error) {
     console.error(error);
@@ -55,7 +57,7 @@ async function validateUser(token) {
 
 async function useLogin(email, password) {
   try {
-    const response = await fetch("http://192.168.1.24:3000/users/login", {
+    const response = await fetch(`http://${ip4}/users/login`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -66,7 +68,25 @@ async function useLogin(email, password) {
       body: JSON.stringify({ email, password }), // body data type must match "Content-Type" header
     });
     const json = await response.json();
-    console.log(json);
+    await storeToken(json.token);
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function registerUser(email, password) {
+  try {
+    const response = await fetch(`http://${ip4}/users/register`, {
+      method: "POST", // *GET, POST, PUT, DELETE, etc.
+      mode: "cors", // no-cors, *cors, same-origin
+      cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ email, password }), // body data type must match "Content-Type" header
+    });
+    const json = await response.json();
     await storeToken(json.token);
     return json;
   } catch (error) {
@@ -80,7 +100,7 @@ async function loginWithToken() {
   if (token) {
     userId = await validateUser(token);
   }
-  return {userId , token};
+  return token ? { userId, token } : undefined;
 }
 
-export { useLogin, useLogout, loginWithToken };
+export { useLogin, useLogout, loginWithToken, registerUser };

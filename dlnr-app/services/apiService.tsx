@@ -1,6 +1,8 @@
+import { ip4 } from "./http";
+
 async function getData() {
   try {
-    const response = await fetch("http://192.168.1.24:3000/test", {
+    const response = await fetch(`http://${ip4}/test`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -25,7 +27,7 @@ async function getData() {
 async function makePost(token, title, detail) {
   try {
     const response = await fetch(
-      "http://192.168.1.24:3000/auth/postOnCommunity",
+      `http://${ip4}/auth/postOnCommunity`,
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -45,9 +47,32 @@ async function makePost(token, title, detail) {
   }
 }
 
+async function makeComment(token, _id, comment) {
+  try {
+    const response = await fetch(
+      `http://${ip4}/auth/commentOnCommunity`,
+      {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ _id, comment }), // body data type must match "Content-Type" header
+      }
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 async function getAllPosts(token) {
   try {
-    const response = await fetch("http://192.168.1.24:3000/auth/getAllPosts", {
+    const response = await fetch(`http://${ip4}/auth/getAllPosts`, {
       method: "GET", // *GET, POST, PUT, DELETE, etc.
       mode: "cors", // no-cors, *cors, same-origin
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
@@ -64,9 +89,32 @@ async function getAllPosts(token) {
   }
 }
 
+async function getAllComments(token, _id) {
+  try {
+    const response = await fetch(
+      `http://${ip4}/auth/getAllComments`,
+      {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ _id }),
+      }
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
 function getTrails() {
   console.log("getting trails from api...");
-  return fetch("http://192.168.1.24:3000/api/trails", { method: "GET" })
+  return fetch(`http://${ip4}/api/trails`, { method: "GET" })
     .then((res) => {
       console.log("successfully receieved trails");
       return res.json();
@@ -74,4 +122,58 @@ function getTrails() {
     .catch((error) => console.log(error));
 }
 
-export { getTrails, makePost, getAllPosts };
+async function deleteComment(token, comment) {
+  try {
+    const response = await fetch(
+      `http://${ip4}/auth/deleteCommentOnCommunityDetail`,
+      {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+      }
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function editComment(token, comment) {
+  try {
+    const response = await fetch(
+      `http://${ip4}/auth/editCommentOnCommunityDetail`,
+      {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+      }
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+export {
+  getTrails,
+  makePost,
+  getAllPosts,
+  makeComment,
+  getAllComments,
+  deleteComment,
+  editComment,
+};

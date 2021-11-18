@@ -4,7 +4,7 @@ import { Button, View } from "react-native";
 export default function AllLinkButton({ navigation }) {
   return (
     <View style={{ height: 200, alignItems: 'center', justifyContent: 'space-evenly'}}>
-      <Button 
+      <Button
         title="Go to Home"
         onPress={() => navigation.navigate("Home")}
       />
@@ -16,6 +16,10 @@ export default function AllLinkButton({ navigation }) {
         title="Go to Community"
         onPress={() => navigation.navigate("Community")}
       />
+        <Button
+            title="Go to Account"
+            onPress={() => navigation.navigate("Community")}
+        />
     </View>
   );
 }

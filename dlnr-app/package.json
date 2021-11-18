@@ -21,10 +21,13 @@
     "react-native-chart-kit": "^6.11.0",
     "react-native-elements": "^3.4.2",
     "react-native-gesture-handler": "^1.10.3",
+    "react-native-input-scroll-view": "^1.11.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
     "react-native-maps": "0.28.0",
     "react-native-reanimated": "^2.2.3",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "~3.8.0",
+    "react-native-svg": "^12.1.1",
     "react-native-web": "0.17.1",
     "recompose": "^0.30.0",
     "victory-native": "^36.2.0"

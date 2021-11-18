@@ -3,5 +3,6 @@ node_modules
 meteor/app/.meteor/packages
 meteor/app/.meteor/release
 meteor/app/.meteor/versions
+dlnr-app/package-lock.json
 scripts/config.js
 .DS_Store

@@ -14,24 +14,67 @@ class TrailsCollection {
       {
         name: String,
         island: String,
-        idKey: String,
+        idKey: { type: String, optional: true },
         image: { type: String, optional: true },
-        defaultImage: { type: String, optional: true },
+        defaultImage: {
+          type: String,
+          optional: true,
+        },
         location: String,
+        openHour: {
+          type: String,
+          allowedValues: [
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+            '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+          ],
+          defaultValue: '5',
+        },
+        openMinute: {
+          type: String,
+          allowedValues: ['00', '15', '30', '45'],
+          defaultValue: '00',
+        },
+        // open: {
+        //   type: String,
+        //   allowedValues: ['AM', 'PM'],
+        //   defaultValue: 'AM',
+        // },
+        closeHour: {
+          type: String,
+          allowedValues: [
+            '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12',
+            '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24',
+          ],
+          defaultValue: '16',
+        },
+        closeMinute: {
+          type: String,
+          allowedValues: ['00', '15', '30', '45'],
+          defaultValue: '00',
+        },
+        // close: {
+        //   type: String,
+        //   allowedValues: ['AM', 'PM'],
+        //   defaultValue: 'AM',
+        // },
         lengthMiles: Number,
-        lengthKm: Number,
-        elevationFeet: Number,
-        elevationMeters: Number,
+        lengthKm: { type: Number, optional: true },
+        elevationFeet: { type: Number, optional: true },
+        elevationMeters: { type: Number, optional: true },
         difficulty: {
           type: String,
-          allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme'],
+          allowedValues: ['Easy', 'Normal', 'Hard', 'Very Hard', 'Extreme', 'Undefined'],
           defaultValue: 'Normal',
         },
-        busyTime: String,
+        busyTime: {
+          type: String,
+          allowedValues: ['08:00 - 10:00', '10:00 - 12:00', '12:00 - 14:00', '14:00 - 16:00', '16:00 - 18:00'],
+          defaultValue: '12:00 - 14:00',
+        },
         price: {
           type: String,
-          allowedValues: ['$', '$$', '$$$'],
-          defaultValue: '$',
+          allowedValues: ['Free', 'Entrance Fees'],
+          defaultValue: 'Free',
         },
         description: String,
         owner: {
