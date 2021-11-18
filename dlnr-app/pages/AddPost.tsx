@@ -42,18 +42,21 @@ export default function AddPost({ navigation }) {
     <View>
       <Input
         placeholder="Title"
-        leftIcon={{ type: "font-awesome", name: "comment" }}
+        //leftIcon={{ type: "font-awesome", name: "comment" }}
+        style={{ textAlignVertical: 'top', padding: 15}}
         value={title}
         onChangeText={(value) => setTitle(value)}
       />
       <Input
         placeholder="Detail"
-        leftIcon={{ type: "font-awesome", name: "comment" }}
+        //leftIcon={{ type: "font-awesome", name: "comment" }}
+        multiline={true}
+        numberOfLines={15}
+        style={{ textAlignVertical: 'top', height:300, padding: 15}}
         value={detail}
         onChangeText={(value) => setDetail(value)}
       />
-
-      <Button title="Solid Button" onPress={submit} />
+      <Button title="Save" onPress={submit} />
     </View>
   );
 }
