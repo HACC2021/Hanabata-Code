@@ -113,7 +113,6 @@ async function getAllComments(token, _id) {
 }
 
 function getTrails() {
-  console.log("getting trails from api...");
   return fetch(`http://${ip4}/api/trails`, { method: "GET" })
     .then((res) => {
       console.log("successfully receieved trails");
@@ -122,7 +121,7 @@ function getTrails() {
     .catch((error) => console.log(error));
 }
 
-async function deleteComment(token, comment) {
+async function deleteComment(token, post_id, comment_id, comment) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/deleteCommentOnCommunityDetail`,
@@ -135,7 +134,7 @@ async function deleteComment(token, comment) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();
@@ -145,7 +144,30 @@ async function deleteComment(token, comment) {
   }
 }
 
-async function editComment(token, comment) {
+async function editPost(token, title_id, detail_id) {
+  try {
+    const response = await fetch(
+      `http://${ip4}/auth/editPostOnCommunityDetail`,
+      {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token,
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ title_id, detail_id }), // body data type must match "Content-Type" header
+      }
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+  }
+}
+
+async function editComment(token, post_id, comment_id, comment) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/editCommentOnCommunityDetail`,
@@ -158,7 +180,7 @@ async function editComment(token, comment) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ comment }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();

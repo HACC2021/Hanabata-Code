@@ -63,3 +63,38 @@ JsonRoutes.add("POST", "auth/commentOnCommunity", function (request, response) {
     data: comments,
   });
 });
+
+
+JsonRoutes.add("POST", "auth/editCommentOnCommunityDetail", function (request, response) {
+  // The authenticated user's ID will be set by this middleware
+  let owner = request.userId;
+  const { comment_id, post_id } = request.body;
+  console.log("owner_id: ", owner);
+  console.log("comment_id: ", comment_id);
+  console.log("post_id: ", post_id);
+  // let comments = Community.collection.findOne(_id, { fields: { comments: 1 } });
+
+  let statusCode = 200;
+
+  JsonRoutes.sendResult(response, {
+    code: statusCode,
+    data: "hi",
+  });
+});
+
+JsonRoutes.add("POST", "auth/deleteCommentOnCommunityDetail", function (request, response) {
+  // The authenticated user's ID will be set by this middleware
+  let owner = request.userId;
+  const { comment_id, post_id } = request.body;
+  console.log("owner_id: ", owner);
+  console.log("comment_id: ", comment_id);
+  console.log("post_id: ", post_id);
+  // let comments = Community.collection.findOne(_id, { fields: { comments: 1 } });
+
+  let statusCode = 200;
+
+  JsonRoutes.sendResult(response, {
+    code: statusCode,
+    data: "hi",
+  });
+});

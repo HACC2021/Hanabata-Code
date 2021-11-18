@@ -9,26 +9,43 @@ import {
   SafeAreaView
 } from "react-native";
 import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
-import { getAllComments, makeComment } from "../services/apiService";
+import {ScrollView, Swipeable} from "react-native-gesture-handler";
+import InputScrollView from "react-native-input-scroll-view";
+import {deleteComment, editComment, getAllComments, makeComment} from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
-
-const renderItem = ({ item }) => {
-  return (
-    <ListItem bottomDivider>
-      {/* <Avatar source={{ uri: item.avatar_url }} /> */}
-      <ListItem.Content>
-        <ListItem.Title>{item.comment}</ListItem.Title>
-        <ListItem.Subtitle>{item.owner + "/" + item._id}</ListItem.Subtitle>
-      </ListItem.Content>
-    </ListItem>
-  );
-};
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 export default function CommunityDetail(props) {
   const [open, setOpen] = useState(false);
   const [comment, setComment] = useState("");
   const [detail, setDetail] = useState({ comments: [] });
   const { state: data, dispatch: setData } = useUserInfo();
+
+    const renderItem = ({ item }) => {
+        const deleteCommentButton = async () => {
+            console.log(item);
+            await deleteComment(data.userInfo.token, props.route.params._id, item._id, item.comment);
+        };
+        const editCommentButton = async () => {
+            //console.log("edit")
+            console.log(item);
+            await editComment(data.userInfo.token, props.route.params._id, item._id, item.comment);
+        };
+        return (
+            <>
+                <Swipeable renderRightActions={() => <MaterialCommunityIcons color="#FF0000" size={50} name='delete-outline' onPress={deleteCommentButton}/>}
+                           renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline' onPress={editCommentButton}/> }>
+                    <ListItem bottomDivider>
+                        {/* <Avatar source={{ uri: item.avatar_url }} /> */}
+                        <ListItem.Content>
+                            <ListItem.Title>{item.comment}</ListItem.Title>
+                            <ListItem.Subtitle>{item.owner + "/" + item._id}</ListItem.Subtitle>
+                        </ListItem.Content>
+                    </ListItem>
+                </Swipeable>
+            </>
+        );
+    };
 
   useEffect(() => {
     getAllComments(data.userInfo.token, props.route.params._id).then((res) =>
@@ -52,13 +69,13 @@ export default function CommunityDetail(props) {
           <Text style={styles.postText}>{props.route.params.detail}</Text>
         </View>
         <View style={styles.BottomView}>
-          <TouchableOpacity>
             <FlatList
               data={detail.comments}
+              horizontal={false}
+              style={{marginTop: 3, backgroundColor: '#dfdfdf'}}
               renderItem={renderItem}
               keyExtractor={(item, i) => i.toString()}
             />
-          </TouchableOpacity>
         </View>
         <SafeAreaView style={{ backgroundColor: "white" }}>
           <ScrollView>
@@ -102,7 +119,7 @@ const styles = StyleSheet.create({
   TopView: {
     flex: 0.5,
     backgroundColor: "#E2FAB5",
-    padding: 13,
+    padding: 20,
   },
   BottomView: {
     flex: 0.5,

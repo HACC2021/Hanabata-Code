@@ -4,6 +4,8 @@ import { View, SafeAreaView, FlatList } from "react-native";
 import { ListItem, Avatar, SpeedDial } from "react-native-elements";
 import { getAllPosts } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
+import { Swipeable } from "react-native-gesture-handler";
+import {MaterialCommunityIcons} from "@expo/vector-icons";
 
 export default function Community({ navigation }) {
   const [open, setOpen] = useState(false);
@@ -25,7 +27,11 @@ export default function Community({ navigation }) {
 
   const renderItem = ({ item }) => {
     // console.log(data.posts);
-    return (
+    // @ts-ignore
+      return (
+      <>
+      <Swipeable renderRightActions={() => <MaterialCommunityIcons color="#FF0000" size={50} name='delete-outline'/>}
+                   renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline'/> }>
       <ListItem
         bottomDivider
         onPress={() => navigation.navigate("CommunityDetail", item)}
@@ -36,6 +42,8 @@ export default function Community({ navigation }) {
           <ListItem.Subtitle>{item.owner}</ListItem.Subtitle>
         </ListItem.Content>
       </ListItem>
+      </Swipeable>
+      </>
     );
   };
 
