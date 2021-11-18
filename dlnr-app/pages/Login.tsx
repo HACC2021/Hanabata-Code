@@ -19,7 +19,7 @@ const Login = ({ navigation }) => {
   };
 
   useEffect(() => {
-    data.userInfo && navigation.navigate('Home');
+    data.userInfo && navigation.navigate("Home");
   }, [data]);
 
   return (

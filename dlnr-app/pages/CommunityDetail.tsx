@@ -1,30 +1,22 @@
-import React, {useState, useEffect} from "react";
-import { FlatList, Text, StyleSheet, View, TouchableOpacity } from "react-native";
-import {Button, Input, ListItem, SpeedDial} from "react-native-elements";
-import {ScrollView, Swipeable} from "react-native-gesture-handler";
-import InputScrollView from "react-native-input-scroll-view";
-import {deleteComment, editComment, getAllComments, makeComment} from "../services/apiService";
+import React, { useState, useEffect } from "react";
+import {
+  FlatList,
+  Text,
+  StyleSheet,
+  View,
+  ScrollView,
+  SafeAreaView,
+} from "react-native";
+import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
+import { Swipeable } from "react-native-gesture-handler";
+import {
+  deleteComment,
+  editComment,
+  getAllComments,
+  makeComment,
+} from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
-import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-// import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
-
-const renderItem = ({ item }) => {
-  return (
-    <>
-    <Swipeable renderRightActions={() => <MaterialCommunityIcons color="#FF0000" size={50} name='delete-outline'/>}
-               renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline'/> }>
-    <ListItem bottomDivider>
-      {/* <Avatar source={{ uri: item.avatar_url }} /> */}
-      <ListItem.Content>
-        <ListItem.Title>{item.comment}</ListItem.Title>
-        <ListItem.Subtitle>{item.owner + "/" + item._id}</ListItem.Subtitle>
-      </ListItem.Content>
-    </ListItem>
-    </Swipeable>
-    </>
-  );
-};
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function CommunityDetail(props) {
   const [open, setOpen] = useState(false);
@@ -32,12 +24,62 @@ export default function CommunityDetail(props) {
   const [detail, setDetail] = useState({ comments: [] });
   const { state: data, dispatch: setData } = useUserInfo();
 
+  const renderItem = ({ item }) => {
+    const deleteCommentButton = async () => {
+      await deleteComment(
+        data.userInfo.token,
+        props.route.params._id,
+        item._id,
+        item.comment
+      );
+    };
+    const editCommentButton = async () => {
+      await editComment(
+        data.userInfo.token,
+        props.route.params._id,
+        item._id,
+        item.comment
+      );
+    };
+    return (
+      <>
+        <Swipeable
+          renderRightActions={() => (
+            <MaterialCommunityIcons
+              color="#FF0000"
+              size={50}
+              name="delete-outline"
+              onPress={deleteCommentButton}
+            />
+          )}
+          renderLeftActions={() => (
+            <MaterialCommunityIcons
+              color="#008000"
+              size={50}
+              name="comment-edit-outline"
+              onPress={editCommentButton}
+            />
+          )}
+        >
+          <ListItem bottomDivider>
+            {/* <Avatar source={{ uri: item.avatar_url }} /> */}
+            <ListItem.Content>
+              <ListItem.Title>{item.comment}</ListItem.Title>
+              <ListItem.Subtitle>
+                {item.owner + "/" + item._id}
+              </ListItem.Subtitle>
+            </ListItem.Content>
+          </ListItem>
+        </Swipeable>
+      </>
+    );
+  };
+
   useEffect(() => {
     getAllComments(data.userInfo.token, props.route.params._id).then((res) =>
       setDetail(res)
     );
   }, [props.route.params._id]);
-
 
   const submit = async () => {
     await makeComment(
@@ -48,12 +90,6 @@ export default function CommunityDetail(props) {
     setComment("");
   };
 
-  const deleteComment = async (comment) => {
-      return await data.action(async () => {
-          return await comment.destroyPermanently();
-      })
-  };
-
   return (
     <>
       <View style={styles.container}>
@@ -61,27 +97,27 @@ export default function CommunityDetail(props) {
           <Text style={styles.postText}>{props.route.params.detail}</Text>
         </View>
         <View style={styles.BottomView}>
+          <FlatList
+            data={detail.comments}
+            horizontal={false}
+            style={{ marginTop: 3, backgroundColor: "#dfdfdf" }}
+            renderItem={renderItem}
+            keyExtractor={(item, i) => i.toString()}
+          />
+        </View>
+        <SafeAreaView style={{ backgroundColor: "white" }}>
           <ScrollView>
-            <FlatList
-              data={detail.comments}
-              horizontal={false}
-              style={{marginTop: 3, backgroundColor: '#dfdfdf'}}
-              renderItem={renderItem}
-              keyExtractor={(item, i) => i.toString()}
+            <Input
+              placeholder="Comment"
+              leftIcon={{ type: "font-awesome", name: "comment" }}
+              value={comment}
+              onChangeText={(value) => setComment(value)}
+              style={{ height: "100%" }}
             />
           </ScrollView>
-        </View>
+        </SafeAreaView>
+        <Button title="Save" onPress={submit} />
       </View>
-      <ScrollView><InputScrollView>
-      <Input
-        placeholder="Comment"
-        leftIcon={{ type: "font-awesome", name: "comment" }}
-        value={comment}
-        onChangeText={(value) => setComment(value)}
-        style={{ height: "100%" }}
-      />
-      <Button title="Save" onPress={submit} />
-      </InputScrollView></ScrollView>
       <SpeedDial
         isOpen={open}
         icon={{ name: "edit", color: "#fff" }}
@@ -109,12 +145,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   TopView: {
-    flex: 1,
+    flex: 0.5,
     backgroundColor: "#E2FAB5",
-    padding: 13,
+    padding: 20,
   },
   BottomView: {
-    flex: 1,
+    flex: 0.5,
   },
   postText: {
     fontSize: 17,

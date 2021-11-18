@@ -1,27 +1,62 @@
-import React, { useState } from "react";
-import { View, SafeAreaView, FlatList } from "react-native";
-import { ListItem, Avatar, SpeedDial } from "react-native-elements";
+import { useNavigationState } from "@react-navigation/core";
+import React, { useState, useEffect } from "react";
+import { SafeAreaView, FlatList } from "react-native";
+import { ListItem, SpeedDial } from "react-native-elements";
+import { getAllPosts } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
+import { Swipeable } from "react-native-gesture-handler";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Community({ navigation }) {
   const [open, setOpen] = useState(false);
-  const { state: data } = useUserInfo();
+  const { state: data, dispatch: setData } = useUserInfo();
+  const navState = useNavigationState((state) => state);
+
+  useEffect(() => {
+    navState.routeNames[navState.index] === "Community" &&
+      getAllPosts(data.userInfo.token).then((res) => {
+        console.log("Community");
+        setData({
+          type: "ADD_ALL_POSTS",
+          payload: {
+            posts: res,
+          },
+        });
+      });
+  }, [navState.index]);
 
   const renderItem = ({ item }) => {
-    // console.log(data.posts);
+    // @ts-ignore
     return (
-      <ListItem
-        bottomDivider
-        onPress={() =>
-          navigation.navigate("CommunityDetail", item)
-        }
-      >
-        {/* <Avatar source={{ uri: item.avatar_url }} /> */}
-        <ListItem.Content>
-          <ListItem.Title>{item.title}</ListItem.Title>
-          <ListItem.Subtitle>{item.owner}</ListItem.Subtitle>
-        </ListItem.Content>
-      </ListItem>
+      <>
+        <Swipeable
+          renderRightActions={() => (
+            <MaterialCommunityIcons
+              color="#FF0000"
+              size={50}
+              name="delete-outline"
+            />
+          )}
+          renderLeftActions={() => (
+            <MaterialCommunityIcons
+              color="#008000"
+              size={50}
+              name="comment-edit-outline"
+            />
+          )}
+        >
+          <ListItem
+            bottomDivider
+            onPress={() => navigation.navigate("CommunityDetail", item)}
+          >
+            {/* <Avatar source={{ uri: item.avatar_url }} /> */}
+            <ListItem.Content>
+              <ListItem.Title>{item.title}</ListItem.Title>
+              <ListItem.Subtitle>{item.owner}</ListItem.Subtitle>
+            </ListItem.Content>
+          </ListItem>
+        </Swipeable>
+      </>
     );
   };
 
