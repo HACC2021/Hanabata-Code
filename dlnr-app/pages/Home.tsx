@@ -3,7 +3,6 @@ import MapView from "react-native-maps";
 import { Marker, Callout } from "react-native-maps";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { useEffect } from "react";
-import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
 import { getTrails } from "../services/apiService";
 import { useNavigationState } from "@react-navigation/core";

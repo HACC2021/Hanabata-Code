@@ -1,10 +1,9 @@
-import * as React from "react";
+import React from "react";
 import MapView, { Marker } from "react-native-maps";
 import { ActivityIndicator, StyleSheet, Dimensions, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { LineChart } from "react-native-chart-kit";
 import { Text, Image, Divider } from "react-native-elements";
-import { CurrentRenderContext } from "@react-navigation/core";
 
 const trailImage =
   "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
@@ -65,10 +64,9 @@ const GoogleBusyTimesInfo = (props) => {
         })}
       </View>
     );
+  } else {
+    return <Text>Popular time data not available yet</Text>;
   }
-    else {
-        return(<Text>Popular time data not available yet</Text>)
-    }
 };
 
 export default function TrailDetail(props) {

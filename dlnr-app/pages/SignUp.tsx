@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { SafeAreaView, StyleSheet, TextInput, Button } from "react-native";
 import { registerUser } from "../services/useLogin";
 import { useUserInfo } from "../services/useUserInfo";

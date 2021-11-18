@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { useUserInfo } from "../services/useUserInfo";
 import { Input } from "react-native-elements";
@@ -39,33 +39,33 @@ export default function AddPost({ navigation }) {
   };
 
   return (
-        <>
-    <View>
-      <Input
-        placeholder="Title"
-        //leftIcon={{ type: "font-awesome", name: "comment" }}
-        style={{ textAlignVertical: 'top', padding: 15}}
-        value={title}
-        onChangeText={(value) => setTitle(value)}
-      />
-      <Input
-        placeholder="Detail"
-        //leftIcon={{ type: "font-awesome", name: "comment" }}
-        multiline={true}
-        numberOfLines={15}
-        style={{ textAlignVertical: 'top', height:300, padding: 15}}
-        value={detail}
-        onChangeText={(value) => setDetail(value)}
-      />
-    </View>
-        <Button title="Save" onPress={submit} />
-      </>
+    <>
+      <View>
+        <Input
+          placeholder="Title"
+          //leftIcon={{ type: "font-awesome", name: "comment" }}
+          style={{ textAlignVertical: "top", padding: 15 }}
+          value={title}
+          onChangeText={(value) => setTitle(value)}
+        />
+        <Input
+          placeholder="Detail"
+          //leftIcon={{ type: "font-awesome", name: "comment" }}
+          multiline={true}
+          numberOfLines={15}
+          style={{ textAlignVertical: "top", height: 300, padding: 15 }}
+          value={detail}
+          onChangeText={(value) => setDetail(value)}
+        />
+      </View>
+      <Button title="Save" onPress={submit} />
+    </>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white"
+    backgroundColor: "white",
   },
 });

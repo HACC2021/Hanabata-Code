@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { View } from "react-native";
 import { useUserInfo } from "../services/useUserInfo";
 import { Input } from "react-native-elements";
@@ -32,12 +32,12 @@ export default function AddComment({ navigation }) {
     //         },
     //       },
     //     });
-      setComment("");
+    setComment("");
     navigation.navigate("Community");
   };
 
   return (
-    <View style={{backgroundColor: "white"}}>
+    <View style={{ backgroundColor: "white" }}>
       <Input
         placeholder="Title"
         leftIcon={{ type: "font-awesome", name: "comment" }}

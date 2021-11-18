@@ -6,12 +6,8 @@ import {
   StyleSheet,
   SafeAreaView,
   FlatList,
-  StatusBar,
-  Image,
   Button,
 } from "react-native";
-import { TouchableHighlight } from "react-native-gesture-handler";
-import TrailDetail from "./TrailDetail";
 import { useUserInfo } from "../services/useUserInfo";
 import { SearchBar, ListItem, Avatar, Card } from "react-native-elements";
 import { useNavigationState } from "@react-navigation/core";
@@ -165,5 +161,5 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 15,
-  }
+  },
 });
