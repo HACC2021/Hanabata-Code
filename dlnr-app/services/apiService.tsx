@@ -113,7 +113,6 @@ async function getAllComments(token, _id) {
 }
 
 function getTrails() {
-  console.log("getting trails from api...");
   return fetch(`http://${ip4}/api/trails`, { method: "GET" })
     .then((res) => {
       console.log("successfully receieved trails");
