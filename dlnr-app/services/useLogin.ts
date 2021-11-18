@@ -100,7 +100,7 @@ async function loginWithToken() {
   if (token) {
     userId = await validateUser(token);
   }
-  return token ? { userId, token } : undefined;
+  return userId ? { userId, token } : undefined;
 }
 
 export { useLogin, useLogout, loginWithToken, registerUser };

@@ -37,14 +37,13 @@ export default function AddComment({ navigation }) {
   };
 
   return (
-    <View>
+    <View style={{backgroundColor: "white"}}>
       <Input
         placeholder="Title"
         leftIcon={{ type: "font-awesome", name: "comment" }}
         value={comment}
         onChangeText={(value) => setComment(value)}
       />
-
       <Button title="Solid Button" onPress={submit} />
     </View>
   );

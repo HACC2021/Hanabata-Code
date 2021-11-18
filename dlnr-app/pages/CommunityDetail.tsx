@@ -1,13 +1,19 @@
-import React, {useState, useEffect} from "react";
-import { FlatList, Text, StyleSheet, View, TouchableOpacity } from "react-native";
-import {Button, Input, ListItem, SpeedDial} from "react-native-elements";
+import React, { useState, useEffect } from "react";
+import {
+  FlatList,
+  Text,
+  StyleSheet,
+  View,
+  TouchableOpacity,
+  ScrollView,
+  SafeAreaView
+} from "react-native";
+import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
 import {ScrollView, Swipeable} from "react-native-gesture-handler";
 import InputScrollView from "react-native-input-scroll-view";
 import {deleteComment, editComment, getAllComments, makeComment} from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-
-// import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
 
 export default function CommunityDetail(props) {
   const [open, setOpen] = useState(false);
@@ -47,7 +53,6 @@ export default function CommunityDetail(props) {
     );
   }, [props.route.params._id]);
 
-
   const submit = async () => {
     await makeComment(
       data.userInfo.token,
@@ -72,17 +77,19 @@ export default function CommunityDetail(props) {
               keyExtractor={(item, i) => i.toString()}
             />
         </View>
+        <SafeAreaView style={{ backgroundColor: "white" }}>
+          <ScrollView>
+            <Input
+              placeholder="Comment"
+              leftIcon={{ type: "font-awesome", name: "comment" }}
+              value={comment}
+              onChangeText={(value) => setComment(value)}
+              style={{ height: "100%" }}
+            />
+          </ScrollView>
+        </SafeAreaView>
+        <Button title="Save" onPress={submit} />
       </View>
-      <ScrollView><InputScrollView>
-      <Input
-        placeholder="Comment"
-        leftIcon={{ type: "font-awesome", name: "comment" }}
-        value={comment}
-        onChangeText={(value) => setComment(value)}
-        style={{ height: "100%" }}
-      />
-      <Button title="Save" onPress={submit} />
-      </InputScrollView></ScrollView>
       <SpeedDial
         isOpen={open}
         icon={{ name: "edit", color: "#fff" }}
@@ -110,12 +117,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   TopView: {
-    flex: 1,
+    flex: 0.5,
     backgroundColor: "#E2FAB5",
     padding: 20,
   },
   BottomView: {
-    flex: 1,
+    flex: 0.5,
   },
   postText: {
     fontSize: 17,

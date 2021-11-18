@@ -1,13 +1,29 @@
-import React, { useState } from "react";
+import { useNavigationState } from "@react-navigation/core";
+import React, { useState, useEffect } from "react";
 import { View, SafeAreaView, FlatList } from "react-native";
 import { ListItem, Avatar, SpeedDial } from "react-native-elements";
+import { getAllPosts } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
 import { Swipeable } from "react-native-gesture-handler";
 import {MaterialCommunityIcons} from "@expo/vector-icons";
 
 export default function Community({ navigation }) {
   const [open, setOpen] = useState(false);
-  const { state: data } = useUserInfo();
+  const { state: data, dispatch: setData } = useUserInfo();
+  const navState = useNavigationState((state) => state);
+
+  useEffect(() => {
+    navState.routeNames[navState.index] === "Community" &&
+      getAllPosts(data.userInfo.token).then((res) => {
+        console.log("Community");
+        setData({
+          type: "ADD_ALL_POSTS",
+          payload: {
+            posts: res,
+          },
+        });
+      });
+  }, [navState.index]);
 
   const renderItem = ({ item }) => {
     // console.log(data.posts);
@@ -18,9 +34,7 @@ export default function Community({ navigation }) {
                    renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline'/> }>
       <ListItem
         bottomDivider
-        onPress={() =>
-          navigation.navigate("CommunityDetail", item)
-        }
+        onPress={() => navigation.navigate("CommunityDetail", item)}
       >
         {/* <Avatar source={{ uri: item.avatar_url }} /> */}
         <ListItem.Content>
