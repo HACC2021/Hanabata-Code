@@ -1,15 +1,19 @@
 import React, {useState, useEffect} from "react";
 import { FlatList, Text, StyleSheet, View, TouchableOpacity } from "react-native";
-import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
-import { ScrollView } from "react-native-gesture-handler";
+import {Button, Input, ListItem, SpeedDial} from "react-native-elements";
+import {ScrollView, Swipeable} from "react-native-gesture-handler";
 import InputScrollView from "react-native-input-scroll-view";
-import { getAllComments, makeComment } from "../services/apiService";
+import {deleteComment, editComment, getAllComments, makeComment} from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
 
 // import Container from "@react-navigation/native-stack/lib/typescript/src/views/DebugContainer.native";
 
 const renderItem = ({ item }) => {
   return (
+    <>
+    <Swipeable renderRightActions={() => <MaterialCommunityIcons color="#FF0000" size={50} name='delete-outline'/>}
+               renderLeftActions={() => <MaterialCommunityIcons color="#008000" size={50} name='comment-edit-outline'/> }>
     <ListItem bottomDivider>
       {/* <Avatar source={{ uri: item.avatar_url }} /> */}
       <ListItem.Content>
@@ -17,6 +21,8 @@ const renderItem = ({ item }) => {
         <ListItem.Subtitle>{item.owner + "/" + item._id}</ListItem.Subtitle>
       </ListItem.Content>
     </ListItem>
+    </Swipeable>
+    </>
   );
 };
 
@@ -42,6 +48,12 @@ export default function CommunityDetail(props) {
     setComment("");
   };
 
+  const deleteComment = async (comment) => {
+      return await data.action(async () => {
+          return await comment.destroyPermanently();
+      })
+  };
+
   return (
     <>
       <View style={styles.container}>
@@ -49,13 +61,15 @@ export default function CommunityDetail(props) {
           <Text style={styles.postText}>{props.route.params.detail}</Text>
         </View>
         <View style={styles.BottomView}>
-          <TouchableOpacity>
+          <ScrollView>
             <FlatList
               data={detail.comments}
+              horizontal={false}
+              style={{marginTop: 3, backgroundColor: '#dfdfdf'}}
               renderItem={renderItem}
               keyExtractor={(item, i) => i.toString()}
             />
-          </TouchableOpacity>
+          </ScrollView>
         </View>
       </View>
       <ScrollView><InputScrollView>
