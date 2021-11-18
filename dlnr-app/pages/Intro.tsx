@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, View, Image, ImageBackground, ScrollView, StyleSheet, SafeAreaView, StatusBar} from 'react-native';
+import { Text, View, Image, ImageBackground, ScrollView, StyleSheet, SafeAreaView, StatusBar, Linking} from 'react-native';
 
 const Intro = () => {
   return (
@@ -12,8 +12,7 @@ const Intro = () => {
  style={styles.bgImage}
 >
  <Text
-   style={styles.title}
- >
+   style={styles.title}>
    Welcome to HITT App!
  </Text>
 </ImageBackground>
@@ -45,7 +44,13 @@ style={{
 2. Do not disturb wildlife.{"\n"}
 3. Be mindful of trail conditions and your surroundings.{"\n"}
 4. Be aware of your surroundings.{"\n"}
-5. Stay on the trail.{"\n"}
+5. Stay on the trail.{"\n"}{"\n"}
+
+<Text
+  style={styles.hyperlink}
+  onPress={() => Linking.openURL('https://www.nps.gov/articles/hikingetiquette.htm')}>
+Visit National Park Service website for more info.{"\n"}{"\n"}
+</Text>
 </Text>
 <Text
   style={styles.header}
@@ -56,7 +61,13 @@ style={{
   style={styles.regFont}>
 {"\n"}HITT App was coded by Yong Kim, Keith Okuna, Yeji Han, Cheolhoon Choi, Kai Hwang.{"\n"}{"\n"}
 HITT App was designed as part of Hawaii Annual Code Challenge (HACC).{"\n"}{"\n"}
-HITT App was developed using React Native, an open-source UI software framework created by Meta Platforms, inc.{"\n"}{"\n"}{"\n"}{"\n"}
+HITT App was developed using React Native, an open-source UI software framework created by Meta Platforms, inc.{"\n"}{"\n"}
+GitHub URL:{"\n"}
+<Text
+  style={styles.hyperlink}
+  onPress={() => Linking.openURL('https://github.com/HACC2021/Hanabata-Code')}>
+https://github.com/HACC2021/Hanabata-Code {"\n"}{"\n"}{"\n"}{"\n"}{"\n"}
+</Text>
 </Text>
 </View>
 </ScrollView>
@@ -92,6 +103,11 @@ const styles = StyleSheet.create({
   },
   regFont: {
     fontSize: 15,
+  },
+  hyperlink: {
+    fontSize: 15,
+    textDecorationLine: 'underline',
+    fontStyle: 'italic',
   },
   container: {
     flex: 1,
