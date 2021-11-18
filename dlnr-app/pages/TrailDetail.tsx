@@ -25,53 +25,56 @@ import { useUserInfo } from "../services/useUserInfo";
 
 const GoogleBusyTimesInfo = (props) => {
   let trail = props.trail;
-  if (trail.googlePlaceData?.populartimes) {
+  let dayOfWeek = new Date().getDay() - 1;
+  if (trail.traffics.google) {
     return (
       <View>
-        {trail.googlePlaceData.populartimes.map((day, index) => {
+        {trail.traffics.google.map((day, index) => {
           return (
-            <View key={"day" + index}>
-              <Text>{day.name}</Text>
-              <LineChart
-                data={{
-                  labels: Object.keys(day.data),
-                  datasets: [{ data: day.data }],
-                }}
-                width={Dimensions.get("window").width}
-                height={220}
-                yAxisLabel=""
-                yAxisSuffix=""
-                chartConfig={{
-                  backgroundColor: "#e26a00",
-                  backgroundGradientFrom: "#fb8c00",
-                  backgroundGradientTo: "#ffa726",
-                  decimalPlaces: 0, // optional, defaults to 2dp
-                  color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
-                  labelColor: (opacity = 1) =>
-                    `rgba(255, 255, 255, ${opacity})`,
-                  style: {
+            dayOfWeek === index && (
+              <View key={"day" + index}>
+                <Text>{day.name}</Text>
+                <LineChart
+                  data={{
+                    labels: Object.keys(day.data),
+                    datasets: [{ data: day.data }],
+                  }}
+                  width={Dimensions.get("window").width}
+                  height={220}
+                  yAxisLabel=""
+                  yAxisSuffix=""
+                  chartConfig={{
+                    backgroundColor: "#e26a00",
+                    backgroundGradientFrom: "#fb8c00",
+                    backgroundGradientTo: "#ffa726",
+                    decimalPlaces: 0, // optional, defaults to 2dp
+                    color: (opacity = 1) => `rgba(255, 255, 255, ${opacity})`,
+                    labelColor: (opacity = 1) =>
+                      `rgba(255, 255, 255, ${opacity})`,
+                    style: {
+                      borderRadius: 16,
+                    },
+                    propsForDots: {
+                      r: "6",
+                      strokeWidth: "2",
+                      stroke: "#ffa726",
+                    },
+                  }}
+                  bezier
+                  style={{
+                    marginVertical: 8,
                     borderRadius: 16,
-                  },
-                  propsForDots: {
-                    r: "6",
-                    strokeWidth: "2",
-                    stroke: "#ffa726",
-                  },
-                }}
-                bezier
-                style={{
-                  marginVertical: 8,
-                  borderRadius: 16,
-                }}
-              />
+                  }}
+                />
 
-              {/* {
+                {/* {
                         day.data.map((busyValue, hour) => {
                             return (
                                 <Text>{busyValue}</Text>
                             )
                         })} */}
-            </View>
+              </View>
+            )
           );
         })}
       </View>
@@ -81,58 +84,61 @@ const GoogleBusyTimesInfo = (props) => {
 };
 
 export default function TrailDetail(props) {
+  // console.log(props);
   let trail = props.route.params.trail;
-  const { state: userInfo, dispatch: setUserInfo } = useUserInfo();
 
   return (
     <>
-        <ScrollView>
-      <Text
-        h4
-        style={{
-          textAlignVertical: "center",
-          textAlign: "center",
-          marginTop: 10,
-          marginBottom: 10,
-        }}
-      >
-        {trail.name}
-      </Text>
-      <Image
-        source={{ uri: trail.image }}
-        style={{ width: 420, height: 200 }}
-        PlaceholderContent={<ActivityIndicator />}
-      />
+      <ScrollView>
+        <Text
+          h4
+          style={{
+            textAlignVertical: "center",
+            textAlign: "center",
+            marginTop: 10,
+            marginBottom: 10,
+          }}
+        >
+          {trail.name}
+        </Text>
+        <Image
+          source={{ uri: trail.image }}
+          style={{ width: 420, height: 200 }}
+          PlaceholderContent={<ActivityIndicator />}
+        />
 
-      <Text style={styles.descriptionText}>{trail.description}</Text>
-      <Divider orientation="horizontal" inset={true} insetType="middle" />
-      <Text style={styles.descriptionText}>
-        Island: {trail.island}{"\n"}
-        Open-Close: {trail.openHour}:{trail.openMinute} - {trail.closeHour}:{trail.closeMinute}{"\n"}
-        Busy Time: {trail.busyTime}{"\n"}
-        Length Miles: {trail.lengthMiles} miles{"\n"}
-        Difficulty: {trail.difficulty}{"\n"}
-        Price: {trail.price}{"\n"}
-        Location: {trail.location}
-      </Text>
-      <Divider orientation="horizontal" inset={true} insetType="middle" />
+        <Text style={styles.descriptionText}>{trail.description}</Text>
+        <Divider orientation="horizontal" inset={true} insetType="middle" />
+        <Text style={styles.descriptionText}>
+          Island: {trail.island}
+          {"\n"}
+          Open-Close: {trail.openHour}:{trail.openMinute} - {trail.closeHour}:
+          {trail.closeMinute}
+          {"\n"}
+          Busy Time: {trail.busyTime}
+          {"\n"}
+          Length Miles: {trail.lengthMiles} miles{"\n"}
+          Difficulty: {trail.difficulty}
+          {"\n"}
+          Price: {trail.price}
+          {"\n"}
+          Location: {trail.location}
+        </Text>
+        <Divider orientation="horizontal" inset={true} insetType="middle" />
 
-      <View style={styles.container}>
         <MapView
-          initialRegion={{
-            latitude: 21.4389,
-            longitude: -158,
-            latitudeDelta: 0.5,
-            longitudeDelta: 0.5,
+          region={{
+            latitude: trail.coords.latitude,
+            longitude: trail.coords.longitude,
+            latitudeDelta: 0.1,
+            longitudeDelta: 0.1,
           }}
           style={styles.map}
         >
-          {userInfo.trails?.map(
-            (trail, index) =>
-              trail.coords && <Marker coordinate={trail.coords}></Marker>
-          )}
+          {trail.coords && <Marker coordinate={trail.coords}></Marker>}
         </MapView>
-      </View></ScrollView>
+        {/* <GoogleBusyTimesInfo trail={trail}/> */}
+      </ScrollView>
     </>
   );
 }
