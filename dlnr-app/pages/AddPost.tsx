@@ -5,6 +5,8 @@ import { Input } from "react-native-elements";
 import { Button } from "react-native-elements";
 import { makePost } from "../services/apiService";
 import { getAllPosts } from "../services/apiService";
+import {ScrollView } from "react-native-gesture-handler";
+
 
 export default function AddPost({ navigation }) {
   const [title, setTitle] = useState("");
@@ -39,7 +41,8 @@ export default function AddPost({ navigation }) {
   };
 
   return (
-    <View>
+    <ScrollView>
+      <View>
       <Input
         placeholder="Title"
         //leftIcon={{ type: "font-awesome", name: "comment" }}
@@ -57,6 +60,7 @@ export default function AddPost({ navigation }) {
         onChangeText={(value) => setDetail(value)}
       />
       <Button title="Save" onPress={submit} />
-    </View>
+      </View>
+    </ScrollView>
   );
 }

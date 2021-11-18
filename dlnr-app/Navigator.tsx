@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { Button } from "react-native";
+import {Button, View} from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
@@ -13,8 +13,17 @@ import TrailDetail from "./pages/TrailDetail";
 import CommunityDetail from "./pages/CommunityDetail";
 import AddPost from "./pages/AddPost";
 import SignUp from "./pages/SignUp";
+import {createBottomTabNavigator} from "@react-navigation/bottom-tabs";
+import { MaterialCommunityIcons } from '@expo/vector-icons';
+import { createStackNavigator } from '@react-navigation/stack';
 
-const Drawer = createDrawerNavigator();
+const TabIcon = ({ name, size, color }) => {
+    return <MaterialCommunityIcons name={name} size={size} color={color}/>;
+};
+
+const Drawer = createBottomTabNavigator();
+const Tab = createBottomTabNavigator();
+const Stack = createStackNavigator();
 
 function Navigator() {
   const { state: data, dispatch } = useUserInfo();
@@ -29,6 +38,7 @@ function Navigator() {
     });
     navigation.navigate("Login");
   };
+
 
   const headerRight = ({ navigation }) => {
     return {
@@ -63,6 +73,30 @@ function Navigator() {
     };
   };
 
+  const HomeStackScreen = () => {
+      const headerRight = ({ navigation }) => {
+        return {
+          headerRight: () =>
+            data.userInfo && (
+              <Button
+              onPress={() => logout(navigation)}
+              title="Logout"
+              color="blue"
+              />
+            ),
+          };
+      };
+      return(
+          <>
+          <Tab.Navigator>
+              <Tab.Screen name="AllTrails" component={AllTrails} options={{tabBarIcon: props => TabIcon({...props, name: 'hiking'}),}}/>
+              <Tab.Screen name="Home" component={Home} options={{tabBarIcon: props => TabIcon({...props, name: 'home'}),}}/>
+              <Tab.Screen name="Community" component={Community} options={{tabBarIcon: props => TabIcon({...props, name: 'network'}),}}/>
+          </Tab.Navigator>
+          </>
+      );
+  };
+
   useEffect(() => {
     
     // console.log(navigationRef);
@@ -70,43 +104,34 @@ function Navigator() {
 
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName={"Login"} backBehavior="history">
+      <Stack.Navigator initialRouteName={"Login"} >
         {data.userInfo ? (
           <>
-            <Drawer.Screen name="Home" component={Home} options={headerRight} />
-            <Drawer.Screen
-              name="AllTrails"
-              component={AllTrails}
-              options={headerRight}
+            <Stack.Screen
+              name="Back"
+              component={HomeStackScreen}
+              options={{ headerShown: false,}}
             />
-            <Drawer.Screen
-              name="Community"
-              component={Community}
-              options={headerRight}
-            />
-            <Drawer.Screen
+            <Stack.Screen
               name="TrailDetail"
               component={TrailDetail}
-              options={hiddenDrawerWithButton}
             />
-            <Drawer.Screen
+            <Stack.Screen
               name="CommunityDetail"
               component={CommunityDetail}
-              options={hiddenDrawerWithButton}
             />
-            <Drawer.Screen
+            <Stack.Screen
               name="AddPost"
               component={AddPost}
-              options={hiddenDrawerWithButton}
             />
           </>
         ) : (
           <>
-            <Drawer.Screen name="Login" component={Login} />
-            <Drawer.Screen name="Sign Up" component={SignUp} />
+            <Stack.Screen name="Login" component={Login} />
+            <Stack.Screen name="Sign Up" component={SignUp} />
           </>
         )}
-      </Drawer.Navigator>
+      </Stack.Navigator>
     </NavigationContainer>
   );
 }
