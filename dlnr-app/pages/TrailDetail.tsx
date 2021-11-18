@@ -1,27 +1,15 @@
 import * as React from "react";
-import MapView, { Marker, Callout } from "react-native-maps";
+import MapView, { Marker} from "react-native-maps";
 import { ActivityIndicator, StyleSheet, Dimensions, View } from "react-native";
-import { useEffect } from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import {
-  LineChart,
-  BarChart,
-  PieChart,
-  ProgressChart,
-  ContributionGraph,
-  StackedBarChart,
+  LineChart
 } from "react-native-chart-kit";
 import {
   Text,
-  Card,
-  ListItem,
-  Button,
-  Icon,
   Image,
   Divider,
 } from "react-native-elements";
-import { ScreenContainer } from "react-native-screens";
-import { useUserInfo } from "../services/useUserInfo";
 
 const GoogleBusyTimesInfo = (props) => {
   let trail = props.trail;
@@ -128,10 +116,10 @@ export default function TrailDetail(props) {
 
         <MapView
           region={{
-            latitude: trail.coords.latitude,
-            longitude: trail.coords.longitude,
-            latitudeDelta: 0.1,
-            longitudeDelta: 0.1,
+            latitude: trail.coords?.latitude || 21.4389,
+            longitude: trail.coords?.longitude || -158,
+            latitudeDelta: 0.3,
+            longitudeDelta: 0.3,
           }}
           style={styles.map}
         >
