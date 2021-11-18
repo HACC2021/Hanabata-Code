@@ -62,7 +62,9 @@ const GoogleBusyTimesInfo = (props) => {
             </View>
         );
     }
-    return null;
+    else {
+        return(<Text>Popular time data not available yet</Text>)
+    }
 }
 
 export default function TrailDetail(props) {
