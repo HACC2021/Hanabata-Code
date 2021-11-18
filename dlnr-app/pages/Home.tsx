@@ -33,7 +33,7 @@ export default function Home(props) {
           color = "#00FF00";
         }
         else if (busyValue < 60) {
-          color = "#00FFFF";
+          color = "#FFFF00";
         }
         else if (busyValue < 80) {
           color = "#FFA500";
