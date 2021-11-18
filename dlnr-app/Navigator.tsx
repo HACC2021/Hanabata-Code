@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { Button, Pressable, StyleSheet, Text } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
@@ -41,11 +41,9 @@ function Navigator() {
       tabBarIcon: (props) => TabIcon({ ...props, name: "hiking" }),
       headerRight: () =>
         data.userInfo && (
-          <Button
-            onPress={() => logout(navigation)}
-            title="Logout"
-            color="blue"
-          />
+          <Pressable onPress={() => logout(navigation)} style={styles.button}>
+            <Text>Log Out</Text>
+          </Pressable>
         ),
     };
   };
@@ -56,7 +54,7 @@ function Navigator() {
       headerRight: () =>
         data.userInfo && (
           <Pressable onPress={() => logout(navigation)} style={styles.button}>
-            <Text style={styles.text}>Log Out</Text>
+            <Text>Log Out</Text>
           </Pressable>
         ),
     };
@@ -67,11 +65,9 @@ function Navigator() {
       tabBarIcon: (props) => TabIcon({ ...props, name: "network" }),
       headerRight: () =>
         data.userInfo && (
-          <Button
-            onPress={() => logout(navigation)}
-            title="Logout"
-            color="blue"
-          />
+          <Pressable onPress={() => logout(navigation)} style={styles.button}>
+            <Text>Log Out</Text>
+          </Pressable>
         ),
     };
   };
@@ -86,7 +82,7 @@ function Navigator() {
       ),
       headerRight: () => (
         <Pressable onPress={() => logout(navigation)} style={styles.button}>
-          <Text style={styles.text}>Log Out</Text>
+          <Text>Log Out</Text>
         </Pressable>
       ),
     };
