@@ -6,3 +6,4 @@ meteor/app/.meteor/versions
 dlnr-app/package-lock.json
 scripts/config.js
 .DS_Store
+meteor/.DS_Store
