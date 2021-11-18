@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { Pressable, StyleSheet, Text } from "react-native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
+import { Button, Pressable, StyleSheet, Text } from "react-native";
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
@@ -13,8 +12,15 @@ import TrailDetail from "./pages/TrailDetail";
 import CommunityDetail from "./pages/CommunityDetail";
 import AddPost from "./pages/AddPost";
 import SignUp from "./pages/SignUp";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { Icon } from "react-native-elements";
 
-const Drawer = createDrawerNavigator();
+const TabIcon = ({ name, size, color }) => {
+  return <MaterialCommunityIcons name={name} size={size} color={color} />;
+};
+
+const Tab = createBottomTabNavigator();
 
 function Navigator() {
   const { state: data, dispatch } = useUserInfo();
@@ -30,8 +36,23 @@ function Navigator() {
     navigation.navigate("Login");
   };
 
-  const headerRight = ({ navigation }) => {
+  const hikingTabOptions = ({ navigation }) => {
     return {
+      tabBarIcon: (props) => TabIcon({ ...props, name: "hiking" }),
+      headerRight: () =>
+        data.userInfo && (
+          <Button
+            onPress={() => logout(navigation)}
+            title="Logout"
+            color="blue"
+          />
+        ),
+    };
+  };
+
+  const homeTabOptions = ({ navigation }) => {
+    return {
+      tabBarIcon: (props) => TabIcon({ ...props, name: "home" }),
       headerRight: () =>
         data.userInfo && (
           <Pressable onPress={() => logout(navigation)} style={styles.button}>
@@ -41,12 +62,26 @@ function Navigator() {
     };
   };
 
-  const hiddenDrawerWithButton = ({ navigation }) => {
+  const communityTabOptions = ({ navigation }) => {
     return {
-      drawerItemStyle: { display: "none" as "none" },
+      tabBarIcon: (props) => TabIcon({ ...props, name: "network" }),
+      headerRight: () =>
+        data.userInfo && (
+          <Button
+            onPress={() => logout(navigation)}
+            title="Logout"
+            color="blue"
+          />
+        ),
+    };
+  };
+
+  const hiddenTabOptions = ({ navigation }) => {
+    return {
+      tabBarItemStyle: { display: "none" as "none" },
       headerLeft: () => (
         <Pressable onPress={() => navigation.goBack()} style={styles.button}>
-          <Text style={styles.text2}>Go Back</Text>
+          <Icon name="arrow-left" type="material-community" />
         </Pressable>
       ),
       headerRight: () => (
@@ -57,51 +92,69 @@ function Navigator() {
     };
   };
 
+  useEffect(() => {
+    // console.log(data.userInfo);
+  }, []);
+
   return (
     <NavigationContainer>
-      <Drawer.Navigator
-        initialRouteName={"Login"}
-        backBehavior="history"
+      <Tab.Navigator
         screenOptions={{
           headerTitleAlign: "center",
         }}
+        backBehavior="history"
+        initialRouteName="Home"
       >
         {data.userInfo ? (
           <>
-            <Drawer.Screen name="Home" component={Home} options={headerRight} />
-            <Drawer.Screen
+            <Tab.Screen
               name="AllTrails"
               component={AllTrails}
-              options={headerRight}
+              options={hikingTabOptions}
             />
-            <Drawer.Screen
+            <Tab.Screen name="Home" component={Home} options={homeTabOptions} />
+            <Tab.Screen
               name="Community"
               component={Community}
-              options={headerRight}
+              options={communityTabOptions}
             />
-            <Drawer.Screen
+            <Tab.Screen
               name="TrailDetail"
               component={TrailDetail}
-              options={hiddenDrawerWithButton}
+              options={hiddenTabOptions}
             />
-            <Drawer.Screen
+            <Tab.Screen
               name="CommunityDetail"
               component={CommunityDetail}
-              options={hiddenDrawerWithButton}
+              options={hiddenTabOptions}
             />
-            <Drawer.Screen
+            <Tab.Screen
               name="AddPost"
               component={AddPost}
-              options={hiddenDrawerWithButton}
+              options={hiddenTabOptions}
             />
           </>
         ) : (
           <>
-            <Drawer.Screen name="Login" component={Login} />
-            <Drawer.Screen name="Sign Up" component={SignUp} />
+            <Tab.Screen
+              name="Login"
+              component={Login}
+              options={{
+                tabBarIcon: (props) =>
+                  TabIcon({ ...props, name: "login-variant" }),
+              }}
+            />
+            <Tab.Screen
+              name="Sign Up"
+              component={SignUp}
+              options={{
+                tabBarIcon: (props) =>
+                  TabIcon({ ...props, name: "account-plus-outline" }),
+              }}
+            />
           </>
         )}
-      </Drawer.Navigator>
+      </Tab.Navigator>
     </NavigationContainer>
   );
 }
@@ -115,20 +168,6 @@ const styles = StyleSheet.create({
     borderRadius: 4,
     // elevation: 3,
     // backgroundColor: "grey",
-  },
-  text: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: "bold",
-    letterSpacing: 0.25,
-    color: "red",
-  },
-  text2: {
-    fontSize: 16,
-    lineHeight: 21,
-    fontWeight: "bold",
-    letterSpacing: 0.25,
-    color: "skyblue",
   },
 });
 
