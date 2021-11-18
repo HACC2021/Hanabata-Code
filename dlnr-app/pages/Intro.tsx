@@ -37,7 +37,7 @@ style={{
 <Text
   style={styles.header}
 >
-  Hiking Trail Etiquette 101
+  {"\n"}Hiking Trail Etiquette 101
 </Text>
 <Text
   style={styles.regFont}>
@@ -47,14 +47,18 @@ style={{
 4. Be aware of your surroundings.{"\n"}
 5. Stay on the trail.{"\n"}
 </Text>
-<Text>
-Lorem ipsum dolor sit amet. Est modi enim 33 voluptatem fugiat et iusto ipsa ut rerum sunt? Hic voluptas nemo qui itaque accusamus ut blanditiis vero ab voluptas dolor in ipsum cumque qui quasi dicta et accusantium nulla! Est tempora consectetur sed eius sint aut totam voluptas qui eius saepe et laborum galisum.
+<Text
+  style={styles.header}
+>
+  {"\n"}Credits
 </Text>
-<Text>
-Lorem ipsum dolor sit amet. Est modi enim 33 voluptatem fugiat et iusto ipsa ut rerum sunt? Hic voluptas nemo qui itaque accusamus ut blanditiis vero ab voluptas dolor in ipsum cumque qui quasi dicta et accusantium nulla! Est tempora consectetur sed eius sint aut totam voluptas qui eius saepe et laborum galisum.
+<Text
+  style={styles.regFont}>
+{"\n"}HITT App was coded by Yong Kim, Keith Okuna, Yeji Han, Cheolhoon Choi, Kai Hwang.{"\n"}{"\n"}
+HITT App was designed as part of Hawaii Annual Code Challenge (HACC).{"\n"}{"\n"}
+HITT App was developed using React Native, an open-source UI software framework created by Meta Platforms, inc.{"\n"}{"\n"}{"\n"}{"\n"}
 </Text>
 </View>
-
 </ScrollView>
 </SafeAreaView>
 
