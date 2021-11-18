@@ -142,7 +142,7 @@ const styles = StyleSheet.create({
     marginBottom: 20,
   },
   map: {
-    width: 400,
+    width: "100%",
     height: 250,
   },
   points: {
