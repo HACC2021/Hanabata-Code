@@ -55,11 +55,9 @@ function Navigator() {
       tabBarIcon: (props) => TabIcon({ ...props, name: "home" }),
       headerRight: () =>
         data.userInfo && (
-          <Button
-            onPress={() => logout(navigation)}
-            title="Logout"
-            color="blue"
-          />
+          <Pressable onPress={() => logout(navigation)} style={styles.button}>
+            <Text style={styles.text}>Log Out</Text>
+          </Pressable>
         ),
     };
   };
@@ -87,11 +85,9 @@ function Navigator() {
         </Pressable>
       ),
       headerRight: () => (
-        <Button
-          onPress={() => logout(navigation)}
-          title="Logout"
-          color="blue"
-        />
+        <Pressable onPress={() => logout(navigation)} style={styles.button}>
+          <Text style={styles.text}>Log Out</Text>
+        </Pressable>
       ),
     };
   };
