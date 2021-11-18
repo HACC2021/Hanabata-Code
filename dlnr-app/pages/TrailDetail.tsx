@@ -1,15 +1,13 @@
 import * as React from "react";
-import MapView, { Marker} from "react-native-maps";
+import MapView, { Marker } from "react-native-maps";
 import { ActivityIndicator, StyleSheet, Dimensions, View } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
-import {
-  LineChart
-} from "react-native-chart-kit";
-import {
-  Text,
-  Image,
-  Divider,
-} from "react-native-elements";
+import { LineChart } from "react-native-chart-kit";
+import { Text, Image, Divider } from "react-native-elements";
+import { CurrentRenderContext } from "@react-navigation/core";
+
+const trailImage =
+  "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
 
 const GoogleBusyTimesInfo = (props) => {
   let trail = props.trail;
@@ -74,7 +72,6 @@ const GoogleBusyTimesInfo = (props) => {
 export default function TrailDetail(props) {
   // console.log(props);
   let trail = props.route.params.trail;
-
   return (
     <>
       <ScrollView>
@@ -90,13 +87,13 @@ export default function TrailDetail(props) {
           {trail.name}
         </Text>
         <Image
-          source={{ uri: trail.image }}
+          source={{ uri: trail.image || trailImage }}
           style={{ width: 420, height: 200 }}
           PlaceholderContent={<ActivityIndicator />}
         />
-
         <Text style={styles.descriptionText}>{trail.description}</Text>
         <Divider orientation="horizontal" inset={true} insetType="middle" />
+        <Text style={styles.points}>Reward Points: {trail.points}</Text>
         <Text style={styles.descriptionText}>
           Island: {trail.island}
           {"\n"}
@@ -123,7 +120,9 @@ export default function TrailDetail(props) {
           }}
           style={styles.map}
         >
-          {trail.coords && <Marker coordinate={trail.coords}></Marker>}
+          {trail.coords && (
+            <Marker pinColor={trail.color} coordinate={trail.coords}></Marker>
+          )}
         </MapView>
         {/* <GoogleBusyTimesInfo trail={trail}/> */}
       </ScrollView>
@@ -145,5 +144,10 @@ const styles = StyleSheet.create({
   map: {
     width: 400,
     height: 250,
+  },
+  points: {
+    fontSize: 25,
+    alignSelf: "center",
+    color: "red",
   },
 });

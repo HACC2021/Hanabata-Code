@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
-import { Button } from "react-native";
+import { Pressable, StyleSheet, Text } from "react-native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
 import Home from "./pages/Home";
 import AllTrails from "./pages/AllTrails";
@@ -34,11 +34,9 @@ function Navigator() {
     return {
       headerRight: () =>
         data.userInfo && (
-          <Button
-            onPress={() => logout(navigation)}
-            title="Logout"
-            color="blue"
-          />
+          <Pressable onPress={() => logout(navigation)} style={styles.button}>
+            <Text style={styles.text}>Log Out</Text>
+          </Pressable>
         ),
     };
   };
@@ -47,30 +45,27 @@ function Navigator() {
     return {
       drawerItemStyle: { display: "none" as "none" },
       headerLeft: () => (
-        <Button
-          onPress={() => navigation.goBack()}
-          title="Go Back"
-          color="blue"
-        />
+        <Pressable onPress={() => navigation.goBack()} style={styles.button}>
+          <Text style={styles.text2}>Go Back</Text>
+        </Pressable>
       ),
       headerRight: () => (
-        <Button
-          onPress={() => logout(navigation)}
-          title="Logout"
-          color="blue"
-        />
+        <Pressable onPress={() => logout(navigation)} style={styles.button}>
+          <Text style={styles.text}>Log Out</Text>
+        </Pressable>
       ),
     };
   };
 
-  useEffect(() => {
-    
-    // console.log(navigationRef);
-  }, []);
-
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName={"Login"} backBehavior="history">
+      <Drawer.Navigator
+        initialRouteName={"Login"}
+        backBehavior="history"
+        screenOptions={{
+          headerTitleAlign: "center",
+        }}
+      >
         {data.userInfo ? (
           <>
             <Drawer.Screen name="Home" component={Home} options={headerRight} />
@@ -110,5 +105,31 @@ function Navigator() {
     </NavigationContainer>
   );
 }
+
+const styles = StyleSheet.create({
+  button: {
+    alignItems: "center",
+    justifyContent: "center",
+    paddingVertical: 6,
+    paddingHorizontal: 12,
+    borderRadius: 4,
+    // elevation: 3,
+    // backgroundColor: "grey",
+  },
+  text: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "red",
+  },
+  text2: {
+    fontSize: 16,
+    lineHeight: 21,
+    fontWeight: "bold",
+    letterSpacing: 0.25,
+    color: "blue",
+  },
+});
 
 export default Navigator;

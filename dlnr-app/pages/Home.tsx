@@ -8,18 +8,6 @@ import { useUserInfo } from "../services/useUserInfo";
 import { getTrails } from "../services/apiService";
 import { useNavigationState } from "@react-navigation/core";
 
-// export default function Home(props) {
-//   const Stack = createNativeStackNavigator();
-//   return (
-//     <Stack.Navigator>
-//       <Stack.Screen name="Map">
-//         {(p) => <MapComponent {...props} />}
-//       </Stack.Screen>
-//       <Stack.Screen name="TrailDetail" component={TrailDetail} />
-//     </Stack.Navigator>
-//   );
-// }
-
 export default function Home(props) {
   const { state: data, dispatch: setData } = useUserInfo();
   const navState = useNavigationState((state) => state);
@@ -33,6 +21,7 @@ export default function Home(props) {
         let tempDayOfWeek = dayOfWeek;
         let color = "#AAAAAA";
         let busyValue;
+        let points;
 
         const newTrails = res.map((trail) => {
           dayOfWeek < 0 && (tempDayOfWeek = 6);
@@ -40,17 +29,24 @@ export default function Home(props) {
             busyValue = trail.traffics.google[tempDayOfWeek].data[hour];
             if (busyValue < 25) {
               color = "#00FF00";
+              points = 100;
             } else if (busyValue < 60) {
               color = "#00FFFF";
+              points = 80;
             } else if (busyValue < 80) {
               color = "#FFA500";
+              points = 50;
             } else {
               color = "#FF0000";
+              points = 20;
             }
             trail.color = color;
+            trail.points = points;
           } else {
             color = "#AAAAAA";
+            points = 0;
             trail.color = color;
+            trail.points = points;
           }
           return trail;
         });

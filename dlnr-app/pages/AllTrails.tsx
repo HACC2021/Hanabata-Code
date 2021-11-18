@@ -21,19 +21,23 @@ const trailImage =
   "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
 
 const Search = (props) => {
-  const [search, setSearch] = useState("");
   const onChange = (text) => {
-    setSearch(text);
+    props.setSearch(text);
     props.setResult(props.trails.filter((trail) => trail.name.includes(text)));
   };
 
   return (
     <SearchBar
-      placeholder="Type Here..."
-      onChangeText={onChange as any}
-      value={search}
+      inputStyle={{ backgroundColor: "white" }}
+      containerStyle={{
+        backgroundColor: "white",
+      }}
+      inputContainerStyle={{ backgroundColor: "white" }}
+      placeholder={"Search"}
       onBlur={undefined}
+      onChangeText={onChange as any}
       onFocus={undefined}
+      value={props.search}
       platform={"default"}
       clearIcon={undefined}
       searchIcon={undefined}
@@ -41,7 +45,7 @@ const Search = (props) => {
       showLoading={undefined}
       onClear={undefined}
       onCancel={undefined}
-      lightTheme={false}
+      lightTheme={true}
       round={false}
       cancelButtonTitle={undefined}
       cancelButtonProps={undefined}
@@ -54,23 +58,67 @@ export default function AllTrails({ navigation }) {
   const { state: data, dispatch: setData } = useUserInfo();
   const navState = useNavigationState((state) => state);
   const [result, setResult] = useState();
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     navState.routeNames[navState.index] === "AllTrails" &&
       getTrails().then((res) => {
         console.log("AllTrails");
+
+        let dayOfWeek = new Date().getDay() - 1;
+        let hour = new Date().getHours();
+        let tempDayOfWeek = dayOfWeek;
+        let color = "#AAAAAA";
+        let busyValue;
+        let points;
+
+        const newTrails = res.map((trail) => {
+          dayOfWeek < 0 && (tempDayOfWeek = 6);
+          if (trail.traffics?.google) {
+            busyValue = trail.traffics.google[tempDayOfWeek].data[hour];
+            if (busyValue < 25) {
+              color = "#00FF00";
+              points = 100;
+            } else if (busyValue < 60) {
+              color = "#00FFFF";
+              points = 80;
+            } else if (busyValue < 80) {
+              color = "#FFA500";
+              points = 50;
+            } else {
+              color = "#FF0000";
+              points = 20;
+            }
+            trail.color = color;
+            trail.points = points;
+          } else {
+            color = "#AAAAAA";
+            points = 0;
+            trail.color = color;
+            trail.points = points;
+          }
+          return trail;
+        });
+
         setData({
           type: "ALL_TRAILS",
           payload: {
-            trails: res,
+            trails: newTrails,
           },
         });
       });
+    setSearch("");
+    setResult(undefined);
   }, [navState.index]);
 
   return (
     <SafeAreaView style={styles.container}>
-      <Search trails={data.trails} setResult={setResult}/>
+      <Search
+        trails={data.trails}
+        setResult={setResult}
+        search={search}
+        setSearch={setSearch}
+      />
       <FlatList
         data={result || data.trails}
         renderItem={(item) => renderItem(item.item, navigation)}
@@ -90,17 +138,15 @@ const renderItem = (trail, navigation) => {
         <Card.Divider />
         <Text style={{ marginBottom: 10 }}>{trail.description}</Text>
         <Card.Divider />
-        <View style={styles.viewDetails}>
-          <Text>
-            <Button
-              title="View Details"
-              onPress={() =>
-                navigation.navigate("TrailDetail", {
-                  trail,
-                })
-              }
-            />
-          </Text>
+        <View>
+          <Button
+            title="View Details"
+            onPress={() =>
+              navigation.navigate("TrailDetail", {
+                trail,
+              })
+            }
+          />
         </View>
       </Card>
     </>
@@ -110,7 +156,6 @@ const renderItem = (trail, navigation) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    marginTop: StatusBar.currentHeight || 0,
   },
   item: {
     backgroundColor: "#f9c2ff",
@@ -120,9 +165,5 @@ const styles = StyleSheet.create({
   },
   title: {
     fontSize: 15,
-  },
-  viewDetails: {
-    justifyContent: "center",
-    alignItems: "center",
-  },
+  }
 });

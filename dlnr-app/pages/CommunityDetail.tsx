@@ -60,7 +60,7 @@ export default function CommunityDetail(props) {
             />
           </TouchableOpacity>
         </View>
-        <SafeAreaView>
+        <SafeAreaView style={{ backgroundColor: "white" }}>
           <ScrollView>
             <Input
               placeholder="Comment"
