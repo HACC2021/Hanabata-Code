@@ -17,12 +17,12 @@ function createUser(email, password, role) {
       $set: {
         isAdmin: true,
         isSuperAdmin: true,
-      }
+      },
     });
     Roles.createRole(role, { unlessExists: true });
-    Roles.createRole("admin", {unlessExists: true});
+    Roles.createRole('admin', { unlessExists: true });
     Roles.addUsersToRoles(userID, role);
-    Roles.addUsersToRoles(userID, "admin");
+    Roles.addUsersToRoles(userID, 'admin');
   }
 }
 
