@@ -196,7 +196,6 @@ JsonRoutes.add(
 );
 
 JsonRoutes.add("POST", "auth/checkInToTrail", async (req, res) => {
-  console.log("checkInToTrail", req.body);
   let trailId = req.body.trailId;
   let userId = req.userId;
 
@@ -241,11 +240,11 @@ JsonRoutes.add("POST", "auth/checkInToTrail", async (req, res) => {
   }
 
   if (busyTimes && req.userId) {
-    checkInObj.busyValue = busyTimes[dayOfWeek][hour];
+    checkInObj.busyValue = busyTimes[dayOfWeek].data[hour];
     if (checkInObj.busyValue < 25) points = 100;
     else if (checkInObj.busyValue < 60) points = 80;
     else if (checkInObj.busyValue < 80) points = 50;
-    else  points = 20;
+    else points = 20;
 
     checkInObj.pointsAwarded = points;
   }

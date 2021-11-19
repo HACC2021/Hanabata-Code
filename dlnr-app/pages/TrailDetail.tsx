@@ -84,7 +84,7 @@ const checkInToTrail = async (trail) => {
     if (result.error) {
       Alert.alert(result.error);
     } else {
-
+      Alert.alert(`Thank you for checking in! You have received ${trail.points} points.`);
     }
   } catch(e) {
     console.log(e);
