@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import {
   FlatList,
   Text,
@@ -23,33 +23,36 @@ export default function CommunityDetail(props) {
   const [comment, setComment] = useState("");
   const [detail, setDetail] = useState({ comments: [] });
   const { state: data, dispatch: setData } = useUserInfo();
+  const [isEdit, setIsEdit] = useState(false);
+  const [editId, setEditId] = useState("");
+  const swipeable = useRef([]);
 
-  const renderItem = ({ item }) => {
+  const renderItem = ({ item, index }) => {
     const deleteCommentButton = async () => {
-      await deleteComment(
-        data.userInfo.token,
-        props.route.params._id,
-        item._id,
-        item.comment
-      );
+      // await deleteComment(
+      //   data.userInfo.token,
+      //   props.route.params._id,
+      //   item._id,
+      //   item.comment
+      // );
+      swipeable.current[index].close();
     };
-    const editCommentButton = async () => {
-      await editComment(
-        data.userInfo.token,
-        props.route.params._id,
-        item._id,
-        item.comment
-      );
+    const editCommentButton = () => {
+      setIsEdit(true);
+      setEditId(item._id);
+      swipeable.current[index].close();
     };
     return (
       <>
         <Swipeable
+          ref={(el) => swipeable.current[index] = el}
           renderRightActions={() => (
             <MaterialCommunityIcons
               color="#FF0000"
               size={50}
               name="delete-outline"
               onPress={deleteCommentButton}
+              style={{ alignSelf: "center" }}
             />
           )}
           renderLeftActions={() => (
@@ -58,6 +61,7 @@ export default function CommunityDetail(props) {
               size={50}
               name="comment-edit-outline"
               onPress={editCommentButton}
+              style={{ alignSelf: "center" }}
             />
           )}
         >
@@ -79,14 +83,29 @@ export default function CommunityDetail(props) {
     getAllComments(data.userInfo.token, props.route.params._id).then((res) =>
       setDetail(res)
     );
+    setOpen(false);
+    setComment("");
+    setIsEdit(false);
+    setEditId("");
   }, [props.route.params._id]);
 
   const submit = async () => {
-    await makeComment(
-      data.userInfo.token,
-      props.route.params._id,
-      comment
-    ).then((res) => setDetail(res));
+    if (isEdit) {
+      await editComment(
+        data.userInfo.token,
+        props.route.params._id,
+        editId,
+        comment
+      ).then((res) => setDetail(res));
+      setEditId("");
+      setIsEdit(false);
+    } else {
+      await makeComment(
+        data.userInfo.token,
+        props.route.params._id,
+        comment
+      ).then((res) => setDetail(res));
+    }
     setComment("");
   };
 
@@ -108,11 +127,29 @@ export default function CommunityDetail(props) {
         <SafeAreaView style={{ backgroundColor: "white" }}>
           <ScrollView>
             <Input
-              placeholder="Comment"
-              leftIcon={{ type: "font-awesome", name: "comment" }}
+              placeholder={isEdit ? "Edit Comment":"Comment"}
+              leftIcon={
+                isEdit
+                  ? {
+                      type: "material-community",
+                      name: "comment-edit-outline",
+                      color: "#008000",
+                      size: 30,
+                    }
+                  : { type: "font-awesome", name: "comment" }
+              }
               value={comment}
               onChangeText={(value) => setComment(value)}
               style={{ height: "100%" }}
+              rightIcon={
+                isEdit && {
+                  name: "close",
+                  onPress: () => {
+                    setIsEdit(false);
+                    setEditId("");
+                  },
+                }
+              }
             />
           </ScrollView>
         </SafeAreaView>
