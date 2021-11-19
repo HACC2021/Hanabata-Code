@@ -112,6 +112,7 @@ export default function TrailDetail(props) {
         <Divider orientation="horizontal" inset={true} insetType="middle" />
 
         <MapView
+          showsUserLocation={true}
           region={{
             latitude: trail.coords?.latitude || 21.4389,
             longitude: trail.coords?.longitude || -158,

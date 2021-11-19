@@ -8,7 +8,7 @@ import Community from "./pages/Community";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
 import { useUserInfo } from "./services/useUserInfo";
-import { useLogout } from "./services/useLogin";
+import { useLogout } from "./services/authenticationService";
 import TrailDetail from "./pages/TrailDetail";
 import CommunityDetail from "./pages/CommunityDetail";
 import AddPost from "./pages/AddPost";

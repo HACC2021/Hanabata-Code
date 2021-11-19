@@ -12,6 +12,7 @@ import { useUserInfo } from "../services/useUserInfo";
 import { SearchBar, ListItem, Avatar, Card } from "react-native-elements";
 import { useNavigationState } from "@react-navigation/core";
 import { getTrails } from "../services/apiService";
+import * as Location from 'expo-location';
 
 const trailImage =
   "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
@@ -58,6 +59,7 @@ export default function AllTrails({ navigation }) {
 
   useEffect(() => {
     navState.routeNames[navState.index] === "AllTrails" &&
+      Location.requestForegroundPermissionsAsync();
       getTrails().then((res) => {
         console.log("AllTrails");
 

@@ -93,5 +93,5 @@ webapp-hashing@1.1.0
 zodern:caching-minifier@0.4.0
 zodern:hide-production-sourcemaps@1.2.0
 zodern:meteor-package-versions@0.2.1
-zodern:minifier-js@4.0.0
-zodern:standard-minifier-js@4.0.0
+zodern:minifier-js@4.1.0
+zodern:standard-minifier-js@4.1.0

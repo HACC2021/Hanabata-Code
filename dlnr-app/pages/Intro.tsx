@@ -1,7 +1,9 @@
 import React from 'react';
+import * as Location from 'expo-location';
 import { Text, View, Image, ImageBackground, ScrollView, StyleSheet, SafeAreaView, StatusBar, Linking} from 'react-native';
 
 const Intro = () => {
+  Location.requestForegroundPermissionsAsync();
   return (
     <SafeAreaView style={styles.container}>
     <ScrollView

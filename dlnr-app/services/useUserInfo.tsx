@@ -5,7 +5,7 @@ import React, {
   useCallback,
 } from "react";
 import useEnhancedReducer from "./useEnhancedReducer";
-import { loginWithToken } from "./useLogin";
+import { loginWithToken } from "./authenticationService";
 import { getTrails, getAllPosts } from "./apiService";
 
 const userInfo = createContext({

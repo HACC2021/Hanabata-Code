@@ -3,7 +3,9 @@ import { ip4 } from "./http";
 
 const storeToken = async (token) => {
   try {
-    await AsyncStorage.setItem("HanabataCode", token);
+    await AsyncStorage.setItem("AuthToken", token.token);
+    await AsyncStorage.setItem("AuthTokenExpires", token.tokenExpires);
+    await AsyncStorage.setItem("AuthTokenId", token.id);
   } catch (e) {
     console.log(e);
   }
@@ -11,8 +13,8 @@ const storeToken = async (token) => {
 
 const getToken = async () => {
   try {
-    const value = await AsyncStorage.getItem("HanabataCode");
-    return value;
+    const token = await AsyncStorage.getItem("AuthToken");
+    return token;
   } catch (e) {
     console.log(e);
   }
@@ -20,7 +22,9 @@ const getToken = async () => {
 
 const removeToken = async () => {
   try {
-    await AsyncStorage.removeItem("HanabataCode");
+    await AsyncStorage.removeItem("AuthToken");
+    await AsyncStorage.removeItem("AuthTokenExpires");
+    await AsyncStorage.removeItem("AuthTokenId");
   } catch (e) {
     console.log(e);
   }
@@ -55,7 +59,7 @@ async function validateUser(token) {
   }
 }
 
-async function useLogin(email, password) {
+async function loginWithPassword(email, password) {
   try {
     const response = await fetch(`http://${ip4}/users/login`, {
       method: "POST", // *GET, POST, PUT, DELETE, etc.
@@ -67,9 +71,14 @@ async function useLogin(email, password) {
       },
       body: JSON.stringify({ email, password }), // body data type must match "Content-Type" header
     });
-    const json = await response.json();
-    await storeToken(json.token);
-    return json;
+    const token = await response.json();
+    if (token.error) {
+      return { error: token.reason }
+    }
+    else {
+      await storeToken(token);
+      return token;
+    }
   } catch (error) {
     console.error(error);
   }
@@ -84,11 +93,16 @@ async function registerUser(email, password) {
       headers: {
         "Content-Type": "application/json",
       },
-      body: JSON.stringify({ email, password }), // body data type must match "Content-Type" header
+      body: JSON.stringify({ email, password, username: email }), // body data type must match "Content-Type" header
     });
-    const json = await response.json();
-    await storeToken(json.token);
-    return json;
+    const token = await response.json();
+    if (token.error) {
+      return { error: token.reason }
+    }
+    else {
+      await storeToken(token);
+      return token;
+    }
   } catch (error) {
     console.error(error);
   }
@@ -103,4 +117,4 @@ async function loginWithToken() {
   return userId ? { userId, token } : undefined;
 }
 
-export { useLogin, useLogout, loginWithToken, registerUser };
+export { loginWithPassword, useLogout, loginWithToken, registerUser };
