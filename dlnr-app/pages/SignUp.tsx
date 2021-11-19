@@ -59,7 +59,9 @@ const SignUp = ({ navigation }) => {
         secureTextEntry={true}
         placeholder="Re-Enter Passwords"
       />
-      { errorMessage && <Text style={{ color: "red" }}>{ errorMessage }</Text> }
+      { 
+        errorMessage != null && <Text style={{ color: 'red' }}>{ errorMessage }</Text> 
+      }
       <Button onPress={onSignUp} title="Sign Up" color="#841584" />
     </SafeAreaView>
   );
