@@ -144,7 +144,7 @@ async function deleteComment(token, post_id, comment_id) {
   }
 }
 
-async function editPost(token, title_id, detail_id) {
+async function editPost(token, post_id, post) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/editPostOnCommunityDetail`,
@@ -157,7 +157,7 @@ async function editPost(token, title_id, detail_id) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ title_id, detail_id }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, post }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();
@@ -165,6 +165,29 @@ async function editPost(token, title_id, detail_id) {
   } catch (error) {
     console.error(error);
   }
+}
+
+async function deletePost (token, post_id, post) {
+    try {
+        const response = await fetch(
+            `http://${ip4}/auth/deletePostOnCommunityDetail`,
+            {
+                method: "POST", // *GET, POST, PUT, DELETE, etc.
+                mode: "cors", // no-cors, *cors, same-origin
+                cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+                headers: {
+                    "Content-Type": "application/json",
+                    Authorization: "Bearer " + token,
+                    // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify({ post_id, post }), // body data type must match "Content-Type" header
+            }
+        );
+        const json = await response.json();
+        return json;
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 async function editComment(token, post_id, comment_id, comment) {
@@ -194,6 +217,8 @@ export {
   getTrails,
   makePost,
   getAllPosts,
+  editPost,
+  deletePost,
   makeComment,
   getAllComments,
   deleteComment,

@@ -2,7 +2,7 @@ import { useNavigationState } from "@react-navigation/core";
 import React, { useState, useEffect } from "react";
 import { SafeAreaView, FlatList } from "react-native";
 import { ListItem, SpeedDial } from "react-native-elements";
-import { getAllPosts } from "../services/apiService";
+import { getAllPosts, deletePost, editPost } from "../services/apiService";
 import { useUserInfo } from "../services/useUserInfo";
 import { Swipeable } from "react-native-gesture-handler";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
@@ -27,6 +27,14 @@ export default function Community({ navigation }) {
 
   const renderItem = ({ item }) => {
     // @ts-ignore
+    const deletePostButton = async () => {
+        console.log(item);
+        await deletePost(data.userInfo.token, item._id, item.post);
+    };
+    const editPostButton = async () => {
+        console.log(item);
+        await editPost(data.userInfo.token, item._id, item.post);
+    };
     return (
       <>
         <Swipeable
@@ -36,6 +44,7 @@ export default function Community({ navigation }) {
               size={50}
               name="delete-outline"
               style={{ alignSelf: "center" }}
+              onPress={deletePostButton}
             />
           )}
           renderLeftActions={() => (
@@ -44,6 +53,7 @@ export default function Community({ navigation }) {
               size={50}
               name="comment-edit-outline"
               style={{ alignSelf: "center" }}
+              onPress={editPostButton}
             />
           )}
         >
