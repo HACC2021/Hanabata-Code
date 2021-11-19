@@ -1,4 +1,5 @@
 import { ip4 } from "./http";
+import { getToken } from "./authenticationService";
 
 async function getData() {
   try {
@@ -21,6 +22,7 @@ async function getData() {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -44,6 +46,7 @@ async function makePost(token, title, detail) {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -67,6 +70,7 @@ async function makeComment(token, _id, comment) {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -86,6 +90,7 @@ async function getAllPosts(token) {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -109,6 +114,7 @@ async function getAllComments(token, _id) {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -141,6 +147,7 @@ async function deleteComment(token, post_id, comment_id) {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -164,6 +171,7 @@ async function editPost(token, post_id, title, detail) {
     return json;
   } catch (error) {
     console.error(error);
+    return error;
   }
 }
 
@@ -187,6 +195,7 @@ async function deletePost (token, post_id) {
         return json;
     } catch (error) {
         console.error(error);
+        return error;
     }
 }
 
@@ -210,6 +219,33 @@ async function editComment(token, post_id, comment_id, comment) {
     return json;
   } catch (error) {
     console.error(error);
+    return { error };
+  }
+}
+
+async function checkInToTrail(trailId) {
+  console.log("check in to trail", trailId);
+  try {
+    const token = await getToken();
+    const response = await fetch(
+      `http://${ip4}/auth/checkInToTrail`,
+      {
+        method: "POST", // *GET, POST, PUT, DELETE, etc.
+        mode: "cors", // no-cors, *cors, same-origin
+        cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: "Bearer " + token.token,
+          // 'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: JSON.stringify({ trailId }), // body data type must match "Content-Type" header
+      }
+    );
+    const json = await response.json();
+    return json;
+  } catch (error) {
+    console.error(error);
+    return { error };
   }
 }
 
@@ -223,4 +259,5 @@ export {
   getAllComments,
   deleteComment,
   editComment,
+  checkInToTrail
 };
