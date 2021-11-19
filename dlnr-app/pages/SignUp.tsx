@@ -1,5 +1,6 @@
 import React from "react";
-import { SafeAreaView, StyleSheet, TextInput, Button } from "react-native";
+import { View, StyleSheet, TextInput, Image } from "react-native";
+import { Input, Button } from "react-native-elements";
 import { registerUser } from "../services/useLogin";
 import { useUserInfo } from "../services/useUserInfo";
 
@@ -24,31 +25,62 @@ const SignUp = ({ navigation }) => {
   };
 
   return (
-    <SafeAreaView
+    <View
       style={{ flex: 1, alignItems: "center", justifyContent: "center" }}
     >
-      <TextInput
-        style={styles.input}
-        onChangeText={onChangeId}
-        value={id}
-        placeholder="Enter Email"
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={setPasswords}
-        value={passwords}
-        secureTextEntry={true}
-        placeholder="Enter Passwords"
-      />
-      <TextInput
-        style={styles.input}
-        onChangeText={setRePasswords}
-        value={rePasswords}
-        secureTextEntry={true}
-        placeholder="Re-Enter Passwords"
-      />
-      <Button onPress={onSignUp} title="Sign Up" color="#841584" />
-    </SafeAreaView>
+        <Image
+            source={require("../assets/logo_hit.jpeg")}
+            style={{
+                borderRadius: 8,
+                height: 200,
+                width: 200,
+                alignItems: "center",
+                marginTop: 60,
+                marginBottom: 30,
+                alignSelf: "center",
+            }}
+        />
+        <View style={{flex: 1, width: "80%"} }>
+            <Input
+                label="Email"
+                leftIcon={{ type: "font-awesome", name: "envelope", color: "grey" }}
+                onChangeText={onChangeId}
+                value={id}
+                placeholder="  email@address.com"
+            />
+            <Input
+                label="Password"
+                leftIcon={{
+                    type: "font-awesome",
+                    name: "lock",
+                    color: "grey",
+                    size: 30,
+                }}
+                onChangeText={setPasswords}
+                value={passwords}
+                secureTextEntry={true}
+                placeholder="    Passwords"
+            />
+            <Input
+                label="Password"
+                leftIcon={{
+                    type: "font-awesome",
+                    name: "lock",
+                    color: "grey",
+                    size: 30,
+                }}
+                onChangeText={setRePasswords}
+                value={passwords}
+                secureTextEntry={true}
+                placeholder="    Re-Enter Passwords"
+            />
+            <Button
+                onPress={onSignUp}
+                title="Sign Up"
+                style={{ flex: 1, width: 100, maxWidth: 500 }}
+            />
+        </View>
+    </View>
   );
 };
 

@@ -63,7 +63,7 @@ const Login = ({ navigation }) => {
         <Button
           onPress={onLogin}
           title="Login"
-          //style={{ flex: 1, width: 100, maxWidth: 500 }}
+          style={{ flex: 1, width: 100, maxWidth: 500 }}
         />
       </View>
     </View>
