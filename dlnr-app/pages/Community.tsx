@@ -86,7 +86,7 @@ export default function Community({ navigation }) {
 
   return (
     <>
-      <SafeAreaView>
+      <SafeAreaView style={{backgroundColor:"#9ca9ff"}}>
         <FlatList
           data={data.posts}
           renderItem={renderItem}
