@@ -97,8 +97,8 @@ export default function AllTrails({ navigation }) {
 
       if (location) {
         trail.distance = convertDistance(getDistance(
-          { latitude: trail.coords.latitude, longitude: trail.coords.longitude },
-          { latitude: location.coords.latitude, longitude: location.coords.longitude }
+          { latitude: trail.coords?.latitude, longitude: trail.coords?.longitude },
+          { latitude: location.coords?.latitude, longitude: location.coords?.longitude }
         ), 'mi').toFixed(1);
       }
       return trail;
