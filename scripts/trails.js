@@ -31,6 +31,14 @@ async function copyData() {
             elevationFeet: obj.elevationFeet,
             elevationMeters: obj.elevationMeters,
             coords: obj.coords,
+            busyTime: obj.busyTime,
+            description: obj.description,
+            price: obj.price,
+            location: obj.location,
+            openHour: obj.openHour,
+            openMinute: obj.openMinute,
+            closeHour: obj.closeHour,
+            closeMinute: obj.closeMinute,
             closed: obj.closed
         }
         console.log("inserting ", obj.name);
