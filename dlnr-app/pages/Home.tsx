@@ -12,9 +12,9 @@ export default function Home(props) {
   const navState = useNavigationState((state) => state);
 
   useEffect(() => {
-    navState.routeNames[navState.index] === "Home" &&
+    navState.routeNames[navState.index] === "Map" &&
       getTrails().then((res) => {
-        console.log("Home");
+        console.log("Map");
         let dayOfWeek = new Date().getDay() - 1;
         let hour = new Date().getHours();
         let tempDayOfWeek = dayOfWeek;
