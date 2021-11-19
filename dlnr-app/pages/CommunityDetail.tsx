@@ -19,7 +19,6 @@ import { useUserInfo } from "../services/useUserInfo";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function CommunityDetail(props) {
-  const [open, setOpen] = useState(false);
   const [comment, setComment] = useState("");
   const [detail, setDetail] = useState({ comments: [] });
   const { state: data, dispatch: setData } = useUserInfo();
@@ -29,11 +28,9 @@ export default function CommunityDetail(props) {
 
   const renderItem = ({ item, index }) => {
     const deleteCommentButton = () => {
-      deleteComment(
-        data.userInfo.token,
-        props.route.params._id,
-        item._id
-      ).then((res) => setDetail(res));
+      deleteComment(data.userInfo.token, props.route.params._id, item._id).then(
+        (res) => setDetail(res)
+      );
       swipeable.current[index].close();
     };
     const editCommentButton = () => {
@@ -82,7 +79,6 @@ export default function CommunityDetail(props) {
     getAllComments(data.userInfo.token, props.route.params._id).then((res) =>
       setDetail(res)
     );
-    setOpen(false);
     setComment("");
     setIsEdit(false);
     setEditId("");
@@ -154,24 +150,6 @@ export default function CommunityDetail(props) {
         </SafeAreaView>
         <Button title="Save" onPress={submit} />
       </View>
-      <SpeedDial
-        isOpen={open}
-        icon={{ name: "edit", color: "#fff" }}
-        openIcon={{ name: "close", color: "#fff" }}
-        onOpen={() => setOpen(!open)}
-        onClose={() => setOpen(!open)}
-      >
-        <SpeedDial.Action
-          icon={{ name: "edit", color: "#fff" }}
-          title="edit"
-          onPress={() => console.log("Add Something")}
-        />
-        <SpeedDial.Action
-          icon={{ name: "delete", color: "#fff" }}
-          title="Delete"
-          onPress={() => console.log("Delete Something")}
-        />
-      </SpeedDial>
     </>
   );
 }

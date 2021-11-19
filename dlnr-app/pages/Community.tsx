@@ -1,5 +1,5 @@
 import { useNavigationState } from "@react-navigation/core";
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { SafeAreaView, FlatList } from "react-native";
 import { ListItem, SpeedDial } from "react-native-elements";
 import { getAllPosts, deletePost, editPost } from "../services/apiService";
@@ -8,12 +8,12 @@ import { Swipeable } from "react-native-gesture-handler";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 
 export default function Community({ navigation }) {
-  const [open, setOpen] = useState(false);
   const { state: data, dispatch: setData } = useUserInfo();
   const navState = useNavigationState((state) => state);
+  const swipeable = useRef([]);
 
   useEffect(() => {
-    navState.routeNames[navState.index] === "Community" &&
+    if (navState.routeNames[navState.index] === "Community") {
       getAllPosts(data.userInfo.token).then((res) => {
         console.log("Community");
         setData({
@@ -23,21 +23,33 @@ export default function Community({ navigation }) {
           },
         });
       });
+    }
   }, [navState.index]);
 
-  const renderItem = ({ item }) => {
+  const renderItem = ({ item, index }) => {
     // @ts-ignore
-    const deletePostButton = async () => {
-        console.log(item);
-        await deletePost(data.userInfo.token, item._id, item.post);
+    const deletePostButton = () => {
+      deletePost(data.userInfo.token, item._id).then((res) => {
+        setData({
+          type: "ADD_ALL_POSTS",
+          payload: {
+            posts: res,
+          },
+        });
+      });
+      swipeable.current[index].close();
     };
-    const editPostButton = async () => {
-        console.log(item);
-        await editPost(data.userInfo.token, item._id, item.post);
+    const editPostButton = () => {
+      swipeable.current[index].close();
+      navigation.navigate("AddPost", {
+        item,
+        isEditMode: true,
+      });
     };
     return (
       <>
         <Swipeable
+          ref={(el) => (swipeable.current[index] = el)}
           renderRightActions={() => (
             <MaterialCommunityIcons
               color="#FF0000"
@@ -82,26 +94,13 @@ export default function Community({ navigation }) {
         />
       </SafeAreaView>
       <SpeedDial
-        isOpen={open}
-        icon={{ name: "edit", color: "#fff" }}
-        openIcon={{ name: "close", color: "#fff" }}
-        onOpen={() => setOpen(!open)}
-        onClose={() => setOpen(!open)}
-      >
-        <SpeedDial.Action
-          icon={{ name: "add", color: "#fff" }}
-          title="Add"
-          onPress={() => {
-            setOpen(!open);
-            navigation.navigate("AddPost");
-          }}
-        />
-        <SpeedDial.Action
-          icon={{ name: "delete", color: "#fff" }}
-          title="Delete"
-          onPress={() => console.log("Delete Something")}
-        />
-      </SpeedDial>
+        isOpen={false}
+        icon={{ name: "add", color: "#fff" }}
+        openIcon={undefined}
+        onOpen={() => navigation.navigate("AddPost")}
+        onClose={undefined}
+        overlayColor={"transparent"}
+      />
     </>
   );
 }

@@ -1,40 +1,30 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { View, StyleSheet } from "react-native";
 import { useUserInfo } from "../services/useUserInfo";
 import { Input } from "react-native-elements";
 import { Button } from "react-native-elements";
-import { makePost } from "../services/apiService";
-import { getAllPosts } from "../services/apiService";
-import {ScrollView } from "react-native-gesture-handler";
+import { editPost, makePost } from "../services/apiService";
 
-
-export default function AddPost({ navigation }) {
+export default function AddPost({ navigation, route }) {
   const [title, setTitle] = useState("");
   const [detail, setDetail] = useState("");
   const { state: data, dispatch: setData } = useUserInfo();
 
+  useEffect(() => {
+    if (route.params) {
+      setTitle(route.params.item.title);
+      setDetail(route.params.item.detail);
+    } else {
+      setTitle("");
+      setDetail("");
+    }
+  }, [route.params]);
   const submit = async () => {
-    await makePost(data.userInfo.token, title, detail);
-    await getAllPosts(data.userInfo.token).then((res) => {
-      setData({
-        type: "ADD_ALL_POSTS",
-        payload: {
-          posts: res,
-        },
-      });
-    });
-    //     await setData({
-    //       type: "ADD_POST",
-    //       payload: {
-    //         post: {
-    //           name: title,
-    //           avatar_url:
-    //             "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-    //           subtitle: "this is subtitle " + title,
-    //           detail,
-    //         },
-    //       },
-    //     });
+    if (route.params?.isEditMode) {
+      await editPost(data.userInfo.token, route.params.item._id, title, detail);
+    } else {
+      await makePost(data.userInfo.token, title, detail);
+    }
     setTitle("");
     setDetail("");
     navigation.navigate("Community");
@@ -42,7 +32,7 @@ export default function AddPost({ navigation }) {
 
   return (
     <>
-      <View>
+      <View style={{flex: 1}}>
         <Input
           placeholder="Title"
           //leftIcon={{ type: "font-awesome", name: "comment" }}
