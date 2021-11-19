@@ -6,6 +6,7 @@ import {
   View,
   ScrollView,
   SafeAreaView,
+  Keyboard,
 } from "react-native";
 import { Button, Input, ListItem, SpeedDial } from "react-native-elements";
 import { Swipeable } from "react-native-gesture-handler";
@@ -25,6 +26,7 @@ export default function CommunityDetail(props) {
   const [isEdit, setIsEdit] = useState(false);
   const [editId, setEditId] = useState("");
   const swipeable = useRef([]);
+  const [keyboardStatus, setKeyboardStatus] = React.useState(false);
 
   const renderItem = ({ item, index }) => {
     const deleteCommentButton = () => {
@@ -84,6 +86,20 @@ export default function CommunityDetail(props) {
     setEditId("");
   }, [props.route.params._id]);
 
+  useEffect(() => {
+    const showSubscription = Keyboard.addListener("keyboardDidShow", () => {
+      setKeyboardStatus(true);
+    });
+    const hideSubscription = Keyboard.addListener("keyboardDidHide", () => {
+      setKeyboardStatus(false);
+    });
+
+    return () => {
+      showSubscription.remove();
+      hideSubscription.remove();
+    };
+  }, []);
+
   const submit = async () => {
     if (isEdit) {
       await editComment(
@@ -107,9 +123,9 @@ export default function CommunityDetail(props) {
   return (
     <>
       <View style={styles.container}>
-        <View style={styles.TopView}>
+        {!keyboardStatus && (<View style={styles.TopView}>
           <Text style={styles.postText}>{props.route.params.detail}</Text>
-        </View>
+        </View>)}
         <View style={styles.BottomView}>
           <FlatList
             data={detail.comments}
@@ -159,12 +175,12 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   TopView: {
-    flex: 0.5,
+    flex: 0.2,
     backgroundColor: "#E2FAB5",
     padding: 20,
   },
   BottomView: {
-    flex: 0.5,
+    flex: 0.8,
   },
   postText: {
     fontSize: 17,
