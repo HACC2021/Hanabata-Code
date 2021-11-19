@@ -1,6 +1,9 @@
 import { Meteor } from "meteor/meteor";
 import { JsonRoutes } from "meteor/simple:json-routes";
 import { Community } from "../../api/community/community";
+import { Trails } from "../../api/trail/Trail";
+import { CheckIns } from "../../api/trail/CheckIn";
+import { ObjectId } from "mongodb";
 
 JsonRoutes.Middleware.use("/auth", JsonRoutes.Middleware.parseBearerToken);
 JsonRoutes.Middleware.use(
@@ -186,3 +189,75 @@ JsonRoutes.add(
     });
   }
 );
+
+JsonRoutes.add("POST", "auth/checkInToTrail", async (req, res) => {
+  console.log("checkInToTrail", req.body);
+  let trailId = req.body.trailId;
+  let userId = req.userId;
+
+  let dayOfWeek = new Date().getDay() - 1;
+  dayOfWeek < 0 && (dayOfWeek = 6);
+  let hour = new Date().getHours();
+
+  let trail = await Trails.collection.findOne({ _id: ObjectId(trailId) });
+
+  if (!trail) {
+    return JsonRoutes.sendResult(res, {
+      code: 400,
+      data: { error: "Invalid trail"},
+    });
+  }
+  let user = Meteor.users.findOne({_id: userId});
+  let busyTimes = trail.traffics?.google;
+
+  let points = 5;
+  let msPerDay = 24 * 60 * 60 * 1000;
+
+  if (user.checkIns?.find(checkIn => checkIn.trailId == trailId && new Date().getTime() - checkIn.startTime.getTime() < msPerDay)) {
+    return JsonRoutes.sendResult(res, {
+      code: 400,
+      data: { error: "You have already checked in within 24 hours."},
+    });
+  }
+
+
+  let checkInObj = { 
+    userId, 
+    trail: {
+      trailId,
+      name: trail.name
+    },
+    startTime: new Date(),  
+    endTime: null,  
+    rating: null,  
+    comment: null,  
+    busyValue: null,
+    pointsAwarded: 5,
+  }
+
+  if (busyTimes && req.userId) {
+    checkInObj.busyValue = busyTimes[dayOfWeek][hour];
+    if (checkInObj.busyValue < 25) points = 100;
+    else if (checkInObj.busyValue < 60) points = 80;
+    else if (checkInObj.busyValue < 80) points = 50;
+    else  points = 20;
+
+    checkInObj.pointsAwarded = points;
+  }
+  else {
+  }
+
+  console.log(checkInObj);
+
+  CheckIns.collection.insert(checkInObj, (err, id) => {
+    checkInObj._id = id;
+    if (req.userId) {
+      Meteor.users.update({ _id: userId }, { $push: { checkIns: checkInObj }});
+    }
+
+    JsonRoutes.sendResult(res, {
+      code: 200,
+      data: checkInObj,
+    });
+  });
+});

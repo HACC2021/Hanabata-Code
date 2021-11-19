@@ -1,9 +1,10 @@
 import React from "react";
 import MapView, { Marker } from "react-native-maps";
-import { ActivityIndicator, StyleSheet, Dimensions, View } from "react-native";
+import { ActivityIndicator, StyleSheet, Dimensions, View, Button } from "react-native";
 import { ScrollView } from "react-native-gesture-handler";
 import { LineChart } from "react-native-chart-kit";
 import { Text, Image, Divider } from "react-native-elements";
+import * as apiService from "../services/apiService";
 
 const trailImage =
   "https://www.hawaiianbeachrentals.com/images/products/thingtodo/p215/p215_zoom_53de8ce1407766.06780368.jpg";
@@ -69,6 +70,20 @@ const GoogleBusyTimesInfo = (props) => {
   }
 };
 
+const checkInToTrail = async (trail) => { 
+  console.log(trail.name);
+  try {
+    let result = await apiService.checkInToTrail(trail._id._str);
+    if (result.error) {
+
+    } else {
+
+    }
+  } catch(e) {
+    console.log(e);
+  }
+}
+
 export default function TrailDetail(props) {
   // console.log(props);
   let trail = props.route.params.trail;
@@ -109,7 +124,10 @@ export default function TrailDetail(props) {
           {"\n"}
           Location: {trail.location}
         </Text>
+        <Button title="check in to trail" onPress={ function() { checkInToTrail(trail) }}/>
         <Divider orientation="horizontal" inset={true} insetType="middle" />
+
+        <GoogleBusyTimesInfo trail={trail}/>
 
         <MapView
           showsUserLocation={true}
@@ -125,7 +143,6 @@ export default function TrailDetail(props) {
             <Marker pinColor={trail.color} coordinate={trail.coords}></Marker>
           )}
         </MapView>
-        {/* <GoogleBusyTimesInfo trail={trail}/> */}
       </ScrollView>
     </>
   );

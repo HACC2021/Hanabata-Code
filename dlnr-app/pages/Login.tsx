@@ -17,6 +17,7 @@ const Login = ({ navigation }) => {
         onErrorChanged(res.error);
       }
       else {
+        console.log(res);
         setData({
           type: "LOGIN",
           payload: { userInfo: res },

@@ -12,7 +12,7 @@ const SignUp = ({ navigation }) => {
   const { state: data, dispatch: setData } = useUserInfo();
 
   const onSignUp = () => {
-    if (passwords === rePasswords) {
+    if (email.length > 5 && passwords === rePasswords) {
       registerUser(email, passwords).then((res) => {
         if (res.error) {
           onErrorChanged(res.message);
@@ -28,7 +28,7 @@ const SignUp = ({ navigation }) => {
         onErrorChanged("A communication error occurred");
       });
     } else {
-      onErrorChanged("Passwords didn't match");
+      onErrorChanged("Please check your email or passwords");
     }
   };
 

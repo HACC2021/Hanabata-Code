@@ -14,7 +14,9 @@ const storeToken = async (token) => {
 const getToken = async () => {
   try {
     const token = await AsyncStorage.getItem("AuthToken");
-    return token;
+    const tokenExpires = await AsyncStorage.getItem("AuthTokenExpires");
+    const id = await AsyncStorage.getItem("AuthTokenId");
+    return { token, tokenExpires, id };
   } catch (e) {
     console.log(e);
   }
@@ -112,9 +114,9 @@ async function loginWithToken() {
   let userId = undefined;
   const token = await getToken();
   if (token) {
-    userId = await validateUser(token);
+    userId = await validateUser(token.token);
   }
   return userId ? { userId, token } : undefined;
 }
 
-export { loginWithPassword, useLogout, loginWithToken, registerUser };
+export { loginWithPassword, useLogout, loginWithToken, getToken, registerUser };
