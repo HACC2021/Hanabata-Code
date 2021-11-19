@@ -15,7 +15,7 @@ const Intro = () => {
     <SafeAreaView style={styles.container}>
       <ImageBackground
         source={{
-          uri: "http://613725-1989666-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/07/Best-Hikes-in-Hawaii-post-cover.jpg",
+          uri: "https://media.breitbart.com/media/2021/11/GettyImages-469723680-640x480.png",
         }}
         style={styles.bgImage}
       >
@@ -108,7 +108,7 @@ const styles = StyleSheet.create({
   header: {
     fontWeight: "bold",
     fontSize: 25,
-    color: "#17203d",
+    color: "#1e436b",
     paddingTop: 20,
   },
   header3: {
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
   },
   regFont: {
     fontSize: 15,
-    color: "#d7e2fc",
+    color: "#778798",
     fontWeight: "bold",
     padding: 9,
   },
@@ -139,21 +139,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#648ced",
+    backgroundColor: "#F5f7f9",
     padding: 20,
   },
   slide2: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#7672f7",
+    backgroundColor: "#F5f7f9",
     padding: 20,
   },
   slide3: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#648ced",
+    backgroundColor: "#F5f7f9",
     padding: 20,
   },
 });

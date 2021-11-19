@@ -26,8 +26,7 @@ const Search = (props) => {
     <SearchBar
       inputStyle={{ backgroundColor: "white" }}
       containerStyle={{
-        backgroundColor: "#f0f8fc",
-          borderBottomColor: "#f0f8fc",
+        backgroundColor: "white",
       }}
       inputContainerStyle={{ backgroundColor: "white" }}
       placeholder={"Search"}
@@ -154,10 +153,9 @@ const renderItem = (trail, navigation) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-      backgroundColor: "#f0f8fc",
+      backgroundColor: "white",
   },
   item: {
-    backgroundColor: "#f9c2ff",
     padding: 20,
     marginVertical: 8,
     marginHorizontal: 16,
