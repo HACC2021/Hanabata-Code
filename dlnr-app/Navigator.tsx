@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { Pressable, StyleSheet, Text } from "react-native";
 import Home from "./pages/Home";
+import Intro from "./pages/Intro";
 import AllTrails from "./pages/AllTrails";
 import Community from "./pages/Community";
 import Account from "./pages/Account";
