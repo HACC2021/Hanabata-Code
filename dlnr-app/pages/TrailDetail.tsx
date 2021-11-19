@@ -123,6 +123,8 @@ export default function TrailDetail(props) {
           Price: {trail.price}
           {"\n"}
           Location: {trail.location}
+          {"\n"}
+          Distance: {trail.distance} miles away
         </Text>
         <Button title="check in to trail" onPress={ function() { checkInToTrail(trail) }}/>
         <Divider orientation="horizontal" inset={true} insetType="middle" />

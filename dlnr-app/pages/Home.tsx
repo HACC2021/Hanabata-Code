@@ -7,6 +7,9 @@ import { useUserInfo } from "../services/useUserInfo";
 import { getTrails } from "../services/apiService";
 import { useNavigationState } from "@react-navigation/core";
 import * as Location from 'expo-location';
+import getDistance from 'geolib/es/getDistance';
+import convertDistance from 'geolib/es/convertDistance';
+
 
 export default function Home(props) {
   const { state: data, dispatch: setData } = useUserInfo();
@@ -41,13 +44,16 @@ export default function Home(props) {
         trail.points = points;
       } else {
         color = "#AAAAAA";
-        points = 0;
+        points = 5;
         trail.color = color;
         trail.points = points;
       }
 
       if (location) {
-        // trail.distance = location.coords.
+        trail.distance = convertDistance(getDistance(
+          { latitude: trail.coords.latitude, longitude: trail.coords.longitude }, 
+          { latitude: location.coords.latitude, longitude: location.coords.longitude}
+        ), 'mi').toFixed(1);
       }
       return trail;
     });
