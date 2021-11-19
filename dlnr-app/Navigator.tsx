@@ -40,42 +40,30 @@ function Navigator() {
   const IntroTabOptions = ({ navigation }) => {
     return {
      tabBarIcon: (props) => TabIcon({ ...props, name: "home" }),
-       headerRight: () =>
-         data.userInfo && (
-           <Pressable onPress={() => logout(navigation)} style={styles.button}>
-             <Text>Log Out</Text>
-           </Pressable>
-         ),
     };
   };
 
   const hikingTabOptions = ({ navigation }) => {
     return {
       tabBarIcon: (props) => TabIcon({ ...props, name: "hiking" }),
-      headerRight: () =>
-        data.userInfo && (
-          <Pressable onPress={() => logout(navigation)} style={styles.button}>
-            <Text>Log Out</Text>
-          </Pressable>
-        ),
     };
   };
 
   const homeTabOptions = ({ navigation }) => {
     return {
       tabBarIcon: (props) => TabIcon({ ...props, name: "map-marker" }),
-      headerRight: () =>
-        data.userInfo && (
-          <Pressable onPress={() => logout(navigation)} style={styles.button}>
-            <Text>Log Out</Text>
-          </Pressable>
-        ),
     };
   };
 
   const communityTabOptions = ({ navigation }) => {
     return {
-      tabBarIcon: (props) => TabIcon({ ...props, name: "network" }),
+      tabBarIcon: (props) => TabIcon({ ...props, name: "island" }),
+    };
+  };
+
+  const accountTabOptions = ({ navigation }) => {
+    return {
+      tabBarIcon: (props) => TabIcon({ ...props, name: "account" }),
       headerRight: () =>
         data.userInfo && (
           <Pressable onPress={() => logout(navigation)} style={styles.button}>
@@ -91,11 +79,6 @@ function Navigator() {
       headerLeft: () => (
         <Pressable onPress={() => navigation.goBack()} style={styles.button}>
           <Icon name="arrow-left" type="material-community" />
-        </Pressable>
-      ),
-      headerRight: () => (
-        <Pressable onPress={() => logout(navigation)} style={styles.button}>
-          <Text>Log Out</Text>
         </Pressable>
       ),
     };
@@ -131,6 +114,11 @@ function Navigator() {
               name="Community"
               component={Community}
               options={communityTabOptions}
+            />
+            <Tab.Screen
+              name="Account"
+              component={Account}
+              options={accountTabOptions}
             />
             <Tab.Screen
               name="TrailDetail"

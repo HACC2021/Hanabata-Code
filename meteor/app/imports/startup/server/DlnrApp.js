@@ -211,12 +211,12 @@ JsonRoutes.add("POST", "auth/checkInToTrail", async (req, res) => {
   let busyTimes = trail.traffics?.google;
 
   let points = 5;
-  let msPerDay = 24 * 60 * 60 * 1000;
+  let msPerDay = 12 * 60 * 60 * 1000;
 
-  if (user.checkIns?.find(checkIn => checkIn.trailId == trailId && new Date().getTime() - checkIn.startTime.getTime() < msPerDay)) {
+  if (user.checkIns?.find(checkIn => checkIn.trail.trailId == trailId && new Date().getTime() - checkIn.startTime.getTime() < msPerDay)) {
     return JsonRoutes.sendResult(res, {
       code: 400,
-      data: { error: "You have already checked in within 24 hours."},
+      data: { error: "You have already checked in within 12 hours."},
     });
   }
 

@@ -36,7 +36,7 @@ async function makePost(token, title, detail) {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + token.token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({ title, detail }), // body data type must match "Content-Type" header
@@ -60,7 +60,7 @@ async function makeComment(token, _id, comment) {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + token.token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({ _id, comment }), // body data type must match "Content-Type" header
@@ -82,7 +82,7 @@ async function getAllPosts(token) {
       cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
       headers: {
         "Content-Type": "application/json",
-        Authorization: "Bearer " + token,
+        Authorization: "Bearer " + token.token,
         // 'Content-Type': 'application/x-www-form-urlencoded',
       }, // body data type must match "Content-Type" header
     });
@@ -104,7 +104,7 @@ async function getAllComments(token, _id) {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + token.token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({ _id }),
@@ -137,7 +137,7 @@ async function deleteComment(token, post_id, comment_id) {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + token.token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({ post_id, comment_id }), // body data type must match "Content-Type" header
@@ -161,7 +161,7 @@ async function editPost(token, post_id, title, detail) {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + token.token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({ post_id, title, detail }), // body data type must match "Content-Type" header
@@ -185,7 +185,7 @@ async function deletePost (token, post_id) {
                 cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
                 headers: {
                     "Content-Type": "application/json",
-                    Authorization: "Bearer " + token,
+                    Authorization: "Bearer " + token.token,
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
                 body: JSON.stringify({ post_id }), // body data type must match "Content-Type" header
@@ -209,7 +209,7 @@ async function editComment(token, post_id, comment_id, comment) {
         cache: "no-cache", // *default, no-cache, reload, force-cache, only-if-cached
         headers: {
           "Content-Type": "application/json",
-          Authorization: "Bearer " + token,
+          Authorization: "Bearer " + token.token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
         body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
