@@ -120,7 +120,9 @@ JsonRoutes.add(
       false,
       false
     );
-    let comments = await Community.collection.findOne(post_id, { fields: { comments: 1 } });
+    let comments = await Community.collection.findOne(post_id, {
+      fields: { comments: 1 },
+    });
 
     let statusCode = 200;
 
@@ -131,34 +133,56 @@ JsonRoutes.add(
   }
 );
 
-JsonRoutes.add("POST", "auth/editPostOnCommunityDetail", function (request, response) {
-  // The authenticated user's ID will be set by this middleware
-  let owner = request.userId;
-  const { post_id } = request.body;
-  console.log("owner_id: ", owner);
-  console.log("post_id: ", post_id);
-  // let comments = Community.collection.findOne(_id, { fields: { comments: 1 } });
+JsonRoutes.add(
+  "POST",
+  "auth/editPostOnCommunityDetail",
+  async function (request, response) {
+    // The authenticated user's ID will be set by this middleware
+    let owner = request.userId;
+    const { post_id, title, detail } = request.body;
 
-  let statusCode = 200;
+    await Community.collection.update(
+      {
+        _id: post_id,
+        owner,
+      },
+      {
+        $set: { title, detail },
+      },
+      false,
+      false
+    );
 
-  JsonRoutes.sendResult(response, {
-    code: statusCode,
-    data: "hi",
-  });
-});
+    let statusCode = 200;
 
-JsonRoutes.add("POST", "auth/deletePostOnCommunityDetail", function (request, response) {
-  // The authenticated user's ID will be set by this middleware
-  let owner = request.userId;
-  const { post_id } = request.body;
-  console.log("owner_id: ", owner);
-  console.log("post_id: ", post_id);
-  // let comments = Community.collection.findOne(_id, { fields: { comments: 1 } });
+    JsonRoutes.sendResult(response, {
+      code: statusCode,
+      data: "you can't see me",
+    });
+  }
+);
 
-  let statusCode = 200;
+JsonRoutes.add(
+  "POST",
+  "auth/deletePostOnCommunityDetail",
+  async function (request, response) {
+    // The authenticated user's ID will be set by this middleware
+    let owner = request.userId;
+    const { post_id } = request.body;
+    console.log("owner_id: ", owner);
+    console.log("post_id: ", post_id);
+    await Community.collection.remove({
+      _id: post_id,
+      owner,
+    });
+    let posts = await Community.collection
+      .find({}, { fields: { comments: 0 } })
+      .fetch();
+    let statusCode = 200;
 
-  JsonRoutes.sendResult(response, {
-    code: statusCode,
-    data: "hi",
-  });
-});
+    JsonRoutes.sendResult(response, {
+      code: statusCode,
+      data: posts,
+    });
+  }
+);
