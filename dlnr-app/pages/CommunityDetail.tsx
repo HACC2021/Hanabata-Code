@@ -28,13 +28,12 @@ export default function CommunityDetail(props) {
   const swipeable = useRef([]);
 
   const renderItem = ({ item, index }) => {
-    const deleteCommentButton = async () => {
-      // await deleteComment(
-      //   data.userInfo.token,
-      //   props.route.params._id,
-      //   item._id,
-      //   item.comment
-      // );
+    const deleteCommentButton = () => {
+      deleteComment(
+        data.userInfo.token,
+        props.route.params._id,
+        item._id
+      ).then((res) => setDetail(res));
       swipeable.current[index].close();
     };
     const editCommentButton = () => {
@@ -45,7 +44,7 @@ export default function CommunityDetail(props) {
     return (
       <>
         <Swipeable
-          ref={(el) => swipeable.current[index] = el}
+          ref={(el) => (swipeable.current[index] = el)}
           renderRightActions={() => (
             <MaterialCommunityIcons
               color="#FF0000"
@@ -127,7 +126,7 @@ export default function CommunityDetail(props) {
         <SafeAreaView style={{ backgroundColor: "white" }}>
           <ScrollView>
             <Input
-              placeholder={isEdit ? "Edit Comment":"Comment"}
+              placeholder={isEdit ? "Edit Comment" : "Comment"}
               leftIcon={
                 isEdit
                   ? {

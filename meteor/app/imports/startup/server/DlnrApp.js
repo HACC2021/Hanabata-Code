@@ -87,7 +87,9 @@ JsonRoutes.add(
       false
     );
 
-    let comments = await Community.collection.findOne(post_id, { fields: { comments: 1 } });
+    let comments = await Community.collection.findOne(post_id, {
+      fields: { comments: 1 },
+    });
 
     let statusCode = 200;
 
@@ -101,20 +103,30 @@ JsonRoutes.add(
 JsonRoutes.add(
   "POST",
   "auth/deleteCommentOnCommunityDetail",
-  function (request, response) {
+  async function (request, response) {
     // The authenticated user's ID will be set by this middleware
     let owner = request.userId;
     const { comment_id, post_id } = request.body;
-    console.log("owner_id: ", owner);
-    console.log("comment_id: ", comment_id);
-    console.log("post_id: ", post_id);
-    // let comments = Community.collection.findOne(_id, { fields: { comments: 1 } });
+    await Community.collection.update(
+      {
+        _id: post_id,
+        comments: {
+          $elemMatch: { owner: owner, _id: comment_id },
+        },
+      },
+      {
+        $pull: { comments: { owner: owner, _id: comment_id } },
+      },
+      false,
+      false
+    );
+    let comments = await Community.collection.findOne(post_id, { fields: { comments: 1 } });
 
     let statusCode = 200;
 
     JsonRoutes.sendResult(response, {
       code: statusCode,
-      data: "hi",
+      data: comments,
     });
   }
 );

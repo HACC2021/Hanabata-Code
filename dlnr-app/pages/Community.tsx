@@ -35,6 +35,7 @@ export default function Community({ navigation }) {
               color="#FF0000"
               size={50}
               name="delete-outline"
+              style={{ alignSelf: "center" }}
             />
           )}
           renderLeftActions={() => (
@@ -42,6 +43,7 @@ export default function Community({ navigation }) {
               color="#008000"
               size={50}
               name="comment-edit-outline"
+              style={{ alignSelf: "center" }}
             />
           )}
         >
