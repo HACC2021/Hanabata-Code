@@ -13,7 +13,7 @@ JsonRoutes.add("GET", "auth/loginWithToken", function (request, response) {
   const userId = request.userId;
 
   let user = Meteor.users.findOne({ _id: userId });
-  delete user.services;
+  if (user?.services) delete user.services;
 
   let statusCode = userId ? 200 : 401;
 
