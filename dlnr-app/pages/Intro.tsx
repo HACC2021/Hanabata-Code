@@ -15,7 +15,7 @@ const Intro = () => {
     <SafeAreaView style={styles.container}>
       <ImageBackground
         source={{
-          uri: "https://www.journeyera.com/wp-content/uploads/2016/04/DSC08316-scaled-2048x1366.jpg",
+          uri: "http://613725-1989666-raikfcquaxqncofqfm.stackpathdns.com/wp-content/uploads/2017/07/Best-Hikes-in-Hawaii-post-cover.jpg",
         }}
         style={styles.bgImage}
       >
@@ -23,19 +23,21 @@ const Intro = () => {
       </ImageBackground>
         <Swiper style={styles.wrapper} loop={false}>
           <View style={styles.slide1}>
-            <Text style={styles.header}>What can you do on our app?</Text>
-            <Text style={styles.regFont}>
-              {"\n"}1. Confirm the geographical location of hiking trails
-              through the map provided on our app.{"\n"}
-              2. Get detailed information on each hiking trails pinned on the
-              map such as difficulty or operating hours.{"\n"}
-              3. Share your experiences on hiking trails where you have visited
-              with other people using our app.{"\n"}
-              {"\n"}
-            </Text>
+            <Text style={styles.header}>What can you do on HIT?</Text>
+              <Text style={styles.regFont}>
+                {"\n"}1. Confirm the geographical location of hiking trails through the map provided on our app.
+              </Text>
+              <Text style={styles.regFont}>
+                2. Get detailed information on each hiking trails pinned on the
+                map such as difficulty or operating hours.
+              </Text>
+              <Text style={styles.regFont}>
+                3. Share your experiences on hiking trails where you have visited
+                with other people using our app.{"\n"}
+              </Text>
           </View>
           <View style={styles.slide2}>
-            <Text style={styles.header}>{"\n"}Hiking Trail Etiquette 101</Text>
+            <Text style={styles.header}>Hiking Trail Etiquette 101</Text>
             <Text style={styles.regFont}>
               {"\n"}1. Know your right of way. {"\n"}
               2. Do not disturb wildlife.{"\n"}
@@ -57,9 +59,9 @@ const Intro = () => {
             </Text>
           </View>
           <View style={styles.slide3}>
-            <Text style={styles.header}>{"\n"}Credits</Text>
+            <Text style={styles.header3}>{"\n"}Credits</Text>
             <Text style={styles.regFont}>
-              {"\n"}HIT was coded by Yong Kim, Keith Okuna, Yeji Han,
+              HIT was coded by Yong Kim, Keith Okuna, Yeji Han,
               Cheolhoon Choi, Kai Hwang.{"\n"}
               {"\n"}
               HIT was designed as part of Hawaii Annual Code Challenge
@@ -92,9 +94,9 @@ const styles = StyleSheet.create({
     fontWeight: "bold",
     textAlign: "center",
     color: "white",
-    fontSize: 30,
+    fontSize: 40,
     position: "absolute", // child
-    bottom: "25%", // position where you want
+    bottom: "10%", // position where you want
   },
   bgImage: {
     height: 300,
@@ -106,10 +108,21 @@ const styles = StyleSheet.create({
   header: {
     fontWeight: "bold",
     fontSize: 25,
-    color: "black",
+    color: "#17203d",
+    paddingTop: 20,
+  },
+  header3: {
+    fontWeight: "bold",
+    fontSize: 25,
+    color: "#17203d",
+    paddingTop: 2,
+    paddingBottom: 10,
   },
   regFont: {
     fontSize: 15,
+    color: "#d7e2fc",
+    fontWeight: "bold",
+    padding: 9,
   },
   hyperlink: {
     fontSize: 15,
@@ -126,21 +139,21 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#9DD6EB",
+    backgroundColor: "#648ced",
     padding: 20,
   },
   slide2: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#97CAE5",
+    backgroundColor: "#7672f7",
     padding: 20,
   },
   slide3: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#92BBD9",
+    backgroundColor: "#648ced",
     padding: 20,
   },
 });

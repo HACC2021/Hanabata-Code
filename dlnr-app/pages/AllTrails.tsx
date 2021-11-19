@@ -26,7 +26,8 @@ const Search = (props) => {
     <SearchBar
       inputStyle={{ backgroundColor: "white" }}
       containerStyle={{
-        backgroundColor: "white",
+        backgroundColor: "#f0f8fc",
+          borderBottomColor: "#f0f8fc",
       }}
       inputContainerStyle={{ backgroundColor: "white" }}
       placeholder={"Search"}
@@ -127,7 +128,7 @@ export default function AllTrails({ navigation }) {
 const renderItem = (trail, navigation) => {
   return (
     <>
-      <Card>
+      <Card containerStyle={{ borderWidth: 0, }}>
         <Card.Title>{trail.name}</Card.Title>
         <Card.Divider />
         <Card.Image source={{ uri: trail.image || trailImage }}></Card.Image>
@@ -137,6 +138,7 @@ const renderItem = (trail, navigation) => {
         <View>
           <Button
             title="View Details"
+            //color="white"
             onPress={() =>
               navigation.navigate("TrailDetail", {
                 trail,
@@ -152,6 +154,7 @@ const renderItem = (trail, navigation) => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+      backgroundColor: "#f0f8fc",
   },
   item: {
     backgroundColor: "#f9c2ff",
