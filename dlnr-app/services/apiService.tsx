@@ -121,7 +121,7 @@ function getTrails() {
     .catch((error) => console.log(error));
 }
 
-async function deleteComment(token, post_id, comment_id, comment) {
+async function deleteComment(token, post_id, comment_id) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/deleteCommentOnCommunityDetail`,
@@ -134,7 +134,7 @@ async function deleteComment(token, post_id, comment_id, comment) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, comment_id }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();
