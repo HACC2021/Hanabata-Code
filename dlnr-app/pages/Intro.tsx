@@ -15,7 +15,7 @@ const Intro = () => {
     <SafeAreaView style={styles.container}>
       <ImageBackground
         source={{
-          uri: "https://media.breitbart.com/media/2021/11/GettyImages-469723680-640x480.png",
+          uri: "https://github.com/yejihan92/digits-1/blob/master/app/public/images/home_image2.jpeg?raw=true",
         }}
         style={styles.bgImage}
       >
@@ -96,7 +96,8 @@ const styles = StyleSheet.create({
     color: "white",
     fontSize: 40,
     position: "absolute", // child
-    bottom: "10%", // position where you want
+    bottom: "5%", // position where you want
+    shadowOpacity: 10,
   },
   bgImage: {
     height: 300,
