@@ -1,6 +1,7 @@
 import React from "react";
 import MapView, { Marker } from "react-native-maps";
-import { ActivityIndicator, StyleSheet, Dimensions, View, Button } from "react-native";
+import { ActivityIndicator, StyleSheet, Dimensions, View, Button, Alert } from "react-native";
+import { useEffect } from "react";
 import { ScrollView } from "react-native-gesture-handler";
 import { LineChart } from "react-native-chart-kit";
 import { Text, Image, Divider } from "react-native-elements";
@@ -19,7 +20,7 @@ const GoogleBusyTimesInfo = (props) => {
           return (
             dayOfWeek === index && (
               <View key={"day" + index}>
-                <Text>{day.name}</Text>
+                <Text>Busy times for {day.name}</Text>
                 <LineChart
                   data={{
                     labels: Object.keys(day.data),
@@ -70,18 +71,28 @@ const GoogleBusyTimesInfo = (props) => {
   }
 };
 
+
 const checkInToTrail = async (trail) => { 
   console.log(trail.name);
+  if (trail.distance === null || trail.distance === undefined || trail.distance > .5) {
+    Alert.alert("You're too far away to check in.");
+    return;
+  }
   try {
     let result = await apiService.checkInToTrail(trail._id._str);
+    console.log(result);
     if (result.error) {
-
+      Alert.alert(result.error);
     } else {
 
     }
   } catch(e) {
     console.log(e);
   }
+}
+
+const TrailCheckIns = (props) => {
+
 }
 
 export default function TrailDetail(props) {
@@ -115,7 +126,7 @@ export default function TrailDetail(props) {
           Open-Close: {trail.openHour}:{trail.openMinute} - {trail.closeHour}:
           {trail.closeMinute}
           {"\n"}
-          Busy Time: {trail.busyTime}
+          Busy Level: {trail.currentBusyValue}
           {"\n"}
           Length Miles: {trail.lengthMiles} miles{"\n"}
           Difficulty: {trail.difficulty}
