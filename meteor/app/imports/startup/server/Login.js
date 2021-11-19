@@ -11,11 +11,15 @@ JsonRoutes.Middleware.use(
 JsonRoutes.add("GET", "auth/loginWithToken", function (request, response) {
   // The authenticated user's ID will be set by this middleware
   const userId = request.userId;
+
+  let user = Meteor.users.findOne({ _id: userId });
+  delete user.services;
+
   let statusCode = userId ? 200 : 401;
 
   JsonRoutes.sendResult(response, {
     code: statusCode,
-    data: userId,
+    data: user,
   });
 });
 

@@ -11,6 +11,11 @@ JsonRoutes.Middleware.use(
   JsonRoutes.Middleware.authenticateMeteorUserByToken
 );
 
+JsonRoutes.Middleware.use(function (req, res, next) {
+  console.log(req.method, req.originalUrl, req.userId);
+  next();
+});
+
 JsonRoutes.add("POST", "auth/postOnCommunity", function (request, response) {
   // The authenticated user's ID will be set by this middleware
   let owner = request.userId;

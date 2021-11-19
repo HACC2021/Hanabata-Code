@@ -111,12 +111,12 @@ async function registerUser(email, password) {
 }
 
 async function loginWithToken() {
-  let userId = undefined;
+  let user = undefined;
   const token = await getToken();
   if (token) {
-    userId = await validateUser(token.token);
+    user = await validateUser(token.token);
   }
-  return userId ? { userId, token } : undefined;
+  return user ? { user, token } : undefined;
 }
 
 export { loginWithPassword, useLogout, loginWithToken, getToken, registerUser };

@@ -61,6 +61,7 @@ const UserInfoProvider = ({ children }) => {
   // const memo = useMemo(()=>({state, dispatch, getState}),[]);
   useEffect(() => {
     loginWithToken().then((res) => {
+      console.log('response', res)
       dispatch({
         type: "LOGIN",
         payload: {
