@@ -115,7 +115,15 @@ async function importJson() {
       elevationFeet: trail.elevationFeet,
       elevationMeters: trail.elevationMeters,
       difficulty: trail.difficulty || "Normal",
-      //should add on schema
+      description: trail.description,
+      location: trail.location,
+      image: trail.image,
+      busyTime: trail.busyTime,
+      price: trail.price,
+      openHour: trail.openHour,
+      openMinute: trail.openMinute,
+      closeHour: trail.closeHour,
+      closeMinute: trail.closeMinute,
       coords: {
         latitude: trail.coords.latitude,
         longitude: trail.coords.longitude,
