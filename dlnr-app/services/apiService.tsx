@@ -121,7 +121,7 @@ function getTrails() {
     .catch((error) => console.log(error));
 }
 
-async function deleteComment(token, post_id, comment_id, comment) {
+async function deleteComment(token, post_id, comment_id) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/deleteCommentOnCommunityDetail`,
@@ -134,7 +134,7 @@ async function deleteComment(token, post_id, comment_id, comment) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ post_id, comment_id, comment }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, comment_id }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();
@@ -144,7 +144,7 @@ async function deleteComment(token, post_id, comment_id, comment) {
   }
 }
 
-async function editPost(token, post_id, post) {
+async function editPost(token, post_id, title, detail) {
   try {
     const response = await fetch(
       `http://${ip4}/auth/editPostOnCommunityDetail`,
@@ -157,7 +157,7 @@ async function editPost(token, post_id, post) {
           Authorization: "Bearer " + token,
           // 'Content-Type': 'application/x-www-form-urlencoded',
         },
-        body: JSON.stringify({ post_id, post }), // body data type must match "Content-Type" header
+        body: JSON.stringify({ post_id, title, detail }), // body data type must match "Content-Type" header
       }
     );
     const json = await response.json();
@@ -167,7 +167,7 @@ async function editPost(token, post_id, post) {
   }
 }
 
-async function deletePost (token, post_id, post) {
+async function deletePost (token, post_id) {
     try {
         const response = await fetch(
             `http://${ip4}/auth/deletePostOnCommunityDetail`,
@@ -180,7 +180,7 @@ async function deletePost (token, post_id, post) {
                     Authorization: "Bearer " + token,
                     // 'Content-Type': 'application/x-www-form-urlencoded',
                 },
-                body: JSON.stringify({ post_id, post }), // body data type must match "Content-Type" header
+                body: JSON.stringify({ post_id }), // body data type must match "Content-Type" header
             }
         );
         const json = await response.json();
