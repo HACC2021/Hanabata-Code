@@ -37,6 +37,18 @@ function Navigator() {
     navigation.navigate("Login");
   };
 
+  const IntroTabOptions = ({ navigation }) => {
+    return {
+     tabBarIcon: (props) => TabIcon({ ...props, name: "home" }),
+       headerRight: () =>
+         data.userInfo && (
+           <Pressable onPress={() => logout(navigation)} style={styles.button}>
+             <Text>Log Out</Text>
+           </Pressable>
+         ),
+    };
+  };
+
   const hikingTabOptions = ({ navigation }) => {
     return {
       tabBarIcon: (props) => TabIcon({ ...props, name: "hiking" }),
@@ -51,7 +63,7 @@ function Navigator() {
 
   const homeTabOptions = ({ navigation }) => {
     return {
-      tabBarIcon: (props) => TabIcon({ ...props, name: "home" }),
+      tabBarIcon: (props) => TabIcon({ ...props, name: "map-marker" }),
       headerRight: () =>
         data.userInfo && (
           <Pressable onPress={() => logout(navigation)} style={styles.button}>
@@ -105,11 +117,16 @@ function Navigator() {
         {data.userInfo ? (
           <>
             <Tab.Screen
+              name="Home"
+              component={Intro}
+              options={IntroTabOptions}
+            />
+            <Tab.Screen
               name="AllTrails"
               component={AllTrails}
               options={hikingTabOptions}
             />
-            <Tab.Screen name="Home" component={Home} options={homeTabOptions} />
+            <Tab.Screen name="Map" component={Home} options={homeTabOptions} />
             <Tab.Screen
               name="Community"
               component={Community}
