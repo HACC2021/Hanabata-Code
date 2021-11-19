@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import {SafeAreaView, StyleSheet, Image } from "react-native";
-import { Input, Button } from 'react-native-elements';
+import { StyleSheet, Image, View } from "react-native";
+import { Input, Button } from "react-native-elements";
 import { useLogin } from "../services/useLogin";
 import { useUserInfo } from "../services/useUserInfo";
 
@@ -24,50 +24,61 @@ const Login = ({ navigation }) => {
   }, [data]);
 
   return (
-      <>
-          <Image source={require('../assets/logo_hit.jpeg')} style={{borderRadius: 8, height:200, width:200, alignItems: "center", marginTop: 60, marginBottom: 40, alignSelf:"center"}}/>
-    <SafeAreaView
-      style={{ flex: 1, alignItems: "center", justifyContent: "center", marginTop: -150 }}
+    <View
+      style={{ flex: 1, justifyContent: "center", flexDirection: "column", alignItems: "center" }}
     >
-      <Input
-        label="Email"
-        leftIcon={{ type: 'font-awesome', name: 'envelope', color:'grey' }}
-        style={{ width: 20 }}
-        onChangeText={onChangeId}
-        value={id}
-        placeholder="  email@address.com"
+      <Image
+        source={require("../assets/logo_hit.jpeg")}
+        style={{
+          borderRadius: 8,
+          height: 200,
+          width: 200,
+          alignItems: "center",
+          marginTop: 60,
+          marginBottom: 60,
+          alignSelf: "center",
+        }}
       />
-      <Input
-        label="Password"
-        leftIcon={{ type: 'font-awesome', name: 'lock', color:'grey' }}
-        style={{ width: 20 }}
-        onChangeText={onChangePasswords}
-        value={passwords}
-        secureTextEntry={true}
-        placeholder="    Passwords"
-
-      />
-      <Button
+      <View style={{flex: 1, width: "80%"} }>
+        <Input
+          label="Email"
+          leftIcon={{ type: "font-awesome", name: "envelope", color: "grey" }}
+          onChangeText={onChangeId}
+          value={id}
+          placeholder="  email@address.com"
+        />
+        <Input
+          label="Password"
+          leftIcon={{
+            type: "font-awesome",
+            name: "lock",
+            color: "grey",
+            size: 30,
+          }}
+          onChangeText={onChangePasswords}
+          value={passwords}
+          secureTextEntry={true}
+          placeholder="    Passwords"
+        />
+        <Button
           onPress={onLogin}
           title="Login"
-          style={styles.button}
-      />
-    </SafeAreaView></>
+          style={{ flex: 1, width: 100, maxWidth: 500 }}
+        />
+      </View>
+    </View>
   );
 };
 
 const styles = StyleSheet.create({
   input: {
-    //height: 40,
     width: 1,
-    //margin: 12,
-    //borderWidth: 1,
-    //padding: 10,
   },
-    button: {
-      width: 300,
-      margin: 12,
-    },
+  button: {
+    width: "100%",
+    margin: 12,
+    padding: 40,
+  },
 });
 
 export default Login;
