@@ -17,6 +17,7 @@ export default function Account({ navigation }) {
   useEffect(() => {
     if (navState.routeNames[navState.index] === "Account") {
       loginWithToken().then((res) => {
+        console.log('setting token accounts', res)
         setData({
           type: "LOGIN",
           payload: {
@@ -41,7 +42,7 @@ export default function Account({ navigation }) {
       <Text>{points} points</Text>
       <Text>Your checkins: </Text>
       {
-        userInfo.user.checkIns?.map(checkIn => {
+        userInfo.user?.checkIns && userInfo.user.checkIns?.map(checkIn => {
           return <CheckInItem key={checkIn._id} checkIn={checkIn}></CheckInItem>
         })
       }
