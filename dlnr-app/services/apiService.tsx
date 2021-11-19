@@ -147,7 +147,7 @@ async function deleteComment(token, post_id, comment_id, comment) {
 async function editPost(token, title_id, detail_id) {
   try {
     const response = await fetch(
-      `http://${ip4}/auth/editPostOnCommunityDetail`,
+      `http://${ip4}/auth/editPostOnEditPost`,
       {
         method: "POST", // *GET, POST, PUT, DELETE, etc.
         mode: "cors", // no-cors, *cors, same-origin
@@ -198,4 +198,5 @@ export {
   getAllComments,
   deleteComment,
   editComment,
+  editPost
 };

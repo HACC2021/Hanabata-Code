@@ -12,6 +12,7 @@ import { useLogout } from "./services/useLogin";
 import TrailDetail from "./pages/TrailDetail";
 import CommunityDetail from "./pages/CommunityDetail";
 import AddPost from "./pages/AddPost";
+import EditPost from "./pages/EditPost";
 import SignUp from "./pages/SignUp";
 
 const Drawer = createDrawerNavigator();
@@ -97,6 +98,11 @@ function Navigator() {
             <Drawer.Screen
               name="AddPost"
               component={AddPost}
+              options={hiddenDrawerWithButton}
+            />
+            <Drawer.Screen
+              name="EditPost"
+              component={EditPost}
               options={hiddenDrawerWithButton}
             />
           </>
