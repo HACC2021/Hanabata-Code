@@ -1,11 +1,12 @@
 import * as React from "react";
 import MapView from "react-native-maps";
 import { Marker, Callout } from "react-native-maps";
-import { StyleSheet, Text, View, Dimensions } from "react-native";
+import { StyleSheet, Text, View, Alert, Dimensions } from "react-native";
 import { useEffect } from "react";
 import { useUserInfo } from "../services/useUserInfo";
 import { getTrails } from "../services/apiService";
 import { useNavigationState } from "@react-navigation/core";
+import * as Location from 'expo-location';
 
 export default function Home(props) {
   const { state: data, dispatch: setData } = useUserInfo();
@@ -22,6 +23,16 @@ export default function Home(props) {
         let busyValue;
         let points;
 
+
+        Location.requestForegroundPermissionsAsync().then(f => {
+          console.log(f);
+          let location = Location.getCurrentPositionAsync();
+          location.then(l => console.log(l)).catch(e => console.error(e));
+        }).catch(e => {
+          Alert.alert("We need your location in order to find nearby trails and to check in to trails.");
+        });
+
+
         const newTrails = res.map((trail) => {
           dayOfWeek < 0 && (tempDayOfWeek = 6);
           if (trail.traffics?.google) {
@@ -30,7 +41,7 @@ export default function Home(props) {
               color = "#00FF00";
               points = 100;
             } else if (busyValue < 60) {
-              color = "#00FFFF";
+              color = "#FFFF00";
               points = 80;
             } else if (busyValue < 80) {
               color = "#FFA500";
@@ -62,6 +73,7 @@ export default function Home(props) {
   return (
     <View style={styles.container}>
       <MapView
+        showsUserLocation={true}
         initialRegion={{
           latitude: 21.4389,
           longitude: -158,

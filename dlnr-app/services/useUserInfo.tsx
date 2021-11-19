@@ -21,23 +21,6 @@ let initialState = {
   posts: undefined,
 };
 
-// const posts = [
-//   {
-//     name: "Amy Farha",
-//     avatar_url:
-//       "https://s3.amazonaws.com/uifaces/faces/twitter/ladylexy/128.jpg",
-//     subtitle: "Vice President",
-//     detail: "heeyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
-//   },
-//   {
-//     name: "Chris Jackson",
-//     avatar_url:
-//       "https://s3.amazonaws.com/uifaces/faces/twitter/adhamdannaway/128.jpg",
-//     subtitle: "Vice Chairman",
-//     detail:"weeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
-//   },
-// ];
-
 const UserInfoProvider = ({ children }) => {
   const [state, dispatch, getState] = useEnhancedReducer(
     useCallback((state, action) => {
